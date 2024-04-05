@@ -1,0 +1,94 @@
+/* Positioning CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(117, 111, 229);
+   
+}
+
+.title {
+    padding-bottom: 50px;
+    background-color: aqua;
+}
+
+.parent {
+    padding: 5px;
+    background-color: #00AAFF;
+  }
+  
+  .child {
+    padding: 5px;
+  }
+  
+  .child-one {
+    background-color: rgb(116, 255, 116);
+  }
+  
+  .child-two {
+    background-color: rgb(248, 117, 117);
+  }
+  
+  .child-three {
+    background-color: rgb(255, 116, 232);
+  }
+
+  /* Relative allows you to add top, right, bottom and left */
+  /*
+  .child-one {
+    position: relative;
+    left: 10px;
+  }
+  /* 
+
+  /*  
+  
+  .child-one {
+    position: absolute;
+    top: 10px;
+  }
+  
+  */
+
+   /* 
+  .parent {
+    position: relative;
+  }
+
+  .child-one { 
+    position: absolute;
+    top: 0;
+  }
+  Absolute takes the tag out of DOM FLOW, IT FLOATS  IT IS RELATIVE TO THE PARENT*/
+  
+
+
+/* 
+  .parent {
+    position: relative;
+  }
+
+  .child-one {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  This ignores all but just the HTML model*/
+
+
+  
+  .parent {
+    position: relative;
+    height: 200vh;
+  }
+
+  .child-one {
+    position: sticky;
+    top: 0;
+  }
+  

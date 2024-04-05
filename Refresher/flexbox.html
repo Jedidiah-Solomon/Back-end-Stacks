@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="/flexbox.css">
+      <title>Flexbox Example</title>
+    </head>
+    <body>
+      <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item-1"></div>
+        <div class="flexbox-item flexbox-item-2"></div>
+        <div class="flexbox-item flexbox-item-3"></div>
+        <div class="axis main-axis"></div>
+        <div class="axis cross-axis"></div>
+      </div>
+
+      <p>
+
+
+        align-items:
+
+This property is used on the flex container (the parent element with display: flex) to align flex items along the cross-axis.
+It aligns flex items vertically when the flex direction is row, and horizontally when the flex direction is column.
+Common values for align-items include:
+flex-start: Aligns items to the start of the cross-axis.
+flex-end: Aligns items to the end of the cross-axis.
+center: Aligns items to the center of the cross-axis.
+stretch: Stretches items to fill the cross-axis.
+baseline: Aligns items to their baselines.
+align-content:
+
+This property is used on the flex container to align lines of flex items along the cross-axis.
+It only has an effect when there is more than one line of flex items (i.e., when flex-wrap is set to wrap or wrap-reverse).
+Common values for align-content include:
+flex-start: Aligns lines of flex items to the start of the cross-axis.
+flex-end: Aligns lines of flex items to the end of the cross-axis.
+center: Aligns lines of flex items to the center of the cross-axis.
+space-between: Distributes lines of flex items evenly, with the first line at the start and the last line at the end.
+space-around: Distributes lines of flex items evenly with equal space around them.
+In summary, align-items is used to align individual flex items within their flex container along the cross-axis, while align-content is used to align lines of flex items within the flex container when there are multiple lines.
+      </p>
+    </body>
+</html>

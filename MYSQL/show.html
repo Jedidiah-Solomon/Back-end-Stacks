@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show Customer Details</title>
+<link rel="stylesheet" href="show.css">
+</head>
+<body>
+    <header>
+        <section class='hero-header'>
+            <h1>List of Hungsmeal Group Customers and their Order Details</h1>
+            <h2>See the details by selecting one only</h2>
+        </section>
+
+
+        <div class="mySQL-table">
+            <label for="customers">Select a customer :</label>
+            <select id="customers" onchange="getCustomerDetails()">
+            <option value="1">John Smith</option>
+            <option value="2">Emily Johnson</option>
+            <!-- Add other customer options here -->
+            </select>
+        
+            <div id="customerDetails"></div>
+            <div id="customerOrders"></div>
+        </div>
+    </header>
+
+   
+
+  <script src="show.js" ></script>
+</body>
+</html>
