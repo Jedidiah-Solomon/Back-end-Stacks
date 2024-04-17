@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+
+    <script>
+       /* function isEven(number){
+
+        if(number % 2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function isEvenNo(number){
+        return number % 2 === 0 ? true: false;
+    }
+
+    console.log(isEven(10));*/
+   
+
+
+
+
+
+    function isEvenNo(number) {
+    return number % 2 === 0 ? true : false;
+    }
+
+    const inputNumber = 3;
+    const isEvenResult = isEvenNo(inputNumber);
+
+    if (inputNumber === '') {
+        console.log(`You have an empty box.`);
+    } else if (isEvenResult) {
+        console.log(`The number ${inputNumber} is even.`);
+    } else {
+        console.log(`The number ${inputNumber} is odd.`);
+    }
+
+
+    function isValidEmail(email) {
+        if(email.includes('@')) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    /*question = isValidEmail('jedy@gmail.com');*/
+    /*question = isValidEmail('jedygmail.com');*/
+
+    console.log(question);
+
+
+
+
+    </script>
+</body>
+</html>

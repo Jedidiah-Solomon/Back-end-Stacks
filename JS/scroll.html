@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Brief description of the website">
+    <meta name="keywords" content="keyword1, keyword2, keyword3, keyword4, keyword5 etc.">
+    <title>Your Website Title</title>
+    <style>
+        * {
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-bottom: 1000px;
+        }
+
+        .navbar {
+            background: rgba(90, 3, 122, 0.902);
+            font-family: calibri;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding: 7px 15px 2px 15px; /*Short-hand */
+            position: relative; /* Add relative positioning */
+            transition: top 0.3s; /* Add smooth transition */
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        ul button {
+            background-color: black;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+
+        ul button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+.marquee {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .15);
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    width: 100%; /* Full width of its parent */
+    white-space: nowrap;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    animation: scroll-left 25s linear 2 /* Animate to the left */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+        /* Add sticky class for sticky navigation */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="marquee" class="marquee">
+        <p>Welcome to Our Website - Scrolling Text</p>
+    </div>
+
+    <header>
+        <nav id="navbar" class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="#the site home link"><img src="https://kingsfieldcollege.org/advert/15398823932b8da0733533c72badb30e2c414b6318.jpg" width="88.9062px" height="75px" alt="Website Logo"></a></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <button><a href="#">Sign In</a></button>
+                    <button><a href="#">Sign Up</a></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section"></div>
+        <section id="home">
+            <h2>Home Section</h2>
+            <!-- Content for the home section goes here -->
+        </section>
+        
+        <section id="about">
+            <h2>About Section</h2>
+            <!-- Content for the about section goes here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+
+            if(window.scrollY >=100){
+                header.classList.add('sticky');
+            }
+            else {
+                header.classList.remove('sticky');
+            }
+            
+        })
+    </script>
+</body>
+</html>

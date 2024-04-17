@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        .userInput{
+            background-color: hsl(0, 0%, 100%);
+            text-align: center;
+            max-width: 500px;
+            height: 200px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
+        }
+        .userInputBox{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: hsl(319, 95%, 34%);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            margin-top: 8px;
+        }
+        .button:hover {
+            background-color: hsl(343, 39%, 40%)
+        }
+
+        .button:active {
+            background-color: #58053f;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .passwordContainer{
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+         
+        .failure{
+            color: rgb(232, 8, 8);
+            font-weight: 800; 
+        }
+
+        /* Define custom checkbox style */
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Define custom checkbox label style */
+        label {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        /* Define custom checkbox tick mark */
+        input[type="checkbox"]::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            border: 1px solid #c9115b;
+            border-radius: 3px;
+        }
+
+        /* Define custom checkbox checked style */
+        input[type="checkbox"]:checked::before {
+            content: '\2713'; /* Unicode for checkmark character */
+            color: rgba(188, 9, 9, 0.696); /* Change the color of the checkmark when checked */
+            text-align: center;
+            line-height: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="userInput">
+        <div id="charaterSelector" class="charaterSelector">
+            <label><input type="checkbox" id="lowercaseCheckbox" checked> Lowercase</label>
+            <label><input type="checkbox" id="uppercaseCheckbox" checked> Uppercase</label>
+            <label><input type="checkbox" id="numbersCheckbox" checked> Numbers</label>
+            <label><input type="checkbox" id="symbolsCheckbox" checked> Symbols</label>
+        </div>
+
+        <input type="number" id="userInputBox" class="userInputBox">
+
+        <button type="button" id="button" class="button" onclick="generatePassword()">Generate Password</button>
+    
+        <div id="passwordContainer" class="passwordContainer">Enter number of Passwords!</div>
+    </div>
+
+    
+    
+    <script>
+    function generatePassword() {
+        const userInputBox = document.querySelector('#userInputBox').value;
+        const passwordContainer = document.querySelector('#passwordContainer');
+
+        const includeLowerCase = document.querySelector('#lowercaseCheckbox').checked;
+        const includeUpperCase = document.querySelector('#uppercaseCheckbox').checked;
+        const includeNumbers = document.querySelector('#numbersCheckbox').checked;
+        const includeSymbols = document.querySelector('#symbolsCheckbox').checked;
+
+        const lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
+        const upperCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const numberChars = '0123456789';
+        const symbolChars = '!@#$%^&*()_+<>?';
+
+        let allowedChars = '';
+
+        allowedChars += includeLowerCase ? lowerCaseChars : '';
+        allowedChars += includeUpperCase ? upperCaseChars : '';
+        allowedChars += includeNumbers ? numberChars : '';
+        allowedChars += includeSymbols ? symbolChars : '';
+
+        if (userInputBox <= 0 || isNaN(userInputBox)) {
+            passwordContainer.textContent = `Please enter a valid number greater than 0.`;
+            passwordContainer.classList.add('failure');
+            return;
+        }
+        else if (userInputBox > 12 ) {
+            passwordContainer.textContent = `Please only 12 characters are accepted.`;
+            passwordContainer.classList.add('failure');
+            return;
+        }
+
+        if (allowedChars.length === 0) {
+            passwordContainer.textContent = `At least 1 set of characters needs to be selected.`;
+            passwordContainer.classList.add('failure');
+            return;
+        }
+
+        let password = ''; // Initialize password string
+
+        for (let i = 0; i < parseInt(userInputBox); i++) { // Generate random characters based on user input
+            const randomIndex = Math.floor(Math.random() * allowedChars.length);
+            password += allowedChars[randomIndex];
+        }
+
+        passwordContainer.textContent = password; // Display generated password
+        passwordContainer.classList.remove('failure');
+    }
+    </script>
+</body>
+</html>

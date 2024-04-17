@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objets</title>
+</head>
+<body>
+    <p id="demo"></p>
+    
+
+    <script>
+        // Objects = A collection o related properties and/or methods.
+//           It can real world objects e.g people, products, places
+//            It has a key: value air
+
+
+const person1 = {
+    firstName: 'Jedidiah',
+    lastName: 'Onwubiko',
+    age: 29,
+    isEmployed: true,
+    sayHello: function(){console.log(`Hi, I am ${this.firstName} ${this.lastName}`)},// this does not work with arrow function
+    sayHello2: function(){console.log(`Hi, I am ${person1.firstName} ${person1.lastName}`)},
+    sayBye: function(){console.log('Goodbye')},
+};
+
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
+person1.sayHello();
+person1.sayHello2();
+person1.sayBye();
+
+
+
+// Constructor
+
+        function Car(make, model, year, color){
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+            this.drive = function(){console.log(`You are driving ${this.model}`)};
+        }
+
+        const car1 = new Car('Mercedex', 'Benz', 2024, 'red');
+
+        console.log(car1.make);//Mercedex
+        console.log(car1.model);//Benz
+        console.log(car1.year);//2024
+        console.log(car1.color);//red
+        console.log(car1);//{"make": "Mercedex", "model": "Benz","year": 2024, "color": "red"}
+        car1.drive();
+
+
+
+        //class - a function in a class does not use function keyword
+
+        class Product{
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+            }
+
+            displayProduct(){
+                console.log(`The Product is: ${this.name}`);
+                console.log(`Price: $${this.price.toFixed(3)}`);
+            }
+
+            calculateTotal(salesTaxValue){
+                return this.price + (this.price * salesTaxValue);
+            }
+        }
+
+
+        const product1 = new Product('Shirt', 20.50);
+        product1.displayProduct();
+
+
+        const salesTax = 0.05;
+        const total = product1.calculateTotal(salesTax);
+        console.log(`Total price (with tax): $${total.toFixed(2)}`);
+
+
+        /* static - 
+            static is a keyword used to define properties and methods that belong to the class itself, rather than to instances of the class. 
+            This means that static members 
+            are shared among all instances of the class and can be accessed directly from the class without the need to create an instance.
+            class MyClass {
+                static staticProperty = 'Static Property';
+                }
+
+            console.log(MyClass.staticProperty); // Output: Static Property
+
+            or
+
+        class MyClass {
+            static staticMethod() {
+                return 'Static Method';
+            }
+            }
+
+        console.log(MyClass.staticMethod()); // Output: Static Method
+
+        Example
+
+
+        vs 
+
+        not using static
+
+        class Car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+
+            drive() {
+                console.log(`${this.make} ${this.model} is driving.`);
+            }
+        }
+        const car1 = new Car('Toyota', 'Camry');
+        car1.drive();
+
+
+        */
+
+        class MathUtil{
+            static PI = 3.2;
+
+            static getDiameter(radius){
+                return radius * 2;
+            } 
+
+            static getArea(radius){
+                return this.PI * (radius ** 2);
+            }
+        }
+
+        console.log(MathUtil.PI);
+        console.log(MathUtil.getArea(4));
+
+// Craete users and take count of them usin static
+
+class User{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+
+    static getUserCount(){
+        console.log(`There are ${User.userCount} users online now`);
+    }
+
+    sayHello(){
+        console.log(`Hello my name is ${this.username}`);
+    }
+}
+
+
+const user1 = new User('Homdy');
+const user2 = new User('Jedy');
+const user3 = new User('Paul');
+const user4 = new User('Enzo');
+
+user1.sayHello();
+user4.sayHello();
+
+User.getUserCount();
+
+
+// the Super() keyword for prent-child inheritance
+
+class Animal{
+
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    move(speed){
+        console.log(`The ${this.name} is moving at a speed of ${speed}mph`);
+    }
+}
+
+class Rabbit extends Animal{
+    constructor(name, age, runspeed){
+        super(name, age);
+        this.runspeed = runspeed;
+    }
+
+    run(){
+        console.log(`This ${this.name} can run`);
+        super.move(this.runspeed);
+    }
+}
+
+class Fish extends Animal{
+    constructor(name, age, swimspeed){
+        super(name, age);
+        this.swimspeed = swimspeed;
+    }
+
+    swim(){
+        console.log(`This ${this.name} can swim`);
+        super.move(this.swimspeed);
+    }
+}
+
+class Hawk extends Animal{
+    constructor(name, age, flyspeed){
+        super(name, age);
+        this.flyspeed = flyspeed;
+    }
+
+    fly(){
+        console.log(`This ${this.name} can fly`);
+        super.move(this.flyspeed);
+    }
+}
+
+
+const rabbit1 =new Rabbit('Bony', 20, '15');
+const fish1 =new Fish('Salmon', 10, '15');
+const hawk1 =new Hawk('Salmon', 20, '15');
+
+console.log(rabbit1);//{ "name": "Bony", "age": 20, "runspeed": "15"}
+console.log(rabbit1.name);//Bony  The Bony is moving at a speed of 15mph
+
+rabbit1.run();//This Bony can run
+
+
+
+// getter = special method that makes a property readable
+//setter = special method that makes a property writeable
+
+//They are used for validation and modification of a value when reading/writing a property
+
+/*class Rectangle{
+
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+    }
+
+    set width(newWidth){
+        if(newWidth > 0){
+            this._width = newWidth;
+        }
+        else{
+            console.error(`Width must be a positive number not ${newWidth}`);
+        }
+    }
+
+    set height(newHeight){
+        if(newHeight > 0){
+            this._height = newHeight;
+        }
+        else{
+            console.error(`Height must be a positive number not ${newHeight}`);
+        }
+    }
+
+}
+
+const rect1 = new Rectangle(-10000, 'pizza');
+const rect2 = new Rectangle(400, 45);
+
+console.log(rect1.width);// Width must be a positive number not -10000 undefined
+console.log(rect1.height);//Height must be a positive number not pizza undefined
+console.log(rect2.width);//undefined 
+console.log(rect2.height);//undefined
+*/
+
+class Rectangle{
+
+constructor(width, height){
+    this.width = width;
+    this.height = height;
+}
+
+set width(newWidth){
+    if(newWidth > 0){
+        this._width = newWidth;
+    }
+    else{
+        console.error(`Width must be a positive number not ${newWidth}`);
+    }
+}
+
+set height(newHeight){
+    if(newHeight > 0){
+        this._height = newHeight;
+    }
+    else{
+        console.error(`Height must be a positive number not ${newHeight}`);
+    }
+}
+
+get width(){
+    return this._width;
+}
+
+get height(){
+    return this._height;
+}
+
+get area(){//we can access a property that does not exit in our constructor such as area
+    return `${(this._width * this._height).toFixed(1)}cm`;
+}
+
+
+}
+
+const rect1 = new Rectangle(-10000, 'pizza');
+const rect2 = new Rectangle(400, 45);
+
+console.log(rect1.width);// Width must be a positive number not -10000 undefined
+console.log(rect1.height);//Height must be a positive number not pizza undefined
+console.log(rect2.width);//400
+console.log(rect2.height);//45
+console.log(rect2.area);//18000.0cm
+
+const demo = document.getElementById('demo');
+demo.innerHTML = `${rect2.area} <sup>2</sup>`;//18000.0cm 2
+
+
+/*
+    //I can validate name like this for instance
+
+    set firstNmae(newFirstName){
+    if(typeOf newFirstNmae === 'string' && newFirstNmae.length > 0 ){
+        this._height = newHeight;
+    }
+    else{
+        console.error(`First Name must be a string`);
+    }
+*/
+    </script>
+</body>
+</html>

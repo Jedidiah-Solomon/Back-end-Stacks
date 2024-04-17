@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Set and Reset</title>
+    <style>
+        #counterLabel {
+            font-size: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: coral;
+        }
+        button {
+            background-color: black;
+            color: whitesmoke;
+            width: 100px;
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="counterLabel">0</div>
+
+    <div class="container">
+        <button type="button" id="increaseBtn">Increase</button>
+        <button type="button" id="decreaseBtn">Decrease</button>
+        <button type="button" id="resetBtn">Reset</button>
+        <button type="button" id="evenBtn">Even</button>
+    </div>
+
+    <script defer type="text/javascript">
+        const increaseBtn = document.getElementById('increaseBtn');
+        const decreaseBtn = document.getElementById('decreaseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const evenBtn = document.getElementById('evenBtn');
+        const counterLabel = document.getElementById('counterLabel');
+
+        let count = 0;
+        let lastOperation = 'reset'; // Initialize lastOperation to 'reset'
+
+        increaseBtn.addEventListener('click', function(){
+            count = lastOperation === 'decrease' ? count : count + 1; // If last operation was decrease, don't increment
+            lastOperation = 'increase';
+            counterLabel.textContent = count;
+        });
+
+        decreaseBtn.onclick = function(){
+            count = lastOperation === 'increase' ? count : count - 1; // If last operation was increase, don't decrement
+            lastOperation = 'decrease';
+            counterLabel.textContent = count;
+        }
+
+        resetBtn.onclick = function(){
+            count = 0;
+            lastOperation = 'reset';
+            counterLabel.textContent = count;
+        }
+
+        evenBtn.onclick = function(){
+            count += 2;
+            lastOperation = 'even';
+            counterLabel.textContent = count;
+        }
+    </script>
+
+    <!--
+        lastOperation is a string variable initialized with the value 'reset'. 
+        This variable is used to keep track of the last operation performed on the counter.
+        When the increase button is clicked, the lastOperation variable is updated to 'increase'. 
+        Similarly, when the decrease button is clicked, it's updated to 'decrease'. 
+        When the even button is clicked, it's updated to 'even'. 
+        And when the reset button is clicked, it's set back to 'reset'.
+    -->
+</body>
+</html>
+
+
+---------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Set and Reset</title>
+    <style>
+        #counterLabel {
+            font-size: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: coral;
+        }
+        button {
+            background-color: black;
+            color: whitesmoke;
+            width: 100px;
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="counterLabel">0</div>
+
+    <div class="container">
+        <button type="button" id="increaseBtn">Increase</button>
+        <button type="button" id="decreaseBtn">Decrease</button>
+        <button type="button" id="resetBtn">Reset</button>
+        <button type="button" id="evenBtn" onclick="evenClick()">Even</button>
+    </div>
+
+ 
+    <script defer type="text/javascript">
+        const increaseBtn = document.getElementById('increaseBtn');
+        const decreaseBtn = document.getElementById('decreaseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const counterLabel = document.getElementById('counterLabel');
+
+        let count = 0;
+
+        increaseBtn.addEventListener('click',function(){
+            count++;
+            counterLabel.textContent = count;   
+        });
+
+        decreaseBtn.onclick = function(){
+            count--;
+            counterLabel.textContent = count;
+        }
+
+        resetBtn.onclick = function(){
+            count = 0;
+            counterLabel.textContent = count;
+        }
+
+      function evenClick(){
+        count+=2;
+        counterLabel.textContent = count;
+      }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

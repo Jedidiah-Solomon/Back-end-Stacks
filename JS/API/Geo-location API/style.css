@@ -1,0 +1,31 @@
+#userLocationBox{
+    max-width: 450px;
+    background-color: rgba(231, 17, 231, 0.628);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 300px;
+    text-align: center;
+}
+
+#userLocationBox p{
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#userLocationBox p::first-line{
+    color: deeppink;
+    font-size: 1.25em;
+    line-height: 50px;
+}
+#getLocationBtn, #stopWatchingBtn{
+    background-color: chocolate;
+    padding: 10px 20px;
+    border: 2px solid rgb(3, 87, 83);
+    cursor: pointer; 
+    color: whitesmoke; 
+    font-size: 16px;
+    text-align: center;
+}
+#getLocationBtn:hover, #stopWatchingBtn:hover{
+    background-color: rgba(210, 105, 30, 0.676);
+}

@@ -1,0 +1,58 @@
+label {
+    font-size: 24px;
+}
+
+#userInput, #userInput2{
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    max-width: 350px;
+    height: 200px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
+}
+#userInput input, #userInput2 input{
+    width: 60%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 2px solid rgb(14, 3, 10);
+}
+
+#userInput input::placeholder, #userInput2 input::placeholder{
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: hsl(319, 95%, 34%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-top: 8px;
+}
+button:hover {
+    background-color: hsl(343, 39%, 40%)
+}
+
+button:active {
+    background-color: #58053f;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#gitHubUser, #countryBox {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #ebd5e4;
+    
+}

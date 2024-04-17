@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CLASS</title>
+</head>
+<body>
+    
+    <script>
+       /* for (let i = 0; i <= 3; i++) {
+            console.log(i, "Hello");
+        }
+
+        for (let i = 1 ; i <= 20; i++){
+            
+            if (i == 13) {
+                continue;
+            }
+            else {
+                console.log(i);
+            }
+           
+        }
+
+        for (let i = 1 ; i <= 20; i++){
+            
+            if (i == 13) {
+                break;
+            }
+            else {
+                console.log(i);
+            }
+           
+        } */
+
+        const minNum = 1;
+        const maxNum = 100;
+        const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+        console.log("The answer is:", answer);
+
+        let attempts = 0;
+        let guess;
+        let running = true;
+
+        while (running) {
+            guess = (window.prompt(`Guess a number between ${minNum} and ${maxNum}: `));
+            guess = Number(guess);
+
+            if (isNaN(guess)) {
+                window.alert('Please enter a valid number');
+                
+            }
+            else if (guess < minNum || guess > maxNum) {
+                window.alert('Please enter a valid number');
+            }
+            else {
+                attempts++
+                if (guess < answer) {
+                    window.alert('Too Low! Please try again');
+                }
+                else if (guess > answer) {
+                    window.alert('Too High! Please try again');
+                }
+                else {
+                    window.alert(`Congratulations!!!! You won. The answer is ${answer} with ${attempts} attempts.`);
+                    running = false; // To exit the game cos we have the answer.
+                }
+            }
+        }
+
+
+/* 
+
+
+The window object is specific to web browsers and is not available in a Node.js environment. Since you are running this code using Node.js, you should use a different approach for user input.
+
+Here’s an alternative way to get user input using the readline-sync package, which works in a Node.js environment:
+
+First, make sure you have the readline-sync package installed. If not, install it using npm:
+npm install readline-sync
+
+Modify your code as follows:
+
+const readlinejed = require('readline-sync');
+
+const minNum = 1;
+const maxNum = 100;
+const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+console.log("The answer is:", answer);
+
+let attempts = 0;
+let guess;
+let running = true;
+
+while (running) {
+    guess = parseInt(readlinejed.question(`Guess a number between ${minNum} and ${maxNum}: `));
+
+    if (isNaN(guess)) {
+        console.log("Please enter a valid number.");
+    } else if (guess < minNum || guess > maxNum) {
+        console.log(`Please enter a number between ${minNum} and ${maxNum}.`);
+    } else {
+        attempts++;
+        if (guess === answer) {
+            console.log(`Congratulations! You guessed the number ${answer} correctly in ${attempts} attempts.`);
+            running = false;
+        } else if (guess < answer) {
+            console.log("Too low! Try again.");
+        } else {
+            console.log("Too high! Try again.");
+        }
+    }
+}
+
+
+
+or use 
+
+const minNum = 1;
+        const maxNum = 100;
+        const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+        console.log("The answer is:", answer);
+
+        let attempts = 0;
+        let guess;
+        let running = true;
+
+        while (running) {
+            guess = parseInt(window.prompt(`Guess a number between ${minNum} and ${maxNum}:`));
+
+            if (isNaN(guess)) {
+                console.log("Please enter a valid number.");
+            } else if (guess < minNum || guess > maxNum) {
+                console.log(`Please enter a number between ${minNum} and ${maxNum}.`);
+            } else {
+                attempts++;
+                if (guess === answer) {
+                    console.log(`Congratulations! You guessed the number ${answer} correctly in ${attempts} attempts.`);
+                    running = false;
+                } else if (guess < answer) {
+                    console.log("Too low! Try again.");
+                } else {
+                    console.log("Too high! Try again.");
+                }
+            }
+        }
+
+
+
+*/
+
+    </script>
+    
+</body>
+</html>

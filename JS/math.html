@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math methods</title>
+    <style>
+        /* Add any additional styles here */
+    </style>
+</head>
+<body>
+    <!-- Display box on line 1 -->
+    <p class="demo">Result: <span id="box"></span></p>
+    <!-- Display box2 on line 2 -->
+    <p class="demo">Result2: <span id="box2"></span></p>
+
+    <script defer type="text/javascript">
+        // Calculate values for box and box2
+        let box = Math.PI;
+        let box2 = Math.E;
+
+        
+        // Set innerHTML of respective spans to the calculated values
+        document.getElementById('box').innerHTML = box;
+        document.getElementById('box2').innerHTML = box2;
+        console.log(Math.round(box));
+        console.log(Math.ceil(box));
+        console.log(Math.floor(box));
+        console.log(Math.trunc(box));//Removes decimal places
+        console.log(Math.pow(3,2));
+        console.log(Math.sqrt(81));
+        console.log(Math.log(100));
+        console.log(Math.log10(100));
+        console.log(Math.sin(30));
+        console.log(Math.max(30, -60, 0));
+
+        // Convert degrees to radians
+        let angleInDegrees = 30;
+        let angleInRadians = angleInDegrees * (Math.PI / 180);
+
+        // Calculate the sine of the angle
+        let sineValue = Math.sin(angleInRadians);
+
+        // Log the result
+        console.log(sineValue);
+
+
+        console.log(Math.abs(-30));
+        console.log(Math.sign(30)); //1 if the number is positive. -1 if the number is negative. 0 if the number is zero. NaN if the number is NaN (Not a Number).
+        console.log(parseFloat(567.8965412008.toFixed(3)));
+        let men = parseFloat(567.8965412008.toFixed(3));
+        let men2 = 567.8965412008.toFixed(3);
+        console.log(typeof men);
+        console.log(typeof men2);
+
+        let num = 42;
+        let str = num.toString(); // Converts the number 42 to the string "42"
+        let num2 = 42;
+        let str2 = num2.toString(2); // Converts the number 42 to the binary string "101010"
+
+        let array = [1, 2, 3];
+        let str3 = array.toString(); // Converts the array [1, 2, 3] to the string "1,2,3"
+
+        let obj = { name: "John", age: 30 };
+        let str4 = obj.toString(); // Converts the object { name: "John", age: 30 } to the string "[object Object]"
+
+        let randomNum = Math.floor(Math.random() * 100) + 1;
+        console.log(randomNum);
+
+        let minNum = 50;
+        let maxNum = 60;
+        let randomNum2 = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
+        console.log(randomNum2);
+
+
+
+
+    </script>
+</body>
+</html>
