@@ -1,0 +1,87 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.heading{
+    font-size: 30px;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#userRequestBox{
+    text-align: center;
+    min-width: 300px;
+    min-height: 200px;
+    padding-top: 20px;
+    
+}
+
+#userRequestBox label {
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#userRequestBox input[type = 'text']{
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 200px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+#userRequestBox button{
+    font-size: 18px;
+    padding: 12px;
+    color: black;
+    font-weight: 600;
+    background-color: burlywood;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#userRequestBox button:hover{
+    opacity: 0.5;
+}
+
+#userRequestBox > #errorBox{
+    font-size: 20px;
+    color: red;
+    margin-top: 10px;
+}
+
+#userRequestBox > #userDetails{
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+#userDetails p {
+    margin-bottom: 7px; 
+}
+#userDetails::before, #userDetails::after{
+    content: '-------------------------------------------------------------------------------------------------------';
+    color: rgb(238, 125, 148);
+    display: block;
+}
+
+
+
+.details{
+    color: white;
+    text-align: center;
+    line-height: 35px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="heading">Using the XMLHttpRequest Object</h2>
+
+    <div id="userRequestBox">
+        <label for="userInput">Enter a User full name</label>
+        <input type="text" id="userInput">
+        <button type="button" id="userBtn">Retrieve User Details</button>
+        <div id="userDetails"></div>
+        <p id="errorBox"></p>
+    </div>
+
+
+    <div class="details">
+        <h3>Uses of XMLHttpRequest</h3>
+        <ul>
+            <li>Update a web page without reloading the page</li>
+            <li>Request data from a server - after the page has loaded</li>
+            <li>Receive data from a server  - after the page has loaded</li>
+            <li> Data to a server - in the background</li>
+        </ul>
+    </div>
+        
+
+    <div>Use <a href="https://www.convertcsv.com/csv-to-json.htm">TO CONVERT CSV TO JSON</a></div>
+
+    <div class="details">
+        id,name/first,name/last,rating/0,rating/1,rating/2
+        1,Dan,Jones,8,7,9
+        2,Bill,Barner,7,6,5
+        3,Joe,Smoe,4,3,
+
+
+        it ses id as one, name as an object with two properties of firsta and last, rating as an aray with three values
+
+        Input Records- Header: true   Header Fields: 6
+        Data: Separator: ,     Fields: 6     Records: 3
+
+
+    <p>Hobbies: ${user.hobbies.join(', ')}</p> or do the same but 2nd allows us to choose array values we want while first makes it simple to write at once
+    <p>Hobbies: ${user.hobbies[0]}, ${user.hobbies[1]}, ${user.hobbies[2]} </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
