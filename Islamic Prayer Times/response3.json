@@ -1,0 +1,2626 @@
+{
+    "code": 200,
+    "status": "OK",
+    "data": [
+        {
+            "timings": {
+                "Fajr": "05:31 (WAT)",
+                "Sunrise": "06:45 (WAT)",
+                "Dhuhr": "12:55 (WAT)",
+                "Asr": "15:54 (WAT)",
+                "Sunset": "18:56 (WAT)",
+                "Maghrib": "19:01 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:21 (WAT)",
+                "Midnight": "00:50 (WAT)",
+                "Firstthird": "22:52 (WAT)",
+                "Lastthird": "02:49 (WAT)"
+            },
+            "date": {
+                "readable": "01 Apr 2024",
+                "timestamp": "1711958461",
+                "gregorian": {
+                    "date": "01-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "01",
+                    "weekday": {
+                        "en": "Monday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "22-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "22",
+                    "weekday": {
+                        "en": "Al Athnayn",
+                        "ar": "الاثنين"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:31 (WAT)",
+                "Sunrise": "06:44 (WAT)",
+                "Dhuhr": "12:55 (WAT)",
+                "Asr": "15:53 (WAT)",
+                "Sunset": "18:56 (WAT)",
+                "Maghrib": "19:01 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:21 (WAT)",
+                "Midnight": "00:50 (WAT)",
+                "Firstthird": "22:52 (WAT)",
+                "Lastthird": "02:48 (WAT)"
+            },
+            "date": {
+                "readable": "02 Apr 2024",
+                "timestamp": "1712044861",
+                "gregorian": {
+                    "date": "02-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "02",
+                    "weekday": {
+                        "en": "Tuesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "23-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "23",
+                    "weekday": {
+                        "en": "Al Thalaata",
+                        "ar": "الثلاثاء"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": [
+                        "Lailat-ul-Qadr"
+                    ]
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:30 (WAT)",
+                "Sunrise": "06:44 (WAT)",
+                "Dhuhr": "12:55 (WAT)",
+                "Asr": "15:52 (WAT)",
+                "Sunset": "18:56 (WAT)",
+                "Maghrib": "19:01 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:20 (WAT)",
+                "Midnight": "00:50 (WAT)",
+                "Firstthird": "22:52 (WAT)",
+                "Lastthird": "02:48 (WAT)"
+            },
+            "date": {
+                "readable": "03 Apr 2024",
+                "timestamp": "1712131261",
+                "gregorian": {
+                    "date": "03-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "03",
+                    "weekday": {
+                        "en": "Wednesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "24-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "24",
+                    "weekday": {
+                        "en": "Al Arba'a",
+                        "ar": "الاربعاء"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:30 (WAT)",
+                "Sunrise": "06:43 (WAT)",
+                "Dhuhr": "12:54 (WAT)",
+                "Asr": "15:51 (WAT)",
+                "Sunset": "18:56 (WAT)",
+                "Maghrib": "19:01 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:20 (WAT)",
+                "Midnight": "00:50 (WAT)",
+                "Firstthird": "22:52 (WAT)",
+                "Lastthird": "02:48 (WAT)"
+            },
+            "date": {
+                "readable": "04 Apr 2024",
+                "timestamp": "1712217661",
+                "gregorian": {
+                    "date": "04-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "04",
+                    "weekday": {
+                        "en": "Thursday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "25-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "25",
+                    "weekday": {
+                        "en": "Al Khamees",
+                        "ar": "الخميس"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": [
+                        "Lailat-ul-Qadr"
+                    ]
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:29 (WAT)",
+                "Sunrise": "06:43 (WAT)",
+                "Dhuhr": "12:54 (WAT)",
+                "Asr": "15:51 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:19 (WAT)",
+                "Midnight": "00:49 (WAT)",
+                "Firstthird": "22:51 (WAT)",
+                "Lastthird": "02:47 (WAT)"
+            },
+            "date": {
+                "readable": "05 Apr 2024",
+                "timestamp": "1712304061",
+                "gregorian": {
+                    "date": "05-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "05",
+                    "weekday": {
+                        "en": "Friday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "26-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "26",
+                    "weekday": {
+                        "en": "Al Juma'a",
+                        "ar": "الجمعة"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:29 (WAT)",
+                "Sunrise": "06:43 (WAT)",
+                "Dhuhr": "12:54 (WAT)",
+                "Asr": "15:51 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:19 (WAT)",
+                "Midnight": "00:49 (WAT)",
+                "Firstthird": "22:51 (WAT)",
+                "Lastthird": "02:47 (WAT)"
+            },
+            "date": {
+                "readable": "06 Apr 2024",
+                "timestamp": "1712390461",
+                "gregorian": {
+                    "date": "06-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "06",
+                    "weekday": {
+                        "en": "Saturday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "27-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "27",
+                    "weekday": {
+                        "en": "Al Sabt",
+                        "ar": "السبت"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": [
+                        "Lailat-ul-Qadr"
+                    ]
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:28 (WAT)",
+                "Sunrise": "06:42 (WAT)",
+                "Dhuhr": "12:54 (WAT)",
+                "Asr": "15:52 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:18 (WAT)",
+                "Midnight": "00:49 (WAT)",
+                "Firstthird": "22:51 (WAT)",
+                "Lastthird": "02:46 (WAT)"
+            },
+            "date": {
+                "readable": "07 Apr 2024",
+                "timestamp": "1712476861",
+                "gregorian": {
+                    "date": "07-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "07",
+                    "weekday": {
+                        "en": "Sunday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "28-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "28",
+                    "weekday": {
+                        "en": "Al Ahad",
+                        "ar": "الاحد"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:28 (WAT)",
+                "Sunrise": "06:42 (WAT)",
+                "Dhuhr": "12:53 (WAT)",
+                "Asr": "15:52 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:18 (WAT)",
+                "Midnight": "00:48 (WAT)",
+                "Firstthird": "22:51 (WAT)",
+                "Lastthird": "02:46 (WAT)"
+            },
+            "date": {
+                "readable": "08 Apr 2024",
+                "timestamp": "1712563261",
+                "gregorian": {
+                    "date": "08-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "08",
+                    "weekday": {
+                        "en": "Monday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "29-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "29",
+                    "weekday": {
+                        "en": "Al Athnayn",
+                        "ar": "الاثنين"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": [
+                        "Lailat-ul-Qadr"
+                    ]
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:27 (WAT)",
+                "Sunrise": "06:41 (WAT)",
+                "Dhuhr": "12:53 (WAT)",
+                "Asr": "15:53 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:17 (WAT)",
+                "Midnight": "00:48 (WAT)",
+                "Firstthird": "22:50 (WAT)",
+                "Lastthird": "02:46 (WAT)"
+            },
+            "date": {
+                "readable": "09 Apr 2024",
+                "timestamp": "1712649661",
+                "gregorian": {
+                    "date": "09-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "09",
+                    "weekday": {
+                        "en": "Tuesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "30-09-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "30",
+                    "weekday": {
+                        "en": "Al Thalaata",
+                        "ar": "الثلاثاء"
+                    },
+                    "month": {
+                        "number": 9,
+                        "en": "Ramaḍān",
+                        "ar": "رَمَضان"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:27 (WAT)",
+                "Sunrise": "06:41 (WAT)",
+                "Dhuhr": "12:53 (WAT)",
+                "Asr": "15:53 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:17 (WAT)",
+                "Midnight": "00:48 (WAT)",
+                "Firstthird": "22:50 (WAT)",
+                "Lastthird": "02:45 (WAT)"
+            },
+            "date": {
+                "readable": "10 Apr 2024",
+                "timestamp": "1712736061",
+                "gregorian": {
+                    "date": "10-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "10",
+                    "weekday": {
+                        "en": "Wednesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "01-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "01",
+                    "weekday": {
+                        "en": "Al Arba'a",
+                        "ar": "الاربعاء"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": [
+                        "Eid-ul-Fitr"
+                    ]
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:26 (WAT)",
+                "Sunrise": "06:40 (WAT)",
+                "Dhuhr": "12:53 (WAT)",
+                "Asr": "15:54 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:16 (WAT)",
+                "Midnight": "00:48 (WAT)",
+                "Firstthird": "22:50 (WAT)",
+                "Lastthird": "02:45 (WAT)"
+            },
+            "date": {
+                "readable": "11 Apr 2024",
+                "timestamp": "1712822461",
+                "gregorian": {
+                    "date": "11-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "11",
+                    "weekday": {
+                        "en": "Thursday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "02-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "02",
+                    "weekday": {
+                        "en": "Al Khamees",
+                        "ar": "الخميس"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:26 (WAT)",
+                "Sunrise": "06:40 (WAT)",
+                "Dhuhr": "12:52 (WAT)",
+                "Asr": "15:54 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:16 (WAT)",
+                "Midnight": "00:47 (WAT)",
+                "Firstthird": "22:50 (WAT)",
+                "Lastthird": "02:45 (WAT)"
+            },
+            "date": {
+                "readable": "12 Apr 2024",
+                "timestamp": "1712908861",
+                "gregorian": {
+                    "date": "12-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "12",
+                    "weekday": {
+                        "en": "Friday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "03-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "03",
+                    "weekday": {
+                        "en": "Al Juma'a",
+                        "ar": "الجمعة"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:25 (WAT)",
+                "Sunrise": "06:39 (WAT)",
+                "Dhuhr": "12:52 (WAT)",
+                "Asr": "15:55 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:15 (WAT)",
+                "Midnight": "00:47 (WAT)",
+                "Firstthird": "22:50 (WAT)",
+                "Lastthird": "02:45 (WAT)"
+            },
+            "date": {
+                "readable": "13 Apr 2024",
+                "timestamp": "1712995261",
+                "gregorian": {
+                    "date": "13-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "13",
+                    "weekday": {
+                        "en": "Saturday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "04-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "04",
+                    "weekday": {
+                        "en": "Al Sabt",
+                        "ar": "السبت"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:25 (WAT)",
+                "Sunrise": "06:39 (WAT)",
+                "Dhuhr": "12:52 (WAT)",
+                "Asr": "15:55 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:15 (WAT)",
+                "Midnight": "00:47 (WAT)",
+                "Firstthird": "22:49 (WAT)",
+                "Lastthird": "02:44 (WAT)"
+            },
+            "date": {
+                "readable": "14 Apr 2024",
+                "timestamp": "1713081661",
+                "gregorian": {
+                    "date": "14-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "14",
+                    "weekday": {
+                        "en": "Sunday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "05-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "05",
+                    "weekday": {
+                        "en": "Al Ahad",
+                        "ar": "الاحد"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:24 (WAT)",
+                "Sunrise": "06:39 (WAT)",
+                "Dhuhr": "12:52 (WAT)",
+                "Asr": "15:56 (WAT)",
+                "Sunset": "18:55 (WAT)",
+                "Maghrib": "19:00 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:14 (WAT)",
+                "Midnight": "00:47 (WAT)",
+                "Firstthird": "22:49 (WAT)",
+                "Lastthird": "02:44 (WAT)"
+            },
+            "date": {
+                "readable": "15 Apr 2024",
+                "timestamp": "1713168061",
+                "gregorian": {
+                    "date": "15-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "15",
+                    "weekday": {
+                        "en": "Monday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "06-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "06",
+                    "weekday": {
+                        "en": "Al Athnayn",
+                        "ar": "الاثنين"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:24 (WAT)",
+                "Sunrise": "06:38 (WAT)",
+                "Dhuhr": "12:51 (WAT)",
+                "Asr": "15:56 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:14 (WAT)",
+                "Midnight": "00:46 (WAT)",
+                "Firstthird": "22:49 (WAT)",
+                "Lastthird": "02:44 (WAT)"
+            },
+            "date": {
+                "readable": "16 Apr 2024",
+                "timestamp": "1713254461",
+                "gregorian": {
+                    "date": "16-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "16",
+                    "weekday": {
+                        "en": "Tuesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "07-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "07",
+                    "weekday": {
+                        "en": "Al Thalaata",
+                        "ar": "الثلاثاء"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:23 (WAT)",
+                "Sunrise": "06:38 (WAT)",
+                "Dhuhr": "12:51 (WAT)",
+                "Asr": "15:57 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:13 (WAT)",
+                "Midnight": "00:46 (WAT)",
+                "Firstthird": "22:49 (WAT)",
+                "Lastthird": "02:43 (WAT)"
+            },
+            "date": {
+                "readable": "17 Apr 2024",
+                "timestamp": "1713340861",
+                "gregorian": {
+                    "date": "17-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "17",
+                    "weekday": {
+                        "en": "Wednesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "08-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "08",
+                    "weekday": {
+                        "en": "Al Arba'a",
+                        "ar": "الاربعاء"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:23 (WAT)",
+                "Sunrise": "06:37 (WAT)",
+                "Dhuhr": "12:51 (WAT)",
+                "Asr": "15:57 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:13 (WAT)",
+                "Midnight": "00:46 (WAT)",
+                "Firstthird": "22:49 (WAT)",
+                "Lastthird": "02:43 (WAT)"
+            },
+            "date": {
+                "readable": "18 Apr 2024",
+                "timestamp": "1713427261",
+                "gregorian": {
+                    "date": "18-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "18",
+                    "weekday": {
+                        "en": "Thursday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "09-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "09",
+                    "weekday": {
+                        "en": "Al Khamees",
+                        "ar": "الخميس"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:22 (WAT)",
+                "Sunrise": "06:37 (WAT)",
+                "Dhuhr": "12:51 (WAT)",
+                "Asr": "15:57 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:12 (WAT)",
+                "Midnight": "00:46 (WAT)",
+                "Firstthird": "22:49 (WAT)",
+                "Lastthird": "02:43 (WAT)"
+            },
+            "date": {
+                "readable": "19 Apr 2024",
+                "timestamp": "1713513661",
+                "gregorian": {
+                    "date": "19-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "19",
+                    "weekday": {
+                        "en": "Friday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "10-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "10",
+                    "weekday": {
+                        "en": "Al Juma'a",
+                        "ar": "الجمعة"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:22 (WAT)",
+                "Sunrise": "06:37 (WAT)",
+                "Dhuhr": "12:50 (WAT)",
+                "Asr": "15:58 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:12 (WAT)",
+                "Midnight": "00:45 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:43 (WAT)"
+            },
+            "date": {
+                "readable": "20 Apr 2024",
+                "timestamp": "1713600061",
+                "gregorian": {
+                    "date": "20-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "20",
+                    "weekday": {
+                        "en": "Saturday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "11-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "11",
+                    "weekday": {
+                        "en": "Al Sabt",
+                        "ar": "السبت"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:21 (WAT)",
+                "Sunrise": "06:36 (WAT)",
+                "Dhuhr": "12:50 (WAT)",
+                "Asr": "15:58 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:11 (WAT)",
+                "Midnight": "00:45 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:42 (WAT)"
+            },
+            "date": {
+                "readable": "21 Apr 2024",
+                "timestamp": "1713686461",
+                "gregorian": {
+                    "date": "21-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "21",
+                    "weekday": {
+                        "en": "Sunday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "12-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "12",
+                    "weekday": {
+                        "en": "Al Ahad",
+                        "ar": "الاحد"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:21 (WAT)",
+                "Sunrise": "06:36 (WAT)",
+                "Dhuhr": "12:50 (WAT)",
+                "Asr": "15:58 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:11 (WAT)",
+                "Midnight": "00:45 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:42 (WAT)"
+            },
+            "date": {
+                "readable": "22 Apr 2024",
+                "timestamp": "1713772861",
+                "gregorian": {
+                    "date": "22-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "22",
+                    "weekday": {
+                        "en": "Monday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "13-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "13",
+                    "weekday": {
+                        "en": "Al Athnayn",
+                        "ar": "الاثنين"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:20 (WAT)",
+                "Sunrise": "06:36 (WAT)",
+                "Dhuhr": "12:50 (WAT)",
+                "Asr": "15:59 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:10 (WAT)",
+                "Midnight": "00:45 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:42 (WAT)"
+            },
+            "date": {
+                "readable": "23 Apr 2024",
+                "timestamp": "1713859261",
+                "gregorian": {
+                    "date": "23-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "23",
+                    "weekday": {
+                        "en": "Tuesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "14-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "14",
+                    "weekday": {
+                        "en": "Al Thalaata",
+                        "ar": "الثلاثاء"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:20 (WAT)",
+                "Sunrise": "06:35 (WAT)",
+                "Dhuhr": "12:50 (WAT)",
+                "Asr": "15:59 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:10 (WAT)",
+                "Midnight": "00:45 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:42 (WAT)"
+            },
+            "date": {
+                "readable": "24 Apr 2024",
+                "timestamp": "1713945661",
+                "gregorian": {
+                    "date": "24-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "24",
+                    "weekday": {
+                        "en": "Wednesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "15-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "15",
+                    "weekday": {
+                        "en": "Al Arba'a",
+                        "ar": "الاربعاء"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:19 (WAT)",
+                "Sunrise": "06:35 (WAT)",
+                "Dhuhr": "12:50 (WAT)",
+                "Asr": "15:59 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:01 (WAT)",
+                "Imsak": "05:09 (WAT)",
+                "Midnight": "00:45 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:41 (WAT)"
+            },
+            "date": {
+                "readable": "25 Apr 2024",
+                "timestamp": "1714032061",
+                "gregorian": {
+                    "date": "25-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "25",
+                    "weekday": {
+                        "en": "Thursday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "16-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "16",
+                    "weekday": {
+                        "en": "Al Khamees",
+                        "ar": "الخميس"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:19 (WAT)",
+                "Sunrise": "06:35 (WAT)",
+                "Dhuhr": "12:49 (WAT)",
+                "Asr": "16:00 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:02 (WAT)",
+                "Imsak": "05:09 (WAT)",
+                "Midnight": "00:44 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:41 (WAT)"
+            },
+            "date": {
+                "readable": "26 Apr 2024",
+                "timestamp": "1714118461",
+                "gregorian": {
+                    "date": "26-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "26",
+                    "weekday": {
+                        "en": "Friday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "17-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "17",
+                    "weekday": {
+                        "en": "Al Juma'a",
+                        "ar": "الجمعة"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:18 (WAT)",
+                "Sunrise": "06:34 (WAT)",
+                "Dhuhr": "12:49 (WAT)",
+                "Asr": "16:00 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:02 (WAT)",
+                "Imsak": "05:08 (WAT)",
+                "Midnight": "00:44 (WAT)",
+                "Firstthird": "22:48 (WAT)",
+                "Lastthird": "02:41 (WAT)"
+            },
+            "date": {
+                "readable": "27 Apr 2024",
+                "timestamp": "1714204861",
+                "gregorian": {
+                    "date": "27-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "27",
+                    "weekday": {
+                        "en": "Saturday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "18-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "18",
+                    "weekday": {
+                        "en": "Al Sabt",
+                        "ar": "السبت"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:18 (WAT)",
+                "Sunrise": "06:34 (WAT)",
+                "Dhuhr": "12:49 (WAT)",
+                "Asr": "16:01 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:02 (WAT)",
+                "Imsak": "05:08 (WAT)",
+                "Midnight": "00:44 (WAT)",
+                "Firstthird": "22:47 (WAT)",
+                "Lastthird": "02:41 (WAT)"
+            },
+            "date": {
+                "readable": "28 Apr 2024",
+                "timestamp": "1714291261",
+                "gregorian": {
+                    "date": "28-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "28",
+                    "weekday": {
+                        "en": "Sunday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "19-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "19",
+                    "weekday": {
+                        "en": "Al Ahad",
+                        "ar": "الاحد"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:18 (WAT)",
+                "Sunrise": "06:34 (WAT)",
+                "Dhuhr": "12:49 (WAT)",
+                "Asr": "16:01 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:02 (WAT)",
+                "Imsak": "05:08 (WAT)",
+                "Midnight": "00:44 (WAT)",
+                "Firstthird": "22:47 (WAT)",
+                "Lastthird": "02:41 (WAT)"
+            },
+            "date": {
+                "readable": "29 Apr 2024",
+                "timestamp": "1714377661",
+                "gregorian": {
+                    "date": "29-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "29",
+                    "weekday": {
+                        "en": "Monday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "20-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "20",
+                    "weekday": {
+                        "en": "Al Athnayn",
+                        "ar": "الاثنين"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        },
+        {
+            "timings": {
+                "Fajr": "05:17 (WAT)",
+                "Sunrise": "06:33 (WAT)",
+                "Dhuhr": "12:49 (WAT)",
+                "Asr": "16:01 (WAT)",
+                "Sunset": "18:54 (WAT)",
+                "Maghrib": "18:59 (WAT)",
+                "Isha": "20:02 (WAT)",
+                "Imsak": "05:07 (WAT)",
+                "Midnight": "00:44 (WAT)",
+                "Firstthird": "22:47 (WAT)",
+                "Lastthird": "02:40 (WAT)"
+            },
+            "date": {
+                "readable": "30 Apr 2024",
+                "timestamp": "1714464061",
+                "gregorian": {
+                    "date": "30-04-2024",
+                    "format": "DD-MM-YYYY",
+                    "day": "30",
+                    "weekday": {
+                        "en": "Tuesday"
+                    },
+                    "month": {
+                        "number": 4,
+                        "en": "April"
+                    },
+                    "year": "2024",
+                    "designation": {
+                        "abbreviated": "AD",
+                        "expanded": "Anno Domini"
+                    }
+                },
+                "hijri": {
+                    "date": "21-10-1445",
+                    "format": "DD-MM-YYYY",
+                    "day": "21",
+                    "weekday": {
+                        "en": "Al Thalaata",
+                        "ar": "الثلاثاء"
+                    },
+                    "month": {
+                        "number": 10,
+                        "en": "Shawwāl",
+                        "ar": "شَوّال"
+                    },
+                    "year": "1445",
+                    "designation": {
+                        "abbreviated": "AH",
+                        "expanded": "Anno Hegirae"
+                    },
+                    "holidays": []
+                }
+            },
+            "meta": {
+                "latitude": 6.447048,
+                "longitude": 3.344747,
+                "timezone": "Africa/Lagos",
+                "method": {
+                    "id": 21,
+                    "name": "Morocco",
+                    "params": {
+                        "Fajr": 19,
+                        "Isha": 17
+                    },
+                    "location": {
+                        "latitude": 33.9715904,
+                        "longitude": -6.8498129
+                    }
+                },
+                "latitudeAdjustmentMethod": "ANGLE_BASED",
+                "midnightMode": "STANDARD",
+                "school": "STANDARD",
+                "offset": {
+                    "Imsak": 0,
+                    "Fajr": 0,
+                    "Sunrise": 0,
+                    "Dhuhr": 5,
+                    "Asr": 0,
+                    "Maghrib": 5,
+                    "Sunset": 0,
+                    "Isha": 0,
+                    "Midnight": 0
+                }
+            }
+        }
+    ]
+}
