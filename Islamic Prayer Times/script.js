@@ -25,14 +25,20 @@ checkPrayerTimeButton.addEventListener('click', async () => {
 
         // Display prayer times in the app container
         appContainer.innerHTML = `
-            <h2>Prayer Times for ${city}</h2>
-            <ul>
-                <li>Fajr: ${prayerTimes.Fajr}</li>
-                <li>Dhuhr: ${prayerTimes.Dhuhr}</li>
-                <li>Asr: ${prayerTimes.Asr}</li>
-                <li>Maghrib: ${prayerTimes.Maghrib}</li>
-                <li>Isha: ${prayerTimes.Isha}</li>
-            </ul>`;
+        <h2>Prayer Times for ${city}</h2>
+        <ul>
+            <li>Fajr: ${prayerTimes.Fajr}</li>
+            <li>Sunrise: ${prayerTimes.Sunrise}</li>
+            <li>Dhuhr: ${prayerTimes.Dhuhr}</li>
+            <li>Asr: ${prayerTimes.Asr}</li>
+            <li>Sunset: ${prayerTimes.Sunset}</li>
+            <li>Maghrib: ${prayerTimes.Maghrib}</li>
+            <li>Isha: ${prayerTimes.Isha}</li>
+            <li>Imsak: ${prayerTimes.Imsak}</li>
+            <li>Midnight: ${prayerTimes.Midnight}</li>
+            <li>First Third: ${prayerTimes.Firstthird}</li>
+            <li>Last Third: ${prayerTimes.Lastthird}</li>
+        </ul>`;
 
         // Calculate time until next prayer (Dhuhr)
         const now = new Date();
