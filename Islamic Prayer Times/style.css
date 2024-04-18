@@ -8,5 +8,9 @@
 body{
     color: white;
     background-color: black;
+    background-image: url('https://cdn.aladhan.com/images/backgrounds/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
