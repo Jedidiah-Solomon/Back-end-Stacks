@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARRAY</title>
-</head>
-<body>
-
-    <div class="container"></div>
-
-    <script>
-       
-
-        const fruits = ['Banana', 'Cowpea', 'Pineapple'];
+const fruits = ['Banana', 'Cowpea', 'Pineapple'];
 
         fruits.push('Anthil');//add to the end
         //fruits.pop()// removes from the end
-        //fruits.unshift('Beans'); // adds to begining
-        //fruits.shift();// removes to begining
+        //fruits.unshift('Beans'); // adds to the beginning
+        //fruits.shift();// removes from beginning
 
 
         console.log(fruits);
@@ -166,7 +152,4 @@
         const fullName = combineStrings('Mr.', 'Jedy', 'Onwubiko');
 
         console.log(fullName);
-    </script>
-    
-</body>
-</html>
+        */

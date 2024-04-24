@@ -73,19 +73,19 @@ function formatTime(milliseconds) {
 
 // Function to change the background image
 function changeBackground() {
-    var currentImageIndex = 1; // Start with image 0
-    var maxImageIndex = 53; // Maximum image index
-    var imageUrlBase = 'https://cdn.aladhan.com/images/backgrounds/'; // Base URL for images
+    let currentImageIndex = 1; // Start with image 1
+    let maxImageIndex = 53; // Maximum image index
+    let imageUrlBase = 'https://cdn.aladhan.com/images/backgrounds/'; // Base URL for images
 
     setInterval(function() {
         // Construct the URL for the next background image
-        var imageUrl = imageUrlBase + currentImageIndex + '.jpg';
+        let imageUrl = imageUrlBase + currentImageIndex + '.jpg';
         // Update the body's background image style
         document.body.style.backgroundImage = 'url(' + imageUrl + ')';
 
         // Increment the index to point to the next image
         currentImageIndex++;
-        // If we've reached the last image, reset to 0
+        // If we've reached the last image, reset to 1
         if (currentImageIndex > maxImageIndex) {
             currentImageIndex = 1;
         }
