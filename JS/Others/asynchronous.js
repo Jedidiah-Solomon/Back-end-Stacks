@@ -521,7 +521,7 @@ function displayOnScreen(data) {
 
     // Display bin info
     const metaElement = document.createElement("div");
-    metaElement.innerHTML = `<br> Bin ID: ${data.metadata.id} <br> Bin Name: ${data.metadata.name}`;
+    metaElement.innerHTML = `<br> Bin ID: <b>${data.metadata.id}</b> <br> Bin Name: <b>${data.metadata.name}<b/>`;
     container.appendChild(metaElement);
 }
 
@@ -534,6 +534,15 @@ const binUrl = `https://api.jsonbin.io/v3/b/${binId}`;
 const jedRequest = new XMLHttpRequest();
 jedRequest.onreadystatechange = function() {
     switch (jedRequest.readyState) {
+        case 1:
+            console.log("Request opened (readyState 1)");
+            break;
+        case 2:
+            console.log("Request sent (readyState 2)");
+            break;
+        case 3:
+            console.log("Response being received (readyState 3)");
+            break;
         case 4:
             if (jedRequest.status === 200) {
                 const users = JSON.parse(jedRequest.responseText);
