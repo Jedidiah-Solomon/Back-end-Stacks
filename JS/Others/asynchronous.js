@@ -236,7 +236,7 @@ However, if you have specific use cases (such as tracking progress or handling s
 
 
 
-  
+ /* 
   // Get the container element where you want to display the user information
 const container = document.getElementById("userContainer");
 
@@ -364,3 +364,233 @@ jedRequest.onreadystatechange = function() {
 
 jedRequest.open('GET', "./asynchronous.json");
 jedRequest.send();
+
+
+// use https://jsonbin.io/  to save json files for api use
+
+
+//-------------------------------------//
+
+// Define the displayOnScreen function
+function displayOnScreen(data) {
+    const container = document.getElementById("userContainer");
+
+    // Assuming data is an array of user objects
+    data.forEach(user => {
+        const nameElement = document.createElement("p");
+        nameElement.textContent = `Name: ${user.first_name} ${user.last_name}`;
+        container.appendChild(nameElement);
+
+        const emailElement = document.createElement("p");
+        emailElement.textContent = `Email: ${user.email}`;
+        container.appendChild(emailElement);
+    });
+}
+
+// Fetch data from the JSONBin.io bin using onreadystatechange with 1 - 4
+const binId = "6628e4cbacd3cb34a83d8a02"; 
+const binUrl = `https://api.jsonbin.io/b/${binId}`;
+
+const jedRequest = new XMLHttpRequest();
+jedRequest.onreadystatechange = function() {
+    switch (jedRequest.readyState) {
+        case 1:
+            console.log("Request opened (readyState 1)");
+            break;
+        case 2:
+            console.log("Request sent (readyState 2)");
+            break;
+        case 3:
+            console.log("Response being received (readyState 3)");
+            break;
+        case 4:
+            if (jedRequest.status === 200) {
+                const users = JSON.parse(jedRequest.responseText);
+                displayOnScreen(users); // Call the displayOnScreen function
+                console.log(`Status of your request: ${jedRequest.status}`);
+            } else {
+                console.log(`Error status: ${jedRequest.status}`);
+            }
+            break;
+        default:
+            console.log("Unhandled readyState");
+    }
+};
+
+jedRequest.open('GET', binUrl);
+jedRequest.send();
+*/
+
+
+/* TO CHECK IF RESPOSE IS AN ARRAY
+
+// Define the displayOnScreen function
+function displayOnScreen(data) {
+    const container = document.getElementById("userContainer");
+
+    if (Array.isArray(data)) {
+        data.forEach(user => {
+            const nameElement = document.createElement("p");
+            nameElement.textContent = `Name: ${user.first_name} ${user.last_name}`;
+            container.appendChild(nameElement);
+
+            const emailElement = document.createElement("p");
+            emailElement.textContent = `Email: ${user.email}`;
+            container.appendChild(emailElement);
+        });
+    } else {
+        console.log("Data is not an array.");
+    }
+}
+
+//-------------THE JSON FILE FROM JSONBIN.IO/
+{
+    "record": [
+        {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        },
+        {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        },
+        {
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        },
+        {
+            "id": 4,
+            "email": "eve.holt@reqres.in",
+            "first_name": "Eve",
+            "last_name": "Holt",
+            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+        },
+        {
+            "id": 5,
+            "email": "charles.morris@reqres.in",
+            "first_name": "Charles",
+            "last_name": "Morris",
+            "avatar": "https://reqres.in/img/faces/5-image.jpg"
+        },
+        {
+            "id": 6,
+            "email": "tracey.ramos@reqres.in",
+            "first_name": "Tracey",
+            "last_name": "Ramos",
+            "avatar": "https://reqres.in/img/faces/6-image.jpg"
+        }
+    ],
+    "metadata": {
+        "id": "6628e4cbacd3cb34a83d8a02",
+        "private": true,
+        "createdAt": "2024-04-24T10:54:03.404Z",
+        "collectionId": "6628e429ad19ca34f85f13aa",
+        "name": "asynchronous"
+    }
+}
+
+*/
+
+
+function displayOnScreen(data) {
+    const container = document.getElementById("userContainer");
+
+    // Assuming data.record is an array of user objects
+    data.record.forEach(user => {
+        const nameElement = document.createElement("p");
+        nameElement.textContent = `Name: ${user.first_name} ${user.last_name}`;
+        container.appendChild(nameElement);
+
+        const emailElement = document.createElement("p");
+        emailElement.textContent = `Email: ${user.email}`;
+        container.appendChild(emailElement);
+
+        const avatarElement = document.createElement("img");
+        avatarElement.src = user.avatar;
+        container.appendChild(avatarElement);
+    });
+
+    // Display bin info
+    const metaElement = document.createElement("div");
+    metaElement.innerHTML = `<br> Bin ID: ${data.metadata.id} <br> Bin Name: ${data.metadata.name}`;
+    container.appendChild(metaElement);
+}
+
+ 
+
+// Fetch data from the JSONBin.io bin using onreadystatechange with 1 - 4
+const binId = "6628e4cbacd3cb34a83d8a02";
+const binUrl = `https://api.jsonbin.io/v3/b/${binId}`;
+
+const jedRequest = new XMLHttpRequest();
+jedRequest.onreadystatechange = function() {
+    switch (jedRequest.readyState) {
+        case 4:
+            if (jedRequest.status === 200) {
+                const users = JSON.parse(jedRequest.responseText);
+                console.log(users)
+                displayOnScreen(users); // Call the displayOnScreen function
+                console.log(`Status of your request: ${jedRequest.status}`);
+            } else {
+                console.log(`Error status: ${jedRequest.status}`);
+            }
+            break;
+        default:
+            console.log("Unhandled readyState");
+    }
+};
+
+jedRequest.open('GET', binUrl);
+jedRequest.setRequestHeader("X-Master-Key", "$2a$10$B9sUREv0OBvAnbJCqELq6OlWS6/TQFTirrF3JzKmlyTrrBTorjWYS");
+jedRequest.setRequestHeader("X-Access-Key", "$2a$10$DgDtNwvpjGCt4Q0Q7zRDoeyRhYeBNhBc8b5eCzIA66ZeM0zxRky6u");
+jedRequest.send();
+
+
+/*
+
+        <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Promise Object</h1>
+<h2>The then() Metod</h2>
+
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let req = new XMLHttpRequest();
+  req.open('GET', "mycar.html");
+  req.onload = function() {
+    if (req.status == 200) {
+      myResolve(req.response);
+    } else {
+      myReject("File not Found");
+    }
+  };
+  req.send();
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+</script>
+
+</body>
+</html>
+
+
+*/
