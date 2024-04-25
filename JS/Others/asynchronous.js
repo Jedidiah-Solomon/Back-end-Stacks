@@ -565,6 +565,13 @@ jedRequest.send();
 
 
 /*
+    dont use both of x-mster-key an x-access-key use one, master key will all actions
+    If you mistakenly pass X-Master-Key as well as X-Access-Key at the same time,
+     priority will be given to X-Master-Key instead of the X-Access-Key.
+
+*/
+
+/*
 
         <!DOCTYPE html>
 <html>
