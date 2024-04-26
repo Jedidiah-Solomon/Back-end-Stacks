@@ -1,0 +1,17 @@
+{
+  "name": "Tailwind CSS and JSON Server",
+  "version": "1.0.0",
+  "description": "Tailwind css use by Jedy AND json server",
+  "main": "json-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/style.css --watch",
+    "start": "json-server --watch ./database/db1.json"
+  },
+  "author": "Jedidiah Solomon",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^1.0.0-alpha.23",
+    "tailwindcss": "^3.4.3"
+  }
+}

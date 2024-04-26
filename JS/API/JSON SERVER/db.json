@@ -1,0 +1,155 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "username": "john_doe",
+        "password": "password123",
+        "firstName": "John",
+        "lastName": "Doe",
+        "age": 35,
+        "yearOfEmployment": 2005,
+        "hobbies": ["Gardening", "Photography", "Hiking"],
+        "address": {
+          "street": "456 Elm Ave",
+          "city": "Metropolis",
+          "country": "Canada"
+        }
+      },
+      {
+        "id": 2,
+        "username": "maria_garcia",
+        "password": "maria@123",
+        "firstName": "Maria",
+        "lastName": "Garcia",
+        "age": 28,
+        "yearOfEmployment": 2018,
+        "hobbies": ["Swimming", "Traveling", "Cooking"],
+        "address": {
+          "street": "789 Oak Rd",
+          "city": "Barcelona",
+          "country": "Spain"
+        }
+      },
+      {
+        "id": 3,
+        "username": "ahmed_khan",
+        "password": "ahmed123",
+        "firstName": "Ahmed",
+        "lastName": "Khan",
+        "age": 31,
+        "yearOfEmployment": 2012,
+        "hobbies": ["Chess", "Painting"],
+        "address": {
+          "street": "10th Street",
+          "city": "Dubai",
+          "country": "UAE"
+        }
+      },
+      {
+        "id": 4,
+        "username": "emma_smith",
+        "password": "emma@123",
+        "firstName": "Emma",
+        "lastName": "Smith",
+        "age": 24,
+        "yearOfEmployment": 2020,
+        "hobbies": ["Reading", "Running"],
+        "address": {
+          "street": "123 Maple Lane",
+          "city": "Springfield",
+          "country": "USA"
+        }
+      },
+      {
+        "id": 5,
+        "username": "luis_rodriguez",
+        "password": "luis@123",
+        "firstName": "Luis",
+        "lastName": "Rodriguez",
+        "age": 29,
+        "yearOfEmployment": 2015,
+        "hobbies": ["Soccer", "Cooking"],
+        "address": {
+          "street": "567 Pine St",
+          "city": "Madrid",
+          "country": "Spain"
+        }
+      },
+      {
+        "id": 6,
+        "username": "sophie_brown",
+        "password": "sophie@123",
+        "firstName": "Sophie",
+        "lastName": "Brown",
+        "age": 27,
+        "yearOfEmployment": 2019,
+        "hobbies": ["Yoga", "Painting"],
+        "address": {
+          "street": "789 Willow Ave",
+          "city": "Paris",
+          "country": "France"
+        }
+      },
+      {
+        "id": 7,
+        "username": "daniel_lee",
+        "password": "daniel@123",
+        "firstName": "Daniel",
+        "lastName": "Lee",
+        "age": 33,
+        "yearOfEmployment": 2010,
+        "hobbies": ["Golf", "Reading"],
+        "address": {
+          "street": "890 Oak Lane",
+          "city": "New York",
+          "country": "USA"
+        }
+      },
+      {
+        "id": 8,
+        "username": "isabella_martinez",
+        "password": "isabella@123",
+        "firstName": "Isabella",
+        "lastName": "Martinez",
+        "age": 26,
+        "yearOfEmployment": 2017,
+        "hobbies": ["Dancing", "Traveling"],
+        "address": {
+          "street": "234 Elm St",
+          "city": "Barcelona",
+          "country": "Spain"
+        }
+      },
+      {
+        "id": 9,
+        "username": "michael_nguyen",
+        "password": "michael@123",
+        "firstName": "Michael",
+        "lastName": "Nguyen",
+        "age": 30,
+        "yearOfEmployment": 2013,
+        "hobbies": ["Photography", "Hiking"],
+        "address": {
+          "street": "345 Oak Ave",
+          "city": "Sydney",
+          "country": "Australia"
+        }
+      },
+      {
+        "id": 10,
+        "username": "emily_kim",
+        "password": "emily@123",
+        "firstName": "Emily",
+        "lastName": "Kim",
+        "age": 28,
+        "yearOfEmployment": 2016,
+        "hobbies": ["Reading", "Cooking"],
+        "address": {
+          "street": "456 Birch Lane",
+          "city": "Seoul",
+          "country": "South Korea"
+        }
+      }
+    ]
+  }
+  
