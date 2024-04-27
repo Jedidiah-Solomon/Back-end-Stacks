@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+    <style>
+        input:disabled {
+            background-color: #dddddd; /* Light grey background */
+            color: #aaaaaa; /* Dimmed text color */
+            cursor:not-allowed; /* Cursor to indicate the field is not interactive */
+            border: 1px solid #cccccc; /* Grey border */
+        }
+      
+        input:invalid {
+          border: 2px solid #ff0000;
+          background-color: #ffe5e5;
+        }
+      
+        input:valid {
+          border: 2px solid #00ff00;
+          background-color: #e5ffe5;
+        }
+      
+        input:optional {
+          border: 1px dashed #666666;
+        }
+      </style>
+</head>
+<body onload="checkCookie()">
+    
+    <div class="container">1</div>
+    <div class="container">2</div>
+    <div class="container">3</div>
+    <p id="demo"></p>
+
+    <input type="button" value="Load new document" onclick="newDoc()">
+
+
+    <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+      <p id="demo2"></p>
+
+
+      <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+      </form>
+
+      
+<form>
+    <label for="username">Username (required):</label>
+    <input type="text" id="username" name="username" required><br><br>
+  
+    <label for="email">Email (required):</label>
+    <input type="email" id="email" name="email"  disabled><br><br>
+  
+    <label for="website">Website (optional):</label>
+    <input type="url" id="website" name="website" optional><br><br>
+  
+    <label for="age">Age (must be 18 or older):</label>
+    <input type="number" id="age" name="age" min="18" max="45" required><br><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+      
+
+    <script>
+
+let base = document.baseURI;
+let myURL = document.getElementsByClassName('container');//getElementsByClassName IS A COLLECTION AND SO IS READ-ONLY. USE ARRAY METHODS TO ACCESS IT.
+console.log(myURL);
+myURL[0].innerHTML = base;//
+
+
+
+//--------------JavaScript Window Location--//
+//The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+
+/*
+The window.location object can be written without the window prefix.
+
+Some examples:
+
+window.location.href returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+window.location.assign() loads a new document
+*/
+
+
+document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+
+document.getElementById("demo").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+
+document.getElementById("demo").innerHTML =
+"Page path is " + window.location.pathname;
+
+document.getElementById("demo").innerHTML =
+"Page protocol is " + window.location.protocol;
+
+document.getElementById("demo").innerHTML =
+"Port number is " + window.location.port;
+
+function newDoc() {
+    document.body.style.backgroundColor = "red";
+  window.location.assign("https://www.google.com")
+  
+}
+
+//document.cookie = "username=John Doe; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/";
+
+// hOW TO SET, GET AND DELETE COOKIE
+
+function setCookie(cookieName,cookieValue,expiryDays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (expiryDays*24*60*60*1000));//cal the milliseconds multiplied by the days user put to get the totla millisseconds
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
+
+function getCookie(cookieName) {
+  let name = cookieName + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);//decode the whole cookie on this page
+  let singleCookie = decodedCookie.split(';');
+  for(let i = 0; i < singleCookie.length; i++) {
+    let c = singleCookie[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  while (!user) {
+    user = prompt("Please enter your name:", "");
+    if (user && user.trim() !== "") {
+      setCookie("username", user, 30);
+      alert("Welcome " + user);
+    } else {
+      alert("You must enter a name to continue.");
+    }
+  }
+}
+
+
+// Set a cookie for username
+setCookie('first name', 'Paul', 30); // Expires in 30 days
+
+// Set a cookie for address
+setCookie('address', '123 Main St, Springfield', 30); // Expires in 30 days
+
+// Set a cookie for email
+setCookie('email', 'john.doe@example.com', 30); // Expires in 30 days
+
+// Set a cookie for password
+setCookie('password', 'securePassword123', 30); // Expires in 30 days
+//---------
+function checkCookies() {
+  let text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("demo6").innerHTML = text;
+}
+
+
+
+//---------------
+
+const x = document.forms["frm1"];
+let num = document.forms["frm1"].length;
+let num2 = document.forms.length;
+let id = document.forms[0].id;
+console.log(x);
+let text = "";
+for (let i = 0; i < x.length ;i++) {
+  text += x.elements[i].value + "<br>";
+}
+document.getElementById("demo2").innerHTML = text + '' + num + 'and' + num2 + "" + id;
+
+
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+//------------
+
+
+const encodedURI = 'https%3A%2F%2Fwww.example.com%2Fsearch%3Fq%3Djavascript';
+const decodedURI = decodeURIComponent(encodedURI);
+console.log(decodedURI);
+// Output: "https://www.example.com/search?q=javascript"
+
+
+//or
+
+const searchTerm = 'JavaScript Basics';
+const encodedTerm = encodeURIComponent(searchTerm);
+
+console.log(encodedTerm);
+// Output: "JavaScript%20Basics"
+
+
+    </script>
+
+
+
+</body>
+</html>

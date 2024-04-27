@@ -1,0 +1,134 @@
+/* Mailchimp Form */
+.form-style-6{
+	font: 95% Lora, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+}
+.form-style-6 h1{
+	background: #FF6B00;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="email"]
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #FFFFFF;
+	margin-bottom: 4%;
+	border: 1px solid #CCCCCC;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="email"]:focus
+
+{
+	box-shadow: 0 0 5px #FF6B00;
+	padding: 3%;
+	border: 1px solid #FF6B00;
+}
+.form-style-6 input[type="submit"] {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #FF6B00 !important;
+	border: none; 
+	border-radius: 20px; 
+	color: #fff;
+	transition: all;
+	font-size: 14px;
+}
+
+
+.form-style-6 input[type="submit"] {
+  opacity: 1;
+  cursor: pointer;
+  font-size: 16px;
+  background: #FF6B00 !important;
+  transition: all 0.3s ease-in-out; /* Added transition property */
+}
+
+.form-style-6 input[type="submit"]:hover {
+  opacity: 0.7;
+  background-color: #FFFFFF !important;
+  color: #FF6B00 !important;
+  transform: scale(1.1); /* Scale up the button on hover */
+}
+
+
+
+
+/* Work With Us Form */
+
+/* Add bottom border with your color to all input fields */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+    border: none;
+    border-bottom: 1px solid #FFB600; /* Your color */
+    transition: border-bottom 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Add full border with your color on focus */
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form textarea:focus {
+    border-bottom: 2px solid #FFB600; /* Your color */
+}
+
+
+
+
+/* Style the submit button */
+.wpcf7-form input[type="submit"] {
+    border-radius: 50px; /* Border radius of 50px */
+    background-color: #FF6B00; /* Your color */
+    color: #FFFFFF; /* Text color */
+    padding: 10px 20px; /* Increase padding to add space */
+    cursor: pointer; /* Cursor style */
+    border: none; /* Remove border */
+    transition: all 0.3s ease; /* Smooth transition */
+    margin-top: 20px; /* Add margin-top to create space */
+}
+
+
+/* Hover effect for the submit button */
+.wpcf7-form input[type="submit"]:hover {
+    opacity: 0.7; /* Reduce opacity */
+}
+
+/* Add a 2px solid border to the form */
+.wpcf7-form {
+    border: 2px solid #FFB600; /* Border color */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+
+
+/* Adjust margin or padding for the text area */
+.wpcf7-form textarea {
+    margin-top: 10px; /* Example margin-top */
+    padding: 10px; /* Example padding */
+    height: 70px; /* Example height */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+

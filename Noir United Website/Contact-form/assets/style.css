@@ -1,0 +1,128 @@
+
+
+
+
+.contact-container {
+    font-family: 'outfit';
+    background: linear-gradient(#ffdad5, #fff7f9 );  
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2 {
+   font-weight: 600;
+   color: #5B2E23;
+   font-size: 40px;
+   margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #5B2E23;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.contact-inputs:focus{
+    border:2px solid #ff994f;
+}
+
+.contact-inputs::placeholder {
+    color: #a9a9a9 ;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+    resize: none;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    cursor: pointer;
+    transition: border-radius 0.3s ease, opacity 0.3s ease; 
+}
+
+.contact-left button:hover {
+    opacity: 0.5;
+    border-radius: 50px;
+}
+
+.contact-left button img {
+    height: 15px;
+}
+
+.contact-right img {
+    width: 500px;
+}
+
+
+.contact-left span {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    font-size: 28px;
+}
+
+.contact-left span a .fa-facebook {
+    color: rgb(49, 49, 101);
+}
+
+.contact-left span a .fa-x-twitter {
+    color: #000000;
+}
+
+.contact-left span a .fa-youtube {
+    color: red;
+}
+
+.contact-left span a .fa-instagram {
+    color: black;
+}
+
+
+
+
+
+@media (max-width:800px) {
+    .contact-inputs {
+        width: 80vw;
+    }
+    .contact-right {
+        display: none;
+    }
+    .contact-left-title h2 {
+        font-size: 30px;
+    }
+}

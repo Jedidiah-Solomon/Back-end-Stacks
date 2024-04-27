@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validity Property Example</title>
+</head>
+<body>
+    Validity Properties
+The validity property of an input element contains a number of properties related to the validity of data:
+
+Property	Description
+customError	Set to true, if a custom validity message is set.
+patternMismatch	Set to true, if an element's value does not match its pattern attribute.
+rangeOverflow	Set to true, if an element's value is greater than its max attribute.
+rangeUnderflow	Set to true, if an element's value is less than its min attribute.
+stepMismatch	Set to true, if an element's value is invalid per its step attribute.
+tooLong	Set to true, if an element's value exceeds its maxLength attribute.
+typeMismatch	Set to true, if an element's value is invalid per its type attribute.
+valueMissing	Set to true, if an element (with a required attribute) has no value.
+valid	Set to true, if an element's value is valid.
+    <p>The validity property contains boolean properties that represent the validity state of an input element.</p>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="button" onclick="checkValidity()">Check Validity</button>
+    </form>
+
+    <script>
+        function checkValidity() {
+            console.log("Function called!"); 
+            const usernameInput = document.getElementById('username');
+            const validityState = usernameInput.validity;
+
+            console.log('Value Missing:', validityState.valueMissing);
+            console.log('Valid:', validityState.valid);
+            console.log('Pattern Mismatch:', validityState.patternMismatch);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" max="100">
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  if (document.getElementById("id1").validity.rangeOverflow) {
+    text = "Value too large";
+  } else {
+    text = "Input OK";
+  } 
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
