@@ -1,0 +1,19 @@
+#myElement {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+    display: none; /* Initially hidden */
+}
+
+#myElement2 {
+    font-size: 18px;
+    color: #333;
+}
+.highlighted{
+    text-align: center;
+    background-color: red;
+}

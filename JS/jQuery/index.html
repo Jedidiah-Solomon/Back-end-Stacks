@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- CDN<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>-->
+    <!-- GOOGLE  CDN<script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+  </head>
+  <body>
+    <button id="hideButton">Hide All Paragraphs</button>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+
+    <div id="boxOffice">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A molestias
+      beatae velit asperiores praesentium mollitia consequatur at labore
+      temporibus aliquam.
+    </div>
+
+    <button id="fadeInButton">Fade In</button>
+    <button id="slideDownButton">Slide Down</button>
+    <button id="animateButton">Animate</button>
+
+    <div id="myElement">Hello, I'm animated!</div>
+
+    <div id="myElement2" class="myElement">Original content</div>
+    <button id="getTextButton">Get Text</button>
+    <button id="setTextButton">Set Text</button>
+    <button id="getAttributeButton">Get Attribute</button>
+    <button id="setAttributeButton">Set Attribute</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("*").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Click me</button>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $(this).hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Click me</button>
+  </body>
+</html>
+$(this) Selects the current HTML element $("p.intro") Selects all
+<p>elements with class="intro" $("p:first") Selects the first</p>
+<p>
+  element $("ul li:first") Selects the first
+  <li>
+    element of the first
+    <ul>
+      $("ul li:first-child") Selects the first
+      <li>
+        element of every
+        <ul>
+          $("[href]") Selects all elements with an href attribute
+          $("a[target='_blank']") Selects all
+          <a>
+            elements with a target attribute value equal to "_blank"
+            $("a[target!='_blank']") Selects all
+            <a>
+              elements with a target attribute value NOT equal to "_blank"
+              $(":button") Selects all
+              <button>
+                elements and <input /> elements of type="button" $("tr:even")
+                Selects all even
+                <tr>
+                  elements $("tr:odd") Selects all odd
+                </tr>
+                <tr>
+                  elements Here are some common DOM events: Mouse Events
+                  Keyboard Events Form Events Document/Window Events click
+                  keypress submit load dblclick keydown change resize mouseenter
+                  keyup focus scroll mouseleave unload blur
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#p1").hover(
+                            function () {
+                              document.getElementById("box").textContent =
+                                "You entered p1!";
+                            },
+                            function () {
+                              document.getElementById("box").textContent =
+                                "Bye! You now leave p1!";
+                            }
+                          );
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p id="p1">This is a paragraph.</p>
+                      <p id="box"></p>
+                    </body>
+                  </html>
+                  The hover() method takes two functions and is a combination of
+                  the mouseenter() and mouseleave() methods. The first function
+                  is executed when the mouse enters the HTML element, and the
+                  second function is executed when the mouse leaves the HTML
+                  element
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("p").on("click", function () {
+                            $(this).hide();
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>If you click on me, I will disappear.</p>
+                      <p>Click me away!</p>
+                      <p>Click me too!</p>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("p").on({
+                            mouseenter: function () {
+                              $(this).css("background-color", "lightgray");
+                            },
+                            mouseleave: function () {
+                              $(this).css("background-color", "lightblue");
+                            },
+                            click: function () {
+                              $(this).css("background-color", "yellow");
+                            },
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>
+                        Click or move the mouse pointer over this paragraph.
+                      </p>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#hide").click(function () {
+                            $("p").hide();
+                          });
+                          $("#show").click(function () {
+                            $("p").show();
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>
+                        If you click on the "Hide" button, I will disappear.
+                      </p>
+
+                      <button id="hide">Hide</button>
+                      <button id="show">Show</button>
+                    </body>
+                  </html>
+                  Syntax: $(selector).hide(speed,callback);
+                  $(selector).show(speed,callback); The optional speed parameter
+                  specifies the speed of the hiding/showing, and can take the
+                  following values: "slow", "fast", or milliseconds.
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("p").hide(3000);
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <button>Hide</button>
+
+                      <p>This is a paragraph with little content.</p>
+                      <p>This is another small paragraph.</p>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("p").toggle();
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <button>
+                        Toggle between hiding and showing the paragraphs
+                      </button>
+
+                      <p>This is a paragraph with little content.</p>
+                      <p>This is another small paragraph.</p>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("p").toggle(3000);
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <button>
+                        Toggle between hiding and showing the paragraphs
+                      </button>
+
+                      <p>This is a paragraph with little content.</p>
+                      <p>This is another small paragraph.</p>
+                    </body>
+                  </html>
+                  jQuery fadeIn() Demonstrates the jQuery fadeIn() method.
+                  jQuery fadeOut() Demonstrates the jQuery fadeOut() method.
+                  jQuery fadeToggle() Demonstrates the jQuery fadeToggle()
+                  method. jQuery fadeTo() Demonstrates the jQuery fadeTo()
+                  method.
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("#div1").fadeIn();
+                            $("#div2").fadeIn("slow");
+                            $("#div3").fadeIn(3000);
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>Demonstrate fadeIn() with different parameters.</p>
+
+                      <button>Click to fade in boxes</button><br /><br />
+
+                      <div
+                        id="div1"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          display: none;
+                          background-color: red;
+                        "
+                      ></div>
+                      <br />
+                      <div
+                        id="div2"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          display: none;
+                          background-color: green;
+                        "
+                      ></div>
+                      <br />
+                      <div
+                        id="div3"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          display: none;
+                          background-color: blue;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("#div1").fadeToggle();
+                            $("#div2").fadeToggle("slow");
+                            $("#div3").fadeToggle(3000);
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>
+                        Demonstrate fadeToggle() with different speed
+                        parameters.
+                      </p>
+
+                      <button>Click to fade in/out boxes</button><br /><br />
+
+                      <div
+                        id="div1"
+                        style="width: 80px; height: 80px; background-color: red"
+                      ></div>
+                      <br />
+                      <div
+                        id="div2"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          background-color: green;
+                        "
+                      ></div>
+                      <br />
+                      <div
+                        id="div3"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          background-color: blue;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("#div1").fadeTo("slow", 0);
+                            $("#div2").fadeTo("slow", 0.4);
+                            $("#div3").fadeTo("slow", 0.7);
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>Demonstrate fadeTo() with different parameters.</p>
+
+                      <button>Click to fade boxes</button><br /><br />
+
+                      <div
+                        id="div1"
+                        style="width: 80px; height: 80px; background-color: red"
+                      ></div>
+                      <br />
+                      <div
+                        id="div2"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          background-color: green;
+                        "
+                      ></div>
+                      <br />
+                      <div
+                        id="div3"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          background-color: blue;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  he jQuery fadeTo() method allows fading to a given opacity
+                  (value between 0 and 1). jQuery Sliding Methods With jQuery
+                  you can create a sliding effect on elements. jQuery has the
+                  following slide methods: slideDown() slideUp() slideToggle()
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#flip").click(function () {
+                            $("#panel").slideDown("slow");
+                          });
+                        });
+                      </script>
+                      <style>
+                        #panel,
+                        #flip {
+                          padding: 5px;
+                          text-align: center;
+                          background-color: #e5eecc;
+                          border: solid 1px #c3c3c3;
+                        }
+
+                        #panel {
+                          padding: 50px;
+                          display: none;
+                        }
+                      </style>
+                    </head>
+                    <body>
+                      <div id="flip">Click to slide down panel</div>
+                      <div id="panel">Hello world!</div>
+                    </body>
+                  </html>
+                  jQuery Animations - The animate() Method The jQuery animate()
+                  method is used to create custom animations. Syntax:
+                  $(selector).animate({params},speed,callback);
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("div").animate({ left: "250px" });
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <button>Start Animation</button>
+
+                      <p>
+                        By default, all HTML elements have a static position,
+                        and cannot be moved. To manipulate the position,
+                        remember to first set the CSS position property of the
+                        element to relative, fixed, or absolute!
+                      </p>
+
+                      <div
+                        style="
+                          background: #98bf21;
+                          height: 100px;
+                          width: 100px;
+                          position: absolute;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("div").animate({
+                              left: "250px",
+                              opacity: "0.5",
+                              height: "150px",
+                              width: "150px",
+                            });
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <button>Start Animation</button>
+
+                      <p>
+                        By default, all HTML elements have a static position,
+                        and cannot be moved. To manipulate the position,
+                        remember to first set the CSS position property of the
+                        element to relative, fixed, or absolute!
+                      </p>
+
+                      <div
+                        style="
+                          background: #98bf21;
+                          height: 100px;
+                          width: 100px;
+                          position: absolute;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  Is it possible to manipulate ALL CSS properties with the
+                  animate() method? Yes, almost! However, there is one important
+                  thing to remember: all property names must be camel-cased when
+                  used with the animate() method: You will need to write
+                  paddingLeft instead of padding-left, marginRight instead of
+                  margin-right, and so on.
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("div").animate({
+                              height: "toggle",
+                            });
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>
+                        Click the button multiple times to toggle the animation.
+                      </p>
+
+                      <button>Start Animation</button>
+
+                      <p>
+                        By default, all HTML elements have a static position,
+                        and cannot be moved. To manipulate the position,
+                        remember to first set the CSS position property of the
+                        element to relative, fixed, or absolute!
+                      </p>
+
+                      <div
+                        style="
+                          background: #98bf21;
+                          height: 100px;
+                          width: 100px;
+                          position: absolute;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            var div = $("div");
+                            div.animate(
+                              { height: "300px", opacity: "0.4" },
+                              "slow"
+                            );
+                            div.animate(
+                              { width: "300px", opacity: "0.8" },
+                              "slow"
+                            );
+                            div.animate(
+                              { height: "100px", opacity: "0.4" },
+                              "slow"
+                            );
+                            div.animate(
+                              { width: "100px", opacity: "0.8" },
+                              "slow"
+                            );
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <button>Start Animation</button>
+
+                      <p>
+                        By default, all HTML elements have a static position,
+                        and cannot be moved. To manipulate the position,
+                        remember to first set the CSS position property of the
+                        element to relative, fixed, or absolute!
+                      </p>
+
+                      <div
+                        style="
+                          background: #98bf21;
+                          height: 100px;
+                          width: 100px;
+                          position: absolute;
+                        "
+                      ></div>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#flip").click(function () {
+                            $("#panel").slideDown(5000);
+                          });
+                          $("#stop").click(function () {
+                            $("#panel").stop();
+                          });
+                        });
+                      </script>
+                      <style>
+                        #panel,
+                        #flip {
+                          padding: 5px;
+                          font-size: 18px;
+                          text-align: center;
+                          background-color: #555;
+                          color: white;
+                          border: solid 1px #666;
+                          border-radius: 3px;
+                        }
+
+                        #panel {
+                          padding: 50px;
+                          display: none;
+                        }
+                      </style>
+                    </head>
+                    <body>
+                      <button id="stop">Stop sliding</button>
+
+                      <div id="flip">Click to slide down panel</div>
+                      <div id="panel">Hello world!</div>
+                    </body>
+                  </html>
+                  Example with Callback $("button").click(function(){
+                  $("p").hide("slow", function(){ alert("The paragraph is now
+                  hidden"); }); });
+
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            $("#p1")
+                              .css("color", "red")
+                              .slideUp(2000)
+                              .slideDown(2000);
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      jQuery - Chaining
+                      <p id="p1">jQuery is fun!!</p>
+
+                      <button>Click me</button>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#btn1").click(function () {
+                            alert("Text: " + $("#test").text());
+                          });
+                          $("#btn2").click(function () {
+                            alert("HTML: " + $("#test").html());
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p id="test">
+                        This is some <b>bold</b> text in a paragraph.
+                      </p>
+
+                      <button id="btn1">Show Text</button>
+                      <button id="btn2">Show HTML</button>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            alert("Value: " + $("#test").val());
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>
+                        Name:
+                        <input type="text" id="test" value="Mickey Mouse" />
+                      </p>
+
+                      <button>Show Value</button>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("button").click(function () {
+                            alert($("#w3s").attr("href"));
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>
+                        <a href="https://www.w3schools.com" id="w3s"
+                          >W3Schools.com</a
+                        >
+                      </p>
+
+                      <button>Show href Value</button>
+                    </body>
+                  </html>
+                  $("#btn1").click(function(){ $("#test1").text("Hello world!");
+                  }); $("#btn2").click(function(){ $("#test2").html("<b
+                    >Hello world!</b
+                  >"); }); $("#btn3").click(function(){ $("#test3").val("Dolly
+                  Duck"); }); $("button").click(function(){
+                  $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
+                  }); $("button").click(function(){ $("#w3s").attr({ "href" :
+                  "https://www.w3schools.com/jquery/", "title" : "W3Schools
+                  jQuery Tutorial" }); }); Add New HTML Content We will look at
+                  four jQuery methods that are used to add new content: append()
+                  - Inserts content at the end of the selected elements
+                  prepend() - Inserts content at the beginning of the selected
+                  elements after() - Inserts content after the selected elements
+                  before() - Inserts content before the selected elements
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#btn1").click(function () {
+                            $("p").append(" <b>Appended text</b>.");
+                          });
+
+                          $("#btn2").click(function () {
+                            $("ol").append("<li>Appended item</li>");
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>This is a paragraph.</p>
+                      <p>This is another paragraph.</p>
+
+                      <ol>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3</li>
+                      </ol>
+
+                      <button id="btn1">Append text</button>
+                      <button id="btn2">Append list items</button>
+                    </body>
+                  </html>
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                      <script>
+                        $(document).ready(function () {
+                          $("#btn1").click(function () {
+                            $("p").prepend("<b>Prepended text</b>. ");
+                          });
+                          $("#btn2").click(function () {
+                            $("ol").prepend("<li>Prepended item</li>");
+                          });
+                        });
+                      </script>
+                    </head>
+                    <body>
+                      <p>This is a paragraph.</p>
+                      <p>This is another paragraph.</p>
+
+                      <ol>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3</li>
+                      </ol>
+
+                      <button id="btn1">Prepend text</button>
+                      <button id="btn2">Prepend list item</button>
+                    </body>
+                  </html>
+                </tr>
+              </button></a
+            ></a
+          >
+        </ul>
+      </li>
+    </ul>
+  </li>
+</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      function appendText() {
+        var txt1 = "<p>Text.</p>"; // Create text with HTML
+        var txt2 = $("<p></p>").text("Text."); // Create text with jQuery
+        var txt3 = document.createElement("p");
+        txt3.innerHTML = "Text."; // Create text with DOM
+        $("body").append(txt1, txt2, txt3); // Append new elements
+      }
+    </script>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <button onclick="appendText()">Append text</button>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("img").before("<b>Before</b>");
+        });
+
+        $("#btn2").click(function () {
+          $("img").after("<i>After</i>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img
+      src="/images/w3jquery.gif"
+      alt="jQuery"
+      width="100"
+      height="140"
+    /><br /><br />
+
+    <button id="btn1">Insert before</button>
+    <button id="btn2">Insert after</button>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      function afterText() {
+        var txt1 = "<b>I </b>"; // Create element with HTML
+        var txt2 = $("<i></i>").text("love "); // Create with jQuery
+        var txt3 = document.createElement("b"); // Create with DOM
+        txt3.innerHTML = "jQuery!";
+        $("img").after(txt1, txt2, txt3); // Insert new elements after img
+      }
+    </script>
+  </head>
+  <body>
+    <img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140" />
+
+    <p>Click the button to insert text after the image.</p>
+
+    <button onclick="afterText()">Insert after</button>
+  </body>
+</html>
+Remove Elements/Content To remove elements and content, there are mainly two
+jQuery methods: remove() - Removes the selected element (and its child elements)
+empty() - Removes the child elements from the selected element
+$("#div1").remove(); $("#div1").empty();
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").remove(".test");
+        });
+      });
+    </script>
+    <style>
+      .test {
+        color: red;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+
+    <button>Remove all p elements with class="test"</button>
+  </body>
+</html>
+$("p").remove(".test, .demo"); jQuery Manipulating CSS jQuery has several
+methods for CSS manipulation. We will look at the following methods: addClass()
+- Adds one or more classes to the selected elements removeClass() - Removes one
+or more classes from the selected elements toggleClass() - Toggles between
+adding/removing classes from the selected elements css() - Sets or returns the
+style attribute
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("h1, h2, p").addClass("blue");
+          $("div").addClass("important");
+        });
+      });
+    </script>
+    <style>
+      .important {
+        font-weight: bold;
+        font-size: xx-large;
+      }
+
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <div>This is some important text!</div>
+    <br />
+
+    <button>Add classes to elements</button>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#div1").addClass("important blue");
+        });
+      });
+    </script>
+    <style>
+      .important {
+        font-weight: bold;
+        font-size: xx-large;
+      }
+
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">This is some text.</div>
+    <div id="div2">This is some text.</div>
+    <br />
+
+    <button>Add classes to first div element</button>
+  </body>
+</html>
+$("button").click(function(){ $("h1, h2, p").toggleClass("blue"); }); jQuery
+css() Method The css() method sets or returns one or more style properties for
+the selected elements.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          alert("Background color = " + $("p").css("background-color"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+
+    <p style="background-color: #ff0000">This is a paragraph.</p>
+    <p style="background-color: #00ff00">This is a paragraph.</p>
+    <p style="background-color: #0000ff">This is a paragraph.</p>
+
+    <button>Return background-color of p</button>
+  </body>
+</html>
+Set a CSS Property To set a specified CSS property, use the following syntax:
+css("propertyname","value"); The following example will set the background-color
+value for ALL matched elements: Example $("p").css("background-color",
+"yellow"); or $("p").css({"background-color": "yellow", "font-size": "200%"});
+jQuery Dimension Methods jQuery has several important methods for working with
+dimensions: width() height() innerWidth() innerHeight() outerWidth()
+outerHeight() jQuery width() and height() Methods The width() method sets or
+returns the width of an element (excludes padding, border and margin). The
+height() method sets or returns the height of an element (excludes padding,
+border and margin). The following example returns the width and height of a
+specified
+<div>
+  element: Example
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $("button").click(function () {
+            var txt = "";
+            txt += "Width of div: " + $("#div1").width() + "</br>";
+            txt += "Height of div: " + $("#div1").height();
+            $("#div1").html(txt);
+          });
+        });
+      </script>
+      <style>
+        #div1 {
+          height: 100px;
+          width: 300px;
+          padding: 10px;
+          margin: 3px;
+          border: 1px solid blue;
+          background-color: lightblue;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="div1"></div>
+      <br />
+
+      <button>Display dimensions of div</button>
+
+      <p>width() - returns the width of an element.</p>
+      <p>height() - returns the height of an element.</p>
+    </body>
+  </html>
+  jQuery innerWidth() and innerHeight() Methods The innerWidth() method returns
+  the width of an element (includes padding). The innerHeight() method returns
+  the height of an element (includes padding). jQuery outerWidth() and
+  outerHeight() Methods The outerWidth() method returns the width of an element
+  (includes padding and border). The outerHeight() method returns the height of
+  an element (includes padding and border).
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var txt = "";
+          txt += "Document width/height: " + $(document).width();
+          txt += "x" + $(document).height() + "\n";
+          txt += "Window width/height: " + $(window).width();
+          txt += "x" + $(window).height();
+          alert(txt);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Display dimensions of document and window</button>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#div1").width(500).height(500);
+        });
+      });
+    </script>
+    <style>
+      #div1 {
+        height: 100px;
+        width: 300px;
+        padding: 10px;
+        margin: 3px;
+        border: 1px solid blue;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <br />
+
+    <button>Resize div</button>
+  </body>
+</html>
+
+$(function() { // Your code here }); best way to use jquery after 3.0.0 avoid
+using ready NOTE: ALWAYS CACHE YOUR STUFF AND USE BEST PRACTICES. USE
+ON('CLICK') AND NOT CLICK FROM 3.3 /* Light and Dart Theme toggle */
+$(function() { const modeIcon = $('#modeIcon'); modeIcon.on('click', function()
+{ $('body').toggleClass('dark-theme'); if ($('body').hasClass('dark-theme')) {
+modeIcon.attr('src', '../../public/img/dark-theme-icon/sun.png'); } else {
+modeIcon.attr('src', '../../public/img/dark-theme-icon/moon.png'); } }); });
+THIS IS SAME AS /* Light and Dart Theme toggle */ $(function() { // Cache the
+selectors const modeIcon = $('#modeIcon'); const body = $('body'); // Store the
+image paths const moonImg = '../../public/img/dark-theme-icon/moon.png'; const
+sunImg = '../../public/img/dark-theme-icon/sun.png'; // Add click event listener
+to the mode icon modeIcon.on('click', function() {
+body.toggleClass('dark-theme'); const iconSrc = body.hasClass('dark-theme') ?
+sunImg : moonImg; modeIcon.attr('src', iconSrc); }); }); BUT THE SECOND IS BEST
+What is Traversing? jQuery traversing, which means "move through", are used to
+"find" (or select) HTML elements based on their relation to other elements.
+Start with one selection and move through that selection until you reach the
+elements you desire. The image below illustrates an HTML page as a tree (DOM
+tree). With jQuery traversing, you can easily move up (ancestors), down
+(descendants) and sideways (siblings) in the tree, starting from the selected
+(current) element. This movement is called traversing - or moving through - the
+DOM tree. Illustration explained: The
+<div>
+  element is the parent of
+  <ul>
+    , and an ancestor of everything inside of it The
+    <ul>
+      element is the parent of both
+      <li>
+        elements, and a child of
+        <div>
+          The left
+          <li>
+            element is the parent of
+            <span
+              >, child of
+              <ul>
+                and a descendant of
+                <div>
+                  The
+                  <span>
+                    element is a child of the left
+                    <li>
+                      and a descendant of
+                      <ul>
+                        and
+                        <div>
+                          The two
+                          <li>
+                            elements are siblings (they share the same parent)
+                            The right
+                          </li>
+                          <li>
+                            element is the parent of
+                            <b
+                              >, child of
+                              <ul>
+                                and a descendant of
+                                <div>
+                                  The
+                                  <b>
+                                    element is a child of the right
+                                    <li>
+                                      and a descendant of
+                                      <ul>
+                                        and
+                                        <div>
+                                          An ancestor is a parent, grandparent,
+                                          great-grandparent, and so on. A
+                                          descendant is a child, grandchild,
+                                          great-grandchild, and so on. Siblings
+                                          share the same parent.
+                                        </div>
+                                      </ul>
+                                    </li></b
+                                  >
+                                </div>
+                              </ul></b
+                            >
+                          </li>
+                        </div>
+                      </ul>
+                    </li></span
+                  >
+                </div>
+              </ul></span
+            >
+          </li>
+        </div>
+      </li>
+    </ul>
+  </ul>
+</div>
+Traversing Up the DOM Tree Three useful jQuery methods for traversing up the DOM
+tree are: parent() parents() parentsUntil() jQuery parent() Method The parent()
+method returns the direct parent element of the selected element. This method
+only traverse a single level up the DOM tree.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("span").parent().css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="ancestors">
+      <div style="width: 500px">
+        div (great-grandparent)
+        <ul>
+          ul (grandparent)
+          <li>
+            li (direct parent)
+            <span>span</span>
+          </li>
+        </ul>
+      </div>
+
+      <div style="width: 500px">
+        div (grandparent)
+        <p>
+          p (direct parent)
+          <span>span</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("span").parents().css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+
+  <body class="ancestors">
+    body (great-great-grandparent)
+    <div style="width: 500px">
+      div (great-grandparent)
+      <ul>
+        ul (grandparent)
+        <li>
+          li (direct parent)
+          <span>span</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+
+  <!-- The outer red border, before the body element, is the html element (also an ancestor) -->
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("span").parents("ul").css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+
+  <body class="ancestors">
+    body (great-great-grandparent)
+    <div style="width: 500px">
+      div (great-grandparent)
+      <ul>
+        ul (grandparent)
+        <li>
+          li (direct parent)
+          <span>span</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("span")
+          .parentsUntil("div")
+          .css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+
+  <body class="ancestors">
+    body (great-great-grandparent)
+    <div style="width: 500px">
+      div (great-grandparent)
+      <ul>
+        ul (grandparent)
+        <li>
+          li (direct parent)
+          <span>span</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+Traversing Down the DOM Tree Two useful jQuery methods for traversing down the
+DOM tree are: children() find()
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .descendants * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("div").children().css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="descendants" style="width: 500px">
+      div (current element)
+      <p>
+        p (child)
+        <span>span (grandchild)</span>
+      </p>
+      <p>
+        p (child)
+        <span>span (grandchild)</span>
+      </p>
+    </div>
+  </body>
+</html>
+jQuery children() Method The children() method returns all direct children of
+the selected element. This method only traverses a single level down the DOM
+tree. You can also use an optional parameter to filter the search for children.
+The following example returns all
+<p>elements with the class name "first", that are direct children of</p>
+<div>
+  $(document).ready(function(){ $("div").children("p.first"); });
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        .descendants * {
+          display: block;
+          border: 2px solid lightgrey;
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $("div").find("span").css({ color: "red", border: "2px solid red" });
+        });
+      </script>
+    </head>
+    <body>
+      <div class="descendants" style="width: 500px">
+        div (current element)
+        <p>
+          p (child)
+          <span>span (grandchild)</span>
+        </p>
+        <p>
+          p (child)
+          <span>span (grandchild)</span>
+        </p>
+      </div>
+    </body>
+  </html>
+  The following example returns all descendants of
+  <div>: Example $(document).ready(function(){ $("div").find("*"); });</div>
+</div>
+With jQuery you can traverse sideways in the DOM tree to find siblings of an
+element. Siblings share the same parent. Traversing Sideways in The DOM Tree
+There are many useful jQuery methods for traversing sideways in the DOM tree:
+siblings() next() nextAll() nextUntil() prev() prevAll() prevUntil()
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .siblings * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("h2").siblings().css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+  <body class="siblings">
+    <div>
+      div (parent)
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>p</p>
+    </div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .siblings * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("h2").next().css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+  <body class="siblings">
+    <div>
+      div (parent)
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>p</p>
+    </div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .siblings * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("h2").nextAll().css({ color: "red", border: "2px solid red" });
+      });
+    </script>
+  </head>
+  <body class="siblings">
+    <div>
+      div (parent)
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>p</p>
+    </div>
+  </body>
+</html>
+The nextUntil() method returns all next sibling elements between two given
+arguments. The following example returns all sibling elements between a
+<h2>
+  and a
+  <h6>
+    element: Example $(document).ready(function(){ $("h2").nextUntil("h6"); });
+    jQuery prev(), prevAll() & prevUntil() Methods The prev(), prevAll() and
+    prevUntil() methods work just like the methods above but with reverse
+    functionality: they return previous sibling elements (traverse backwards
+    along sibling elements in the DOM tree, instead of forward).
+  </h6>
+</h2>
+jQuery Traversing - Filtering The first(), last(), eq(), filter() and not()
+Methods The most basic filtering methods are first(), last() and eq(), which
+allow you to select a specific element based on its position in a group of
+elements. Other filtering methods, like filter() and not() allow you to select
+elements that match, or do not match, a certain criteria.
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("div").first().css("background-color", "yellow");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to My Homepage</h1>
+
+    <p>This is a paragraph.</p>
+
+    <div style="border: 1px solid black">
+      <p>A paragraph in a div.</p>
+      <p>Another paragraph in a div.</p>
+    </div>
+    <br />
+
+    <div style="border: 1px solid black">
+      <p>A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+    </div>
+    <br />
+
+    <div style="border: 1px solid black">
+      <p>A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+    </div>
+  </body>
+</html>
+jQuery last() Method The last() method returns the last element of the specified
+elements. The following example selects the last
+<div>element: Example $(document).ready(function(){ $("div").last(); });</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("p").eq(1).css("background-color", "yellow");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to My Homepage</h1>
+
+    <p>My name is Donald (index 0).</p>
+    <p>Donald Duck (index 1).</p>
+    <p>I live in Duckburg (index 2).</p>
+    <p>My best friend is Mickey (index 3).</p>
+  </body>
+</html>
+jQuery eq() method The eq() method returns an element with a specific index
+number of the selected elements. The index numbers start at 0, so the first
+element will have the index number 0 and not 1. The following example selects
+the second
+<p>
+  element (index number 1):jQuery filter() Method The filter() method lets you
+  specify a criteria. Elements that do not match the criteria are removed from
+  the selection, and those that match will be returned. The following example
+  returns all
+</p>
+
+<p>
+  elements with class name "intro": Example $(document).ready(function(){
+  $("p").filter(".intro"); });jQuery not() Method The not() method returns all
+  elements that do not match the criteria. Tip: The not() method is the opposite
+  of filter(). The following example returns all
+</p>
+
+<p>
+  elements that do not have class name "intro": Example
+  $(document).ready(function(){ $("p").not(".intro"); });What is AJAX? AJAX =
+  Asynchronous JavaScript and XML. In short; AJAX is about loading data in the
+  background and display it on the webpage, without reloading the whole page.
+  Examples of applications using AJAX: Gmail, Google Maps, Youtube, and Facebook
+  tabs.
+</p>
+What About jQuery and AJAX? jQuery provides several methods for AJAX
+functionality. With the jQuery AJAX methods, you can request text, HTML, XML, or
+JSON from a remote server using both HTTP Get and HTTP Post - And you can load
+the external data directly into the selected HTML elements of your web page!
+Without jQuery, AJAX coding can be a bit tricky! Writing regular AJAX code can
+be a bit tricky, because different browsers have different syntax for AJAX
+implementation. This means that you will have to write extra code to test for
+different browsers. However, the jQuery team has taken care of this for us, so
+that we can write AJAX functionality with only one single line of code. jQuery
+load() Method The jQuery load() method is a simple, but powerful AJAX method.
+The load() method loads data from a server and puts the returned data into the
+selected element. Syntax: $(selector).load(URL,data,callback); The required URL
+parameter specifies the URL you wish to load. The optional data parameter
+specifies a set of querystring key/value pairs to send along with the request.
+The optional callback parameter is the name of a function to be executed after
+the load() method is completed. Here is the content of our example file:
+"demo_test.txt":
+
+<h2>jQuery and AJAX is FUN!!!</h2>
+<p id="p1">This is some text in a paragraph.</p>
+The following example loads the content of the file "demo_test.txt" into a
+specific
+<div>element: Example $("#div1").load("demo_test.txt");</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#div1").load("demo_test.txt");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+    <button>Get External Content</button>
+  </body>
+</html>
+Certainly! The load() method in jQuery is used to load data from a server and
+insert the returned data into a selected HTML element. syntax
+$(selector).load(url, data, function(response, status, xhr) { // Callback
+function code here });

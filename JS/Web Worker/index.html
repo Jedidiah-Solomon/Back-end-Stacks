@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Workers Example</title>
+</head>
+<body>
+    <h1>Web Workers Example</h1>
+    <p>Result will appear in the console and here too.</p>
+
+    <div id="result"></div>
+
+    <button onclick="startWorker()">Start Worker</button>
+    <p id="result2"></p>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+
+    <!-- Web Worker JavaScript -->
+    <script src="multiply-worker.js"></script>
+    <script src="worker-script.js"></script>
+
+
+
+
+    <!--
+
+
+        main.js contains the code for the main page, where we create a worker and communicate with it.
+        multiply-worker.js contains the worker code that calculates the product of two numbers and sends the result back to the main page.
+
+        Web Workers API:
+        The Web Workers API is a powerful feature available in modern web browsers. It enables developers to run JavaScript code in the background, separate from the main UI thread.
+        By harnessing the power of multithreading, Web Workers allow for efficient execution of complex and time-consuming tasks without blocking the user interface 12.
+        Here are the key points about Web Workers:
+        Background Threads: Web Workers provide a way to run scripts in background threads. These threads operate independently of the main thread, ensuring that heavy computations or network requests don’t freeze the UI.
+        Isolation: A worker thread runs in a separate global context from the current window. It doesn’t directly manipulate the DOM or use some default methods and properties of the window object.
+        Communication: Data is exchanged between workers and the main thread via a system of messages. Both sides use the postMessage() method to send messages and respond to messages via the onmessage event handler.
+        Dedicated vs. Shared Workers:
+        Dedicated workers are accessible only by the script that spawned them. They’re useful for tasks specific to a single script.
+        Shared workers can be accessed from multiple scripts within the same origin.
+        Functionality: Inside a worker, you can use a wide range of items available under window, including WebSockets and data storage mechanisms like IndexedDB 3.
+        Web Workers in Action:
+        Imagine you have a computationally expensive task that you want to perform without affecting the UI responsiveness. Web Workers come to the rescue!
+        Here’s how you can use them:
+        Create a worker using the Worker() constructor, specifying a JavaScript file that contains the code to run in the worker thread.
+        Communicate with the worker using messages (via postMessage() and onmessage).
+        Leverage Web Workers for tasks like data processing, image manipulation, or background network requests 4.
+        Example:
+        Let’s say you want to multiply two numbers. You can create a dedicated worker that performs this calculation and sends the result back to the main page.
+
+
+    -->
+</body>
+</html>
+
