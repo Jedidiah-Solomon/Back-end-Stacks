@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XMLHttpRequest</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h2 class="heading">Using the XMLHttpRequest Object</h2>
 
     <div id="userRequestBox">
-        <label for="userInput">Enter a User full name</label>
-        <input type="text" id="userInput">
-        <button type="button" id="userBtn">Retrieve User Details</button>
-        <div id="userDetails"></div>
-        <p id="errorBox"></p>
+      <label for="userInput">Enter a User full name</label>
+      <input type="text" id="userInput" />
+      <button type="button" id="userBtn">Retrieve User Details</button>
+      <div id="userDetails"></div>
+      <p id="errorBox"></p>
     </div>
 
-
     <div class="details">
-        <h3>Uses of XMLHttpRequest</h3>
+      <h3>XMLHttpRequest</h3>
+      <p>
+        XMLHttpRequest is an API provided by web browsers that allows JavaScript
+        to make HTTP requests to servers. It is the foundational technology
+        behind AJAX (Asynchronous JavaScript and XML) and is commonly used to
+        fetch data from a server asynchronously without needing to reload the
+        entire web page. XML (Extensible Markup Language). Key features and
+        usage of XMLHttpRequest include: Asynchronous Operations: The requests
+        made with XMLHttpRequest are asynchronous by default. This means that
+        JavaScript execution will continue while the request is being processed,
+        and a callback function is used to handle the response when it arrives.
+        Cross-Origin Requests: XMLHttpRequest supports making requests to
+        domains other than the one hosting the current web page (cross-origin
+        requests). However, this is subject to the same-origin policy, which
+        restricts certain actions due to security considerations. HTTP Methods:
+        It supports various HTTP methods like GET, POST, PUT, DELETE, etc.,
+        allowing developers to perform different types of operations on a
+        server. Handling Responses: Responses from the server can be retrieved
+        in different formats like text, JSON, XML, etc. The response can be
+        processed in the callback function defined for XMLHttpRequest.
+        Event-Driven API: XMLHttpRequest uses event listeners to monitor the
+        progress of requests (e.g., onload, onreadystatechange, onerror, etc.).
+      </p>
+      <h3>Uses of XMLHttpRequest</h3>
+      <div>
         <ul>
-            <li>Update a web page without reloading the page</li>
-            <li>Request data from a server - after the page has loaded</li>
-            <li>Receive data from a server  - after the page has loaded</li>
-            <li> Data to a server - in the background</li>
+          <li>Update a web page without reloading the page</li>
+          <li>Request data from a server - after the page has loaded</li>
+          <li>Receive data from a server - after the page has loaded</li>
+          <li>Data to a server - in the background</li>
         </ul>
+      </div>
     </div>
-        
 
-    <div>Use <a href="https://www.convertcsv.com/csv-to-json.htm">TO CONVERT CSV TO JSON</a></div>
+    <div>
+      <a href="https://www.convertcsv.com/csv-to-json.htm"
+        >TO CONVERT CSV TO JSON</a
+      >
+    </div>
 
     <div class="details">
-        id,name/first,name/last,rating/0,rating/1,rating/2
-        1,Dan,Jones,8,7,9
-        2,Bill,Barner,7,6,5
-        3,Joe,Smoe,4,3,
+      id,name/first,name/last,rating/0,rating/1,rating/2 1,Dan,Jones,8,7,9
+      2,Bill,Barner,7,6,5 3,Joe,Smoe,4,3, it sees id as one, name as an object
+      with two properties of firsta and last, rating as an aray with three
+      values Input Records- Header: true Header Fields: 6 Data: Separator: ,
+      Fields: 6 Records: 3
 
-
-        it ses id as one, name as an object with two properties of firsta and last, rating as an aray with three values
-
-        Input Records- Header: true   Header Fields: 6
-        Data: Separator: ,     Fields: 6     Records: 3
-
-
-    <p>Hobbies: ${user.hobbies.join(', ')}</p> or do the same but 2nd allows us to choose array values we want while first makes it simple to write at once
-    <p>Hobbies: ${user.hobbies[0]}, ${user.hobbies[1]}, ${user.hobbies[2]} </p>
+      <p>Hobbies: ${user.hobbies.join(', ')}</p>
+      or do the same but 2nd allows us to choose array values we want while
+      first makes it simple to write at once
+      <p>Hobbies: ${user.hobbies[0]}, ${user.hobbies[1]}, ${user.hobbies[2]}</p>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

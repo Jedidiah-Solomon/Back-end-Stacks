@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The XMLHttpRequest Object</title>
+    <style>
+      body {
+        padding-bottom: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+
+    <div id="demo">
+      <p>Let AJAX change this text.</p>
+      <button type="button" id="loader">Change Content</button>
+      <p id="error"></p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loader");
+        const error = document.getElementById("error");
+        let xhr;
+        let timerId;
+
+        loader.addEventListener("click", function () {
+          error.innerHTML = ""; // Clear error message
+          xhr = new XMLHttpRequest();
+          xhr.open("GET", "https://www.w3schools.com/js/ajax_info.txt", true);
+
+          xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              timerId = setTimeout(() => {
+                console.log(this.responseText);
+                document.getElementById("demo").innerHTML = xhr.responseText;
+              }, 5000); // Display response text after 5 seconds
+            } else {
+              error.innerHTML = "Request failed with status: " + xhr.status;
+            }
+          };
+
+          xhr.onerror = function () {
+            console.error("An error occurred during the request.");
+          };
+
+          xhr.send();
+        });
+
+        window.addEventListener("scroll", () => {
+          // Calculate the scroll position
+          const scrollPosition = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+
+          // Check if user has scrolled past 50% of the document during the delay
+          if (
+            timerId &&
+            scrollPosition > 0.5 * (documentHeight - windowHeight)
+          ) {
+            clearTimeout(timerId); // Cancel the timer
+            if (xhr) {
+              xhr.abort(); // Abort the request if xhr is defined
+              console.log("You scrolled, request aborted");
+              error.innerHTML = "You scrolled, request aborted";
+            }
+          }
+        });
+      });
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+      
+   
+      //xhr.open('GET', 'url', true, 'username', 'password'); best if the file in the server has username and psw
+
+      /*
+                In the context of web development and HTTP (Hypertext Transfer Protocol), a header refers to 
+                the additional information sent along with a request or response. Headers consist of 
+                key-value pairs that convey metadata about the request or response and can influence how the data 
+                is processed or interpreted by the server or client.
+
+                Headers are categorized into two main types: request headers and response headers.
+
+                Request Headers:
+                Request headers are sent by the client (e.g., a web browser) to the server along with an HTTP 
+                request.
+                These headers provide information about the request itself, such as the type of request, 
+                the content type of the data being sent, authentication credentials, caching directives, and more.
+                Examples of request headers include Content-Type, Authorization, User-Agent, Accept, Cookie, and
+                Referer.
+
+                Response Headers:
+                Response headers are sent by the server back to the client in response to an HTTP request.
+                They provide information about the server's response, such as the content type of the data being 
+                sent, the server software, caching directives, and more.
+                Examples of response headers include Content-Type, Cache-Control, Server, Set-Cookie, and Content-Length.
+
+                Headers are essential for controlling and configuring the behavior of HTTP transactions. 
+                They allow clients and servers to communicate additional information beyond the main request or response
+                data. Modern web development often involves manipulating headers to control caching, 
+                manage authentication, handle cross-origin requests (CORS), and optimize performance.
+
+                The getResponseHeader() method in JavaScript's XMLHttpRequest object is used to retrieve the value of a specific header from the response received after making an HTTP request. It allows you to access the value of a particular header sent by the server in the response.
+
+                Here's how you can use getResponseHeader():
+
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://api.example.com/data', true);
+                xhr.send();
+
+                xhr.onload = function() {
+                const contentType = xhr.getResponseHeader('Content-Type');
+                console.log('Content-Type header:', contentType);
+                };
+
+                e.g Content-Type header: text/plain
+
+                <!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+  <p>Let AJAX change this text.</p>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://www.w3schools.com/js/ajax_info.txt', true);
+  xhr.send();
+
+  xhr.onload = function() {
+    const contentType = xhr.getResponseHeader('Content-Type');
+    console.log('Content-Type header:', contentType);
+  };
+}/////
+
+
+The Content-Type header specifies the media type (or MIME type) of the content sent in the HTTP response. It informs the client (such as a web browser or XMLHttpRequest) about the type of data that is being returned by the server. Common Content-Type values include:
+
+text/plain: Indicates plain text content without any specific formatting or structure.
+text/html: Denotes HTML content, typically used for web pages.
+application/json: Indicates JSON (JavaScript Object Notation) content.
+application/xml or text/xml: Denotes XML (eXtensible Markup Language) content.
+image/jpeg, image/png, image/gif: Specifies image data in JPEG, PNG, or GIF formats.
+audio/mpeg, audio/wav: Specifies audio data in MPEG or WAV formats.
+video/mp4, video/webm: Specifies video data in MP4 or WebM formats.
+These are just a few examples. The Content-Type header is crucial for the client to interpret the response correctly. For instance, if the Content-Type is application/json, the client (such as JavaScript code using XMLHttpRequest) will know that the response body contains JSON data and can parse it accordingly.
+
+In the code example, xhr.getResponseHeader('Content-Type') retrieves the Content-Type header value from the response sent by the server. This information can be used to determine how to handle or process the response data based on its type.
+
+the getAllResponseHeaders() method in JavaScript's XMLHttpRequest object returns all the response headers as a single string. Each header is represented as a key-value pair separated by a colon (:) and a newline character (\r\n).
+
+Here's how it works:
+
+When an XMLHttpRequest is made and a response is received from the server, you can use getAllResponseHeaders() to access all the headers returned in the response.
+The method returns a string that contains all the response headers in the format: header1: value1\r\nheader2: value2\r\n...
+You can then parse this string to extract individual headers and their corresponding values.
+Here's an example of how you might use getAllResponseHeaders():
+
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+xhr.send();
+
+xhr.onload = function() {
+  const allHeaders = xhr.getAllResponseHeaders();
+  console.log('All response headers:', allHeaders);
+
+  // Parse the headers string to extract specific headers if needed
+  const headersArray = allHeaders.split('\r\n');
+  const headersObject = {};
+  headersArray.forEach(header => {
+    const [key, value] = header.split(': ');
+    if (key && value) {
+      headersObject[key] = value;
+    }
+  });
+
+  console.log('Parsed headers object:', headersObject);
+};/////
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+  <p>Let AJAX change this text.</p>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://www.w3schools.com/js/ajax_info.txt', true);
+  xhr.send();
+
+  xhr.onload = function() {
+    const contentType = xhr.getResponseHeader('Content-Type');
+    console.log('Content-Type header:', contentType);
+
+    const allHeaders = xhr.getAllResponseHeaders();
+    console.log('All response headers:', allHeaders);
+
+    // Parse the headers string to extract specific headers if needed
+    const headersArray = allHeaders.split('\r\n');
+    const headersObject = {};
+    headersArray.forEach(header => {
+      const [key, value] = header.split(': ');
+      if (key && value) {
+        headersObject[key] = value;
+      }
+    });
+
+    console.log('Parsed headers object:', headersObject);
+
+    // Display response headers in the HTML
+    const headersDisplay = document.createElement('div');
+    headersDisplay.innerHTML = '<h3>Response Headers</h3>';
+    for (const key in headersObject) {
+      const headerLine = document.createElement('p');
+      headerLine.textContent = `${key}: ${headersObject[key]}`;
+      headersDisplay.appendChild(headerLine);
+    }
+    document.getElementById('demo').appendChild(headersDisplay);
+  };
+}
+
+e.g
+{
+    "accept-ranges": "bytes",
+    "access-control-allow-methods": "PUT, GET, HEAD, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "https://www.w3schools.com",
+    "age": "3180",
+    "cache-control": "public,max-age=14400,public",
+    "content-encoding": "gzip",
+    "content-length": "147",
+    "content-security-policy": "frame-ancestors 'self' https://mycourses.w3schools.com;",
+    "content-type": "text/plain",
+    "date": "Mon, 06 May 2024 21:03:19 GMT",
+    "etag": "\"0cfdac0a09fda1:0+gzip\"",
+    "last-modified": "Mon, 06 May 2024 10:32:54 GMT",
+    "server": "ECS (lhd/359E)",
+    "vary": "Accept-Encoding",
+    "x-cache": "HIT",
+    "x-content-security-policy": "frame-ancestors 'self' https://mycourses.w3schools.com;",
+    "x-powered-by": "ASP.NET"
+}///
+
+
+
+the send() is used 
+
+1. For GET requests:
+When making a GET request, you generally don't need to send a body with the request (i.e., you're not sending data to the server in the request body). Therefore, you can simply call xhr.send() without any arguments. This method will initiate the GET request to the server.
+e.g 
+xhr.open('GET', 'https://api.example.com/data', true);
+xhr.send(); // Send a GET request to retrieve data
+
+2. For POST requests:
+When making a POST request, you typically send data to the server in the request body. In this case, you use xhr.send(string) to send the specified string as the request body. This could be JSON, form data, or any other format that the server expects for processing.
+e.g 
+xhr.open('POST', 'https://api.example.com/submit', true);
+const data = JSON.stringify({ key: 'value' });
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(data); // Send a POST request with data in the request body
+
+
+
+
+
+
+XMLHttpRequest Object Properties
+Property	Description
+onload	Defines a function to be called when the request is received (loaded)
+onreadystatechange	Defines a function to be called when the readyState property changes
+readyState	Holds the status of the XMLHttpRequest.
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+responseText	Returns the response data as a string
+responseXML	Returns the response data as XML data
+status	Returns the status-number of a request
+200: "OK"
+403: "Forbidden"
+404: "Not Found"
+For a complete list go to the Http Messages Reference
+statusText	Returns the status-text (e.g. "OK" or "Not Found")
+/////
+
+
+
+HTTP Status Messages
+HTML Error Messages
+When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".
+
+It is common to name these errors HTML error messages.
+
+But these messages are something called HTTP status messages. In fact, the server always returns a message for every request. The most common message is 200 OK.
+
+Below is a list of HTTP status messages that might be returned:
+
+1xx: Information
+Message:	Description:
+100 Continue	The server has received the request headers, and the client should proceed to send the request body
+101 Switching Protocols	The requester has asked the server to switch protocols
+103 Early Hints	Used with the Link header to allow the browser to start preloading resources while the server prepares a response
+
+2xx: Successful
+Message:	Description:
+200 OK	The request is OK (this is the standard response for successful HTTP requests)
+201 Created	The request has been fulfilled, and a new resource is created 
+202 Accepted	The request has been accepted for processing, but the processing has not been completed
+203 Non-Authoritative Information	The request has been successfully processed, but is returning information that may be from another source
+204 No Content	The request has been successfully processed, but is not returning any content
+205 Reset Content	The request has been successfully processed, but is not returning any content, and requires that the requester reset the document view
+
+206 Partial Content	The server is delivering only part of the resource due to a range header sent by the client
+3xx: Redirection
+Message:	Description:
+300 Multiple Choices	A link list. The user can select a link and go to that location. Maximum five addresses  
+301 Moved Permanently	The requested page has moved to a new URL 
+302 Found	The requested page has moved temporarily to a new URL 
+303 See Other	The requested page can be found under a different URL
+304 Not Modified	Indicates the requested page has not been modified since last requested
+307 Temporary Redirect	The requested page has moved temporarily to a new URL
+308 Permanent Redirect	The requested page has moved permanently to a new URL
+
+
+4xx: Client Error
+Message:	Description:
+400 Bad Request	The request cannot be fulfilled due to bad syntax
+401 Unauthorized	The request was a legal request, but the server is refusing to respond to it. For use when authentication is possible but has failed or not yet been provided
+402 Payment Required	Reserved for future use
+403 Forbidden	The request was a legal request, but the server is refusing to respond to it
+404 Not Found	The requested page could not be found but may be available again in the future
+405 Method Not Allowed	A request was made of a page using a request method not supported by that page
+406 Not Acceptable	The server can only generate a response that is not accepted by the client
+407 Proxy Authentication Required	The client must first authenticate itself with the proxy
+408 Request Timeout	The server timed out waiting for the request
+409 Conflict	The request could not be completed because of a conflict in the request
+410 Gone	The requested page is no longer available
+411 Length Required	The "Content-Length" is not defined. The server will not accept the request without it 
+412 Precondition Failed	The precondition given in the request evaluated to false by the server
+413 Request Too Large	The server will not accept the request, because the request entity is too large
+414 Request-URI Too Long	The server will not accept the request, because the URI is too long. Occurs when you convert a POST request to a GET request with a long query information 
+415 Unsupported Media Type	The server will not accept the request, because the media type is not supported 
+416 Range Not Satisfiable	The client has asked for a portion of the file, but the server cannot supply that portion
+417 Expectation Failed	The server cannot meet the requirements of the Expect request-header field
+
+5xx: Server Error
+Message:	Description:
+500 Internal Server Error	A generic error message, given when no more specific message is suitable
+501 Not Implemented	The server either does not recognize the request method, or it lacks the ability to fulfill the request
+502 Bad Gateway	The server was acting as a gateway or proxy and received an invalid response from the upstream server
+503 Service Unavailable	The server is currently unavailable (overloaded or down)
+504 Gateway Timeout	The server was acting as a gateway or proxy and did not receive a timely response from the upstream server
+505 HTTP Version Not Supported	The server does not support the HTTP protocol version used in the request
+511 Network Authentication Required	The client needs to authenticate to gain network access
+
+
+
+The onreadystatechange Property
+The readyState property holds the status of the XMLHttpRequest.
+
+The onreadystatechange property defines a callback function to be executed when the readyState changes.
+
+The status property and the statusText properties hold the status of the XMLHttpRequest object.
+
+Property	Description
+onreadystatechange	Defines a function to be called when the readyState property changes
+readyState	Holds the status of the XMLHttpRequest.
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+status	200: "OK"
+403: "Forbidden"
+404: "Page not found"
+For a complete list go to the Http Messages Reference
+statusText	Returns the status-text (e.g. "OK" or "Not Found")
+The onreadystatechange function is called every time the readyState changes.
+
+When readyState is 4 and status is 200, the response is ready:
+
+
+*/

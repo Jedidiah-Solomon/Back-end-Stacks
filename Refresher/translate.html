@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Language Selection</title>
     <style>
-        #google_translate_element > div > div > select > option {
-            background-color: pink;
-        }
+      #google_translate_element > div > div > select > option {
+        background-color: pink;
+      }
 
-        #google_translate_element > div > div > select > option:first-child {
-            background-color: red;
-        }
+      #google_translate_element > div > div > select > option:first-child {
+        background-color: red;
+      }
 
-        #google_translate_element > div > div > select > option:nth-child(even):not(:first-child) {
-            
-        }
+      #google_translate_element
+        > div
+        > div
+        > select
+        > option:nth-child(even):not(:first-child) {
+      }
 
-        #google_translate_element > div > div > select > option:nth-last-child() {
-            
-        }
+      #google_translate_element > div > div > select > option:nth-last-child() {
+      }
 
-        #google_translate_element > div > div > select > option:nth-last-of-type() {
-            
-        }
-            /* Select the third paragraph element among its siblings */
-            p:nth-of-type(3) {
-                color: red;
-            }
-            /* Select the second-to-last paragraph element among its siblings */
-            p:nth-last-of-type(2) {
-                font-weight: bold;
-            }
-            /* Select every odd child element, counting from the last child */
-            :nth-last-child(odd) {
-                background-color: lightgray;
-            }
-
-
-
+      #google_translate_element
+        > div
+        > div
+        > select
+        > option:nth-last-of-type() {
+      }
+      /* Select the third paragraph element among its siblings */
+      p:nth-of-type(3) {
+        color: red;
+      }
+      /* Select the second-to-last paragraph element among its siblings */
+      p:nth-last-of-type(2) {
+        font-weight: bold;
+      }
+      /* Select every odd child element, counting from the last child */
+      :nth-last-child(odd) {
+        background-color: lightgray;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="google_translate_element"></div>
-
 
     <h1>Select Language and Translate</h1>
     <p>I like beans and makes me better</p>
     <p>I like beans and makes me better</p>
     <p>I like beans and makes me better</p>
-   
-   
 
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      
-   <script>
-    function googleTranslateElementInit(){
+
+    <script>
+      function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-            {pageLanguage: 'en'},
-            'google_translate_element'
+          { pageLanguage: "en" },
+          "google_translate_element"
         );
-    }
-   </script> 
-</body>
+      }
+    </script>
+  </body>
 </html>
 
 <!-- This is the api response received, you can style it or add morr functionality

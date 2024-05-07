@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript CLASS</title>
+  </head>
+  <body>
+    <script>
+      let poem =
+        "I am a boy of: Nigeria.\r\nShe is a beautiful: woman.\r\nI am a girl of: Nigeria.\r\nShe is a beautiful: girl";
+      console.log(poem);
+      /*
+        I am a boy of: Nigeria.
+        She is a beautiful: woman.
+        I am a girl of: Nigeria.
+        She is a beautiful: girl
+        */
+
+      let splittedMsg = poem.split("\r\n");
+
+      console.log(splittedMsg); //['I am a boy of Nigeria.', 'She is a beautiful: Woman.', 'I am a girl of: Nigeria.', 'She is a beautiful: Girl']
+      const splittedObject = {};
+
+      splittedMsg.forEach((msg) => {
+        const [key, value] = msg.split(":");
+        if (key && value) {
+          splittedObject[key] = value;
+        }
+      });
+
+      console.log(splittedObject);
+      /*
+      {
+        "I am a boy of": " Nigeria.",
+        "She is a beautiful": " girl",
+        "I am a girl of": " Nigeria."
+     }
+     */
+
+      //Destructuring
+      //Array destructuring
+      //syntax
+      //const [variable1, variable2, ...rest] = array;
+      const names = ["alpha", "beta", "gamma", "delta"];
+      /*
+     
+      const [firstName, secondName] = names;
+      console.log(firstName); // "alpha"
+      console.log(secondName); // "beta"
+      */
+      //skipping elements - use commas
+      /* const [firstName, , thirdName] = ["alpha", "beta", "gamma", "delta"];
+      console.log(firstName); // "alpha"
+      console.log(thirdName); // "gamma"*/
+
+      //use the rest operator (...)
+      const [firstName, , ...lastName] = ["alpha", "beta", "gamma", "delta"];
+      console.log(firstName); // "alpha"
+      console.log(lastName); // ["gamma", "delta"]
+
+      //Object Destructuring:
+      //syntax
+
+      //const { property1, property2, ...rest } = object;
+
+      const person = { name: "Alice", age: 30, city: "Wonderland" };
+      //const { name, age } = person;
+      // console.log(name); // "Alice"
+      //console.log(age); // 30
+      //const { name, ...otherProps } = person;
+      //console.log(name); / / "Alice";
+      //console.log(otherProps); // { age: 30, city: "Wonderland" }
+    </script>
+  </body>
+</html>

@@ -1,8 +1,4 @@
 
-
-
-
-
 $(function() {
     $('#btn1').on('click', function(){
         $("p").append(" <b>Appended text</b>.");
