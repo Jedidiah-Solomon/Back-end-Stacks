@@ -1,0 +1,21 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "website": "https://prettier.io/docs/en/configuration.html#basic-configuration",
+    "overrides": [
+        {
+            "files": "./JS/Others/prettier.js",
+            "options": {
+                "singleQuote": true
+            }
+        },
+        {
+            "files": ["*.html", "legacy/**/*.js"],
+            "options": {
+                "tabWidth": 4
+            }
+        }
+    ]
+}

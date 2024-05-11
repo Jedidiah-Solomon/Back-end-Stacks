@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch API</title>
-    <link rel="stylesheet" href="fetchApi.css">
-</head>
-<body>
- <!--Github API-->
-    <div id="userInput">
-        <label for="usernameInput">Enter GitHub Username:</label>
-        <input type="text" id="usernameInput" placeholder="Username only"><br>
-        <button id="checkUserButton">Check User</button>
-    </div>
-    <div id="gitHubUser">
-        <img id="userAvatar" src="" alt="">
-        <span id="userName"></span><br>
-        <span id="twitterUsername"></span><br>
-        <span id="publicRepos"></span>
-    </div>
-    
-        
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fetch API</title>
+        <link rel="stylesheet" href="fetchApi.css" />
+    </head>
+    <body>
+        <!--Github API-->
+        <div id="userInput">
+            <label for="usernameInput">Enter GitHub Username:</label>
+            <input
+                type="text"
+                id="usernameInput"
+                placeholder="Username only"
+            /><br />
+            <button id="checkUserButton">Check User</button>
+        </div>
+        <div id="gitHubUser">
+            <img id="userAvatar" src="" alt="" />
+            <span id="userName"></span><br />
+            <span id="twitterUsername"></span><br />
+            <span id="publicRepos"></span>
+        </div>
 
-    
-    <!-- REST Countries API -->
-    <div id="userInput2">
-        <label for="usernameInput2">Enter Country Name:</label>
-        <input type="text" id="usernameInput2" placeholder="Country only"><br>
-        <button id="checkUserButton2">Check Country</button>
-    </div>
-    <div id="countryBox">
-        <div>
-            <span id="country"></span>
+        <!-- REST Countries API -->
+        <div id="userInput2">
+            <label for="usernameInput2">Enter Country Name:</label>
+            <input
+                type="text"
+                id="usernameInput2"
+                placeholder="Country only"
+            /><br />
+            <button id="checkUserButton2">Check Country</button>
         </div>
-        <div>
-            <span id="capitalCity"></span>
+        <div id="countryBox">
+            <div>
+                <span id="country"></span>
+            </div>
+            <div>
+                <span id="capitalCity"></span>
+            </div>
+            <div>
+                <span id="currency"></span>
+            </div>
+            <div>
+                <span id="language"></span>
+            </div>
+            <div>
+                <span id="region"></span>
+            </div>
+            <div>
+                <img id="flag" src="" alt="Flag" width="200" height="100" />
+            </div>
         </div>
-        <div>
-            <span id="currency"></span>
-        </div>
-        <div>
-            <span id="language"></span>
-        </div>
-        <div>
-            <span id="region"></span>
-        </div>
-        <div>
-            <img id="flag" src="" alt="Flag" width="200" height="100">
-        </div>
-    </div>
 
-    
-    
-    
-    
-    
-    
-    
-       
-    
-    <script src="fetchApi.js"></script>
-</body>
+        <script src="fetchApi.js"></script>
+    </body>
 </html>

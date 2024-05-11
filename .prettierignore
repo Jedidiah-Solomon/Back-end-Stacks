@@ -1,0 +1,8 @@
+# Ignore artifacts (build and coverage folders)
+
+build
+coverage
+
+# Ignore all jedy files
+
+**/*.jedy
