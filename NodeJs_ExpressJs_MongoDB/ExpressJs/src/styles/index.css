@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        270deg,
+        rgba(225, 22, 22, 0.588),
+        rgb(227, 27, 227)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+}
+
+#container .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
