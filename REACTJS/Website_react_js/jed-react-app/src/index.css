@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    font-family: "Poppins";
+}
 .card {
     border: 1px solid hsl(0, 0%, 80%);
     border-radius: 10px;
@@ -27,4 +33,62 @@
     font-family: Arial, Helvetica, sans-serif;
     color: hsl(0, 79%, 15%);
     font-size: 14px;
+}
+
+.student {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 10px;
+    border: 1px solid hsla(0, 0%, 50%, 0.8);
+}
+
+.student p {
+    background-color: hsla(60, 96%, 32%, 0.347);
+}
+
+/* APP 5*/
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 3px solid #f2f2f2;
+}
+.navbar h1 {
+    color: #f1356d;
+}
+.navbar .links {
+    margin-left: auto;
+}
+.navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    color: #f1356d;
+}
+.navbar a:hover {
+    opacity: 0.75;
+}
+.content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #d6a9b7;
+}
+
+/* blog previews / list */
+.blog-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-preview h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 8px;
 }

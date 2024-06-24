@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microphone Access</title>
+    </head>
+    <body>
+        <h1>Microphone Access Example</h1>
+
+        <button onclick="startMicrophone()">Start Microphone</button>
+        <button onclick="stopMicrophone()">Stop Microphone</button>
+
+        <script>
+            let audioElement;
+
+            function startMicrophone() {
+                // Request access to the user's microphone
+                navigator.mediaDevices
+                    .getUserMedia({ audio: true })
+                    .then(function (stream) {
+                        // Create an <audio> element and set the audio stream as its source
+                        audioElement = new Audio();
+                        audioElement.srcObject = stream;
+                        audioElement.play();
+                    })
+                    .catch(function (error) {
+                        console.error("Error accessing microphone:", error);
+                    });
+            }
+
+            function stopMicrophone() {
+                // Stop playing the audio and release the microphone stream
+                if (audioElement) {
+                    audioElement.pause();
+                    audioElement.srcObject = null;
+                    audioElement = null;
+                }
+            }
+
+            /*
+
+                        navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function(stream) {
+                    // Use the stream here, e.g., create an Audio element to play the stream
+                    const audioElement = new Audio();
+                    audioElement.srcObject = stream;
+                    audioElement.play();
+                })
+                .catch(function(error) {
+                    console.error("Error accessing microphone:", error);
+                });
+            */
+        </script>
+    </body>
+</html>

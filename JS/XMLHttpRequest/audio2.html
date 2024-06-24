@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Audio Recorder</title>
+    </head>
+    <body>
+        <h1>Audio Recorder</h1>
+
+        <button onclick="startRecording()">Start Recording</button>
+        <button onclick="stopRecording()">Stop Recording</button>
+        <button onclick="playRecordedAudio()">Play Recorded Audio</button>
+        <button onclick="downloadRecordedAudio()">
+            Download Recorded Audio
+        </button>
+
+        <audio id="audioPlayer" controls></audio>
+
+        <script>
+            let mediaRecorder;
+            let recordedChunks = [];
+
+            function startRecording() {
+                navigator.mediaDevices
+                    .getUserMedia({ audio: true })
+                    .then(function (stream) {
+                        const audioPlayer =
+                            document.getElementById("audioPlayer");
+                        audioPlayer.srcObject = stream;
+
+                        mediaRecorder = new MediaRecorder(stream);
+                        mediaRecorder.ondataavailable = function (e) {
+                            recordedChunks.push(e.data);
+                        };
+
+                        mediaRecorder.start();
+                    })
+                    .catch(function (error) {
+                        console.error("Error accessing microphone:", error);
+                    });
+            }
+
+            function stopRecording() {
+                if (mediaRecorder && mediaRecorder.state !== "inactive") {
+                    mediaRecorder.stop();
+                    const audioPlayer = document.getElementById("audioPlayer");
+                    audioPlayer.srcObject = null;
+                }
+            }
+
+            function playRecordedAudio() {
+                const blob = new Blob(recordedChunks, { type: "audio/webm" });
+                const audioPlayer = document.getElementById("audioPlayer");
+                audioPlayer.src = URL.createObjectURL(blob);
+                audioPlayer.play();
+            }
+
+            function downloadRecordedAudio() {
+                const blob = new Blob(recordedChunks, { type: "audio/webm" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.style.display = "none";
+                a.href = url;
+                a.download = "recorded_audio.webm";
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            }
+        </script>
+    </body>
+</html>

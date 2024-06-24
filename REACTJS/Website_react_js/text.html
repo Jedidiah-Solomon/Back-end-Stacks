@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test</title>
+    </head>
+    <body>
+        <script>
+            let isValid = false; // Initialize isValid to false
+            let userName;
+            let nameBox;
+
+            while (!isValid) {
+                // Loop executes as long as isValid is false
+                userName = prompt("Enter your name:");
+
+                if (!userName || userName.trim() === "") {
+                    // Check for empty or whitespace input
+                    alert("Please enter a name.");
+                } else if (!isNaN(userName)) {
+                    // Check if input is a number
+                    alert("Please enter a valid name (not a number).");
+                } else {
+                    isValid = true; // Set isValid to true if input is valid
+                }
+
+                nameBox = userName; // Store the valid input in nameBox
+            }
+
+            console.log(nameBox); // Output the valid name to the console
+
+            const newElement = document.createElement("p"); // Create a new paragraph element
+            newElement.textContent = nameBox; // Set the text content of the paragraph to nameBox
+            document.body.appendChild(newElement); // Append the paragraph to the document body
+        </script>
+    </body>
+</html>

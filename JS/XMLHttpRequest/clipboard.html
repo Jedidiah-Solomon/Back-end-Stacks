@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clipboard API Example</title>
+    </head>
+    <body>
+        <h1>Clipboard API Example</h1>
+
+        <input type="text" id="copyInput" placeholder="Type text to copy..." />
+        <button onclick="copyToClipboard()">Copy Text</button>
+
+        <div>
+            <button onclick="pasteFromClipboard()">Paste Text</button>
+            <p id="pasteOutput"></p>
+        </div>
+
+        <script>
+            function copyToClipboard() {
+                const copyInput = document.getElementById("copyInput");
+                const textToCopy = copyInput.value;
+
+                navigator.clipboard
+                    .writeText(textToCopy)
+                    .then(() => {
+                        console.log("Text copied to clipboard:", textToCopy);
+                        alert("Text copied to clipboard!");
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Unable to copy text to clipboard:",
+                            error
+                        );
+                    });
+            }
+
+            function pasteFromClipboard() {
+                navigator.clipboard
+                    .readText()
+                    .then((pastedText) => {
+                        const pasteOutput =
+                            document.getElementById("pasteOutput");
+                        pasteOutput.textContent = pastedText;
+                        console.log("Pasted text:", pastedText);
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Unable to read text from clipboard:",
+                            error
+                        );
+                    });
+            }
+        </script>
+    </body>
+</html>

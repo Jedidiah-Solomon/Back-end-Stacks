@@ -86,11 +86,9 @@ In both cases, the response object is logged to the console, but the second snip
 
 */
 
-
 /*fetch('https://regres.in/api/users')
   .then(res => console.log(res))
 */
-
 
 /* Brings the users 6 in number out
 fetch('https://reqres.in/api/users')
@@ -266,7 +264,6 @@ document.getElementById('checkUserButton').addEventListener('click', () => {
 
 */
 
-
 /* fetch('https://reqres.in/api/users', {
     method: 'POST',
     headers: {
@@ -317,15 +314,13 @@ const userData = {
   });
   */
 
+// Open Weather Map API
+// Go here and create acct https://home.openweathermap.org/users/sign_up
 
+//Be specific or use lat and long
+//fetch(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`)
 
-  // Open Weather Map API
-  // Go here and create acct https://home.openweathermap.org/users/sign_up
-
-  //Be specific or use lat and long 
-  //fetch(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`)
-
-  //http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+//http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 //  fetch(`https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${apiKey}`)
 //https://www.latlong.net/ for cordinates
 
@@ -409,7 +404,7 @@ i.e //fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon
 
 
 */
-   
+
 /*  
 const apiKey = '9651c06390184465d41761ed6b77b758'; 
 const latitude = 6.632159;
@@ -421,7 +416,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${lon
   .catch(error => console.error('Error:', error));
 
 */
-
 
 /*
 fetch('https://restcountries.com/v3.1/all')
@@ -493,52 +487,76 @@ function checkAdult(age) {
 </html>
 */
 
+document.getElementById("checkUserButton2").addEventListener("click", () => {
+    const userInput = document.getElementById("usernameInput2").value.trim();
+    if (!userInput) {
+        alert("Please enter a country name.");
+        return;
+    }
 
+    fetch("https://restcountries.com/v3.1/all")
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch countries data");
+            }
+            console.log("The fetch was successful");
+            return response.json();
+        })
+        .then((data) => {
+            console.log("Full Data:", data); // Log the full data retrieved
+            // Find the country matching the user input
+            const matchedCountries = data.filter(
+                (country) =>
+                    country.name.common.toLowerCase() ===
+                    userInput.toLowerCase()
+            );
+            if (matchedCountries.length === 0) {
+                alert("Country not found.");
+                console.log("Country not found."); // For my checkings
+                return;
+            } else if (matchedCountries.length > 1) {
+                alert("Multiple countries found. Please be more specific.");
+                console.log(
+                    "Multiple countries found. Please be more specific."
+                ); // For my checkings
+                return;
+            }
 
-document.getElementById('checkUserButton2').addEventListener('click', () => {
-  const userInput = document.getElementById('usernameInput2').value.trim();
-  if (!userInput) {
-      alert('Please enter a country name.');
-      return;
-  }
+            const countryInfo = matchedCountries[0];
+            // Display country information
+            document.getElementById(
+                "country"
+            ).textContent = `Country: ${countryInfo.name.common}`;
+            document.getElementById(
+                "capitalCity"
+            ).textContent = `Capital City: ${
+                countryInfo.capital ? countryInfo.capital[0] : "N/A"
+            }`;
+            document.getElementById("currency").textContent = `Currency: ${
+                countryInfo.currencies
+                    ? countryInfo.currencies[
+                          Object.keys(countryInfo.currencies)[0]
+                      ].name
+                    : "N/A"
+            }`;
+            document.getElementById("language").textContent = `Language: ${
+                countryInfo.languages
+                    ? countryInfo.languages[
+                          Object.keys(countryInfo.languages)[0]
+                      ]
+                    : "N/A"
+            }`;
+            document.getElementById("region").textContent = `Region: ${
+                countryInfo.region || "N/A"
+            }`;
 
-  fetch('https://restcountries.com/v3.1/all')
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Failed to fetch countries data');
-          }
-          console.log('The fetch was successful');
-          return response.json();
-      })
-      .then(data => {
-          console.log('Full Data:', data); // Log the full data retrieved
-          // Find the country matching the user input
-          const matchedCountries = data.filter(country => country.name.common.toLowerCase() === userInput.toLowerCase());
-          if (matchedCountries.length === 0) {
-              alert('Country not found.');
-              console.log('Country not found.');// For my checkings
-              return;
-          } else if (matchedCountries.length > 1) {
-              alert('Multiple countries found. Please be more specific.');
-              console.log('Multiple countries found. Please be more specific.');// For my checkings
-              return;
-          }
-
-          const countryInfo = matchedCountries[0];
-          // Display country information
-          document.getElementById('country').textContent = `Country: ${countryInfo.name.common}`;
-          document.getElementById('capitalCity').textContent = `Capital City: ${countryInfo.capital ? countryInfo.capital[0] : 'N/A'}`;
-          document.getElementById('currency').textContent = `Currency: ${countryInfo.currencies ? countryInfo.currencies[Object.keys(countryInfo.currencies)[0]].name : 'N/A'}`;
-          document.getElementById('language').textContent = `Language: ${countryInfo.languages ? countryInfo.languages[Object.keys(countryInfo.languages)[0]] : 'N/A'}`;
-          document.getElementById('region').textContent = `Region: ${countryInfo.region || 'N/A'}`;
-
-          // Display country flag
-          const countryFlagUrl = countryInfo.flags.svg;
-          const flagImg = document.getElementById('flag');
-          flagImg.src = countryFlagUrl;
-      })
-      .catch(error => {
-          console.error('Error:', error);
-          alert('Failed to fetch countries data. Please try again later.');
-      });
+            // Display country flag
+            const countryFlagUrl = countryInfo.flags.svg;
+            const flagImg = document.getElementById("flag");
+            flagImg.src = countryFlagUrl;
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("Failed to fetch countries data. Please try again later.");
+        });
 });

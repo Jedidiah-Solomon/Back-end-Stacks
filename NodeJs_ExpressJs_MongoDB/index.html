@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="color: pink">Hello Bathphage</h1>
+        <img src="./img/1.jpeg" alt="" /><a href="./pages/contact.html"
+            >Contact Us Now 2</a
+        >
+        <pre>
+            fs.readFile("index.html", ...): This function reads the contents of index.html.
+            The callback function has two parameters: error and html. error will contain any error that occurs during the file read operation, and html will contain the file's content.
+            </pre
+        >
+        <h6>
+            http.createServer((req, res) => {...}): This function creates an
+            HTTP server. The callback function is executed each time the server
+            receives a request. req: The request object, representing the
+            incoming request. res: The response object, representing the
+            server's response to the request. Inside the callback function:
+            res.statusCode = 200;: Sets the HTTP status code of the response to
+            200 (OK). res.setHeader("Content-type", "text/html");: Sets the
+            Content-type header of the response to text/html, indicating that
+            the content being sent is HTML. res.write(html);: Writes the HTML
+            content (read from the index.html file) to the response. res.end();:
+            Ends the response. server.listen(port, hostname, () => {...}): This
+            function starts the server, making it listen for requests on the
+            specified hostname and port. The callback function logs a message to
+            the console indicating that the server has started successfully.
+            Starting the Server: server.listen(port, hostname, callback) starts
+            the server and listens for incoming requests on the specified port
+            and hostname. Note: Console Tab: The "Console" tab will show any
+            JavaScript errors or logs from your client-side code (HTML,
+            JavaScript). But the http codes are diplayed inside the browser
+            using this structure
+        </h6>
+        <p>
+            nodemon, which will automatically restart the server when you make
+            changes to your files.
+        </p>
+        <p>
+            Using browser-sync for automatic browser reload browser-sync can be
+            used in conjunction with nodemon to reload the browser
+            automatically. Then create a config file for it: bs-config.js. This
+            configuration tells browser-sync to proxy your server running on
+            localhost:3005 and watch for changes in HTML, CSS, JS, and image
+            files. It will serve the site on port 4000.
+        </p>
+        <span>Heyyyyyyyyyy</span>
+        <p>lorem5</p>
+    </body>
+</html>

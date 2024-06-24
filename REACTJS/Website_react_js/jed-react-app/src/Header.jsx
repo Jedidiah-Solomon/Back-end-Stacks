@@ -8,7 +8,7 @@ function Header() {
                         <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#https://via.placeholder.com/150">About</a>
                     </li>
                     <li>
                         <a href="#">Services</a>

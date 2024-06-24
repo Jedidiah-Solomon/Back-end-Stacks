@@ -1,0 +1,28 @@
+{
+    "name": "nodejs_expressjs_mongodb",
+    "version": "1.0.0",
+    "description": "Backend simple applications. This class is hot.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start1": "nodemon app_5.js",
+        "start2": "node start.js",
+        "serve1": "browser-sync start --config bs-config.js"
+    },
+    "keywords": [
+        "Backend",
+        "Node",
+        "NPM",
+        "Express",
+        "MongoDB"
+    ],
+    "author": "Jedidiah Solomon",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^3.0.2",
+        "nodemon": "^3.1.1"
+    },
+    "dependencies": {
+        "open": "^10.1.0"
+    }
+}

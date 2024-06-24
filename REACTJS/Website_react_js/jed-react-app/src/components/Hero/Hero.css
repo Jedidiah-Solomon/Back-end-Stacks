@@ -1,0 +1,124 @@
+.hero {
+    margin: 0 120px;
+    margin-top: 100px;
+    height: 70vh;
+}
+.hero-text {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 100px;
+}
+.hero-agenda {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: fit-content;
+    margin-top: 70px;
+    padding: 03px 8px;
+    padding-left: 20px;
+    border-radius: 60px;
+    background-color: white;
+    cursor: pointer;
+}
+.hero-agenda p {
+    color: #292929;
+    font-size: 18px;
+    font-weight: 500;
+}
+.hero-agenda a {
+    text-decoration: none;
+    padding-top: 4px;
+    transition: all 0.35s;
+}
+.hero-agenda img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.hero-dot-play {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-dots {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    list-style: none;
+    margin-left: 45%;
+    position: relative;
+    bottom: 150px;
+}
+.hero-dot {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 7.5px;
+    cursor: pointer;
+}
+
+.hero-dot.orange {
+    background-color: orangered;
+}
+.hero-play {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    position: relative;
+}
+
+.hero-play img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    position: absolute;
+    right: 130px;
+    bottom: 150px;
+}
+
+.hero-play p {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    right: 0px;
+    bottom: 160px;
+}
+/* Date-Time Marquee */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    width: 100%;
+    color: #fff;
+    font-size: 28px;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/*Media Queries */
+/* Ipad */
+@media (max-width: 799px) {
+    body {
+        font-family: Poppins;
+    }
+}
+
+/* Iphone x */
+@media (max-width: 477px) {
+    body {
+        font-family: Poppins;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microphone and Camera Access</title>
+    </head>
+    <body>
+        <h1>Microphone and Camera Access Example</h1>
+
+        <button onclick="startRecording()">Start Recording</button>
+        <button onclick="stopRecording()">Stop Recording</button>
+
+        <script>
+            let mediaRecorder;
+            let recordedChunks = [];
+
+            function startRecording() {
+                // Request access to the user's microphone and camera
+                navigator.mediaDevices
+                    .getUserMedia({ audio: true, video: true })
+                    .then(function (stream) {
+                        // Create a <video> element and set the stream as its source
+                        const videoElement = document.createElement("video");
+                        videoElement.srcObject = stream;
+                        videoElement.play();
+
+                        // Create a MediaRecorder to capture video data
+                        mediaRecorder = new MediaRecorder(stream);
+
+                        // Event listener for data available from the MediaRecorder
+                        mediaRecorder.ondataavailable = function (event) {
+                            if (event.data.size > 0) {
+                                recordedChunks.push(event.data);
+                            }
+                        };
+
+                        // Start recording
+                        mediaRecorder.start();
+                    })
+                    .catch(function (error) {
+                        console.error(
+                            "Error accessing microphone and camera:",
+                            error
+                        );
+                    });
+            }
+
+            function stopRecording() {
+                // Stop the MediaRecorder
+                if (mediaRecorder) {
+                    mediaRecorder.stop();
+                }
+            }
+        </script>
+    </body>
+</html>

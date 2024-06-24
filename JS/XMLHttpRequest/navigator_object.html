@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navigator Geolocation</title>
+    </head>
+    <body>
+        <div id="content">
+            <pre id="code"></pre>
+        </div>
+
+        <div id="content2">
+            <pre id="batteryInfo"></pre>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Access the navigator object
+                const navigatorObj = navigator;
+                console.log(navigatorObj);
+                // Display navigator object content
+                const code = document.getElementById("code");
+                code.textContent = JSON.stringify(navigatorObj, null, 2);
+
+                // Check if navigator object is available
+                if (!navigatorObj) {
+                    console.error("Navigator object not available.");
+                    return;
+                }
+
+                // Access the geolocation property within the navigator object
+                const geolocation = navigatorObj.geolocation;
+
+                // Check if geolocation is supported
+                if (!geolocation) {
+                    console.error("Geolocation not supported.");
+                    return;
+                }
+
+                // Log the geolocation object
+                console.log("Geolocation Data:", geolocation);
+            });
+
+            //-----------------------------------------//
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Check if the Battery Status API is supported
+                if (!navigator.getBattery) {
+                    console.error("Battery Status API not supported.");
+                    return;
+                }
+
+                // Retrieve battery information
+                navigator
+                    .getBattery()
+                    .then(function (battery) {
+                        // Display battery information
+                        const batteryInfo = {
+                            level: (battery.level * 100).toFixed(2) + "%",
+                            charging: battery.charging ? "Yes" : "No",
+                            chargingTime: battery.chargingTime
+                                ? battery.chargingTime.toFixed(2) + " seconds"
+                                : "N/A",
+                            dischargingTime: battery.dischargingTime
+                                ? battery.dischargingTime.toFixed(2) +
+                                  " seconds"
+                                : "N/A",
+                        };
+
+                        const batteryInfoString = JSON.stringify(
+                            batteryInfo,
+                            null,
+                            2
+                        );
+                        //Note use null as a replacer, or numbers or  //"\t \t" for tabs
+                        // Display battery information in the <pre> element
+                        const batteryInfoElement =
+                            document.getElementById("batteryInfo");
+                        batteryInfoElement.textContent = batteryInfoString;
+
+                        // Log battery information to console
+                        console.log("Battery Information:", batteryInfo);
+                    })
+                    .catch(function (error) {
+                        console.error("Battery status retrieval error:", error);
+                    });
+            });
+        </script>
+    </body>
+</html>

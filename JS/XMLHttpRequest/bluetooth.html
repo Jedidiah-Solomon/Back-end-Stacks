@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web Bluetooth Example</title>
+    </head>
+    <body>
+        <h1>Bluetooth Device Battery Level</h1>
+        <button onclick="connectToDevice()">Connect to Bluetooth Device</button>
+        <div id="batteryLevel"></div>
+
+        <script>
+            async function connectToDevice() {
+                try {
+                    // Request access to the user's Bluetooth device
+                    const device = await navigator.bluetooth.requestDevice({
+                        filters: [{ services: ["battery_service"] }],
+                    });
+
+                    // Connect to the selected Bluetooth device
+                    const server = await device.gatt.connect();
+
+                    // Get the battery service
+                    const service = await server.getPrimaryService(
+                        "battery_service"
+                    );
+
+                    // Get the battery level characteristic
+                    const batteryLevelCharacteristic =
+                        await service.getCharacteristic("battery_level");
+
+                    // Read the battery level value
+                    const value = await batteryLevelCharacteristic.readValue();
+                    const batteryPercentage = value.getUint8(0);
+
+                    // Display the battery level on the page
+                    const batteryLevelElement =
+                        document.getElementById("batteryLevel");
+                    batteryLevelElement.textContent = `Battery Level: ${batteryPercentage}%`;
+
+                    // Handle disconnection
+                    device.addEventListener("gattserverdisconnected", () => {
+                        console.log(
+                            "Bluetooth device disconnected:",
+                            device.name
+                        );
+                        batteryLevelElement.textContent = ""; // Clear battery level display
+                    });
+                } catch (error) {
+                    console.error("Bluetooth device connection error:", error);
+                }
+            }
+        </script>
+    </body>
+</html>

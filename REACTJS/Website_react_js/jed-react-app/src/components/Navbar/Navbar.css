@@ -1,0 +1,86 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 120px;
+    color: white;
+}
+
+.nav-logo {
+    font-family: Outfit;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+    font-size: 20px;
+    gap: 35px;
+}
+
+.nav-contact a:link,
+.nav-contact a:visited {
+    background-color: #834ce8;
+    color: white;
+    padding: 12px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+.nav-speaker a:link,
+.nav-speaker a:visited {
+    background-color: #834ce8;
+    color: white;
+    padding: 12px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+.nav-contact a:hover,
+.nav-contact a:active {
+    background-color: #36068f;
+}
+
+.nav-speaker a:hover,
+.nav-speaker a:active {
+    background-color: #36068f;
+}
+
+.nav-menu li:nth-child(2) a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-menu li:nth-child(3) a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-menu li:nth-child(2):hover a,
+.nav-menu li:nth-child(3):hover a {
+    color: #36068f;
+}
+
+/*Media Queries */
+/* Ipad */
+@media (max-width: 799px) {
+    body {
+        font-family: Poppins;
+    }
+}
+
+/* Iphone x */
+@media (max-width: 477px) {
+    body {
+        font-family: Poppins;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JQUERY</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Include jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- CDN<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>-->
+        <!-- GOOGLE  CDN<script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+    </head>
+    <body>
+        <button id="hideButton">Hide All Paragraphs</button>
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
+
+        <div id="boxOffice">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+            molestias beatae velit asperiores praesentium mollitia consequatur
+            at labore temporibus aliquam.
+        </div>
+
+        <button id="fadeInButton">Fade In</button>
+        <button id="slideDownButton">Slide Down</button>
+        <button id="animateButton">Animate</button>
+
+        <div id="myElement">Hello, I'm animated!</div>
+
+        <div id="myElement2" class="myElement">Original content</div>
+        <button id="getTextButton">Get Text</button>
+        <button id="setTextButton">Set Text</button>
+        <button id="getAttributeButton">Get Attribute</button>
+        <button id="setAttributeButton">Set Attribute</button>
+
+        <!--<script src="script.js0"></script>-->
+        <script>
+            $(function () {
+                $("#hideButton").on("click", () => {
+                    $("p").hide();
+                });
+            });
+
+            const myNavigator = navigator;
+            console.log(myNavigator);
+            console.log("Is Cookie Enabled here: ", myNavigator.cookieEnabled);
+            console.log(
+                "Is geolocation Enabled here: ",
+                myNavigator.geolocation
+            );
+            console.log(
+                "Is geolocation Enabled here, so use: ",
+                myNavigator.geolocation.getCurrentPosition
+            );
+            console.log(
+                "Is geolocation Enabled here, so use: ",
+                myNavigator.geolocation.clearWatch
+            );
+            console.log(
+                "Is geolocation Enabled here, so use: ",
+                myNavigator.geolocation.watchPosition
+            );
+
+            let dateOfBirth1 = new Date();
+            let dateOfBirth2 = new Date("2024-05-15T12:00:00");
+
+            dateOfBirth11 =
+                "Year: " +
+                dateOfBirth1.getFullYear() +
+                " " +
+                "Month: " +
+                dateOfBirth1.getMonth() +
+                " " +
+                "Hour: " +
+                dateOfBirth1.getHours() +
+                " " +
+                "Day: " +
+                dateOfBirth1.getDay() +
+                " " +
+                "Date: " +
+                dateOfBirth1.getDate();
+
+            dayOfTheWeek = dateOfBirth1.getDay();
+            switch (dayOfTheWeek) {
+                case 0:
+                    console.log("Sunday");
+
+                    break;
+                case 1:
+                    console.log("Monday");
+
+                    break;
+                case 2:
+                    console.log("Tuesday");
+
+                    break;
+                case 3:
+                    console.log("Wednesday");
+
+                    break;
+                case 4:
+                    console.log("Thursday");
+
+                    break;
+                case 5:
+                    console.log("Friday");
+
+                    break;
+                case 6:
+                    console.log("Saturday");
+
+                    break;
+
+                default:
+                    break;
+                    console.log("Day of the week");
+            }
+
+            console.log(dateOfBirth11);
+        </script>
+    </body>
+</html>

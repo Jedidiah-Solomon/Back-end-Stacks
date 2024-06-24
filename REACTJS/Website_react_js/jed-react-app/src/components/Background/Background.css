@@ -1,0 +1,37 @@
+.background {
+    height: 100%;
+    width: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: none;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*Media Queries */
+/* Ipad */
+@media (max-width: 799px) {
+    body {
+        font-family: Poppins;
+    }
+}
+
+/* Iphone x */
+@media (max-width: 477px) {
+    body {
+        font-family: Poppins;
+    }
+}
