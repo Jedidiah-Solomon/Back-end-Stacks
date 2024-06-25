@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Post Request</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <h1>Request | Post a form details</h1>
+            <form id="customer-form">
+                <label for="name">
+                    Customer Name:
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Enter name..."
+                        required
+                    />
+                </label>
+                <label for="email"
+                    >Email:
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter email..."
+                        required
+                    />
+                </label>
+                <label for="msg"
+                    >Message:
+                    <textarea
+                        name="msg"
+                        id="msg"
+                        placeholder="How can we help you?"
+                        required
+                    ></textarea>
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+            <div id="links">
+                <a href="/pages/login.html">Login Now</a>
+                <a href="/pages/update.html">Update Now</a>
+                <a href="/pages/delete.html">Delete Now</a>
+            </div>
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>
