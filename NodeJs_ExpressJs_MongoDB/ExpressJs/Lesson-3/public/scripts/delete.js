@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value;
 
         fetch("/delete", {
-            method: "POST",
+            method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
             },

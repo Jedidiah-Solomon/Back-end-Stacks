@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         fetch("/update", {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },

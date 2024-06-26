@@ -89,7 +89,7 @@ app.post("/login", (req, res) => {
 });
 
 // Route to handle update
-app.post("/update", (req, res) => {
+app.put("/update", (req, res) => {
     const { email, password, msg } = req.body;
     const query =
         "UPDATE new_customers SET message = ? WHERE email = ? AND id = ?";
@@ -111,7 +111,7 @@ app.post("/update", (req, res) => {
 });
 
 // Route to handle customer deletion
-app.post("/delete", (req, res) => {
+app.delete("/delete", (req, res) => {
     const { email, password } = req.body;
     const query = "DELETE FROM new_customers WHERE email = ? AND id = ?";
 
