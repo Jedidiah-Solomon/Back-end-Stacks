@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Home</title>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <!-- MailerLite Universal Email Marketing https://dashboard.mailerlite.com/dashboard -->
+        <script>
+            (function (w, d, e, u, f, l, n) {
+                (w[f] =
+                    w[f] ||
+                    function () {
+                        (w[f].q = w[f].q || []).push(arguments);
+                    }),
+                    (l = d.createElement(e)),
+                    (l.async = 1),
+                    (l.src = u),
+                    (n = d.getElementsByTagName(e)[0]),
+                    n.parentNode.insertBefore(l, n);
+            })(
+                window,
+                document,
+                "script",
+                "https://assets.mailerlite.com/js/universal.js",
+                "ml"
+            );
+            ml("account", "1006072");
+        </script>
+        <!-- End MailerLite Universal -->
+    </head>
+    <body>
+        <h1>Home Page</h1>
+        <form action="/userdetails" method="get">
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                required
+            /><br /><br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /><br /><br />
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required /><br /><br />
+            <label for="country">Country:</label>
+            <input
+                type="text"
+                id="country"
+                name="country"
+                required
+            /><br /><br />
+            <input type="submit" value="Submit" />
+        </form>
+        <div id="welcomeUserBox">
+            <a href="/welcomeUser">Register Student</a>
+        </div>
+
+        <script src="/scripts/index.js"></script>
+    </body>
+</html>

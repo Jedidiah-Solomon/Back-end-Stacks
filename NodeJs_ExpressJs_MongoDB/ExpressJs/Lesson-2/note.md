@@ -246,3 +246,74 @@ Also:
 Base URL: https://example.com/login.html
 Fragment Identifier: #contact
 When a user visits https://example.com/login.html#contact, the browser loads login.html and then jumps to the element with id="contact".
+
+```
+<!-- update.html -->
+<form id="update-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password (ID):</label>
+    <input type="password" id="password" name="password" required>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="msg" placeholder="Enter your new message..." required></textarea>
+    <button type="submit">Update User</button>
+</form>
+
+<script>
+document.getElementById("update-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const msg = document.getElementById("msg").value;
+
+    fetch("/updateUser", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password, msg })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Update Response:", data);
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error("Update Error:", error);
+        alert("An error occurred. Please try again.");
+    });
+});
+</script>
+
+```
+
+### Serving static files in Express
+
+To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
+
+The function signature is:
+
+express.static(root, [options])
+The root argument specifies the root directory from which to serve static assets. For more information on the options argument, see express.static.
+
+For example, use the following code to serve images, CSS files, and JavaScript files in a directory named public:
+
+app.use(express.static('public'))
+Now, you can load the files that are in the public directory:
+
+http://localhost:3000/images/kitten.jpg
+http://localhost:3000/css/style.css
+http://localhost:3000/js/app.js
+http://localhost:3000/images/bg.png
+http://localhost:3000/hello.html
+Express looks up the files relative to the static directory, so the name of the static directory is not part of the URL.
+To use multiple static assets directories, call the express.static middleware function multiple times:
+
+app.use(express.static('public'))
+app.use(express.static('files'))
+Express looks up the files in the order in which you set the static directories with the express.static middleware function.
+
+```
+
+```

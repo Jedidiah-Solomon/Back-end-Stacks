@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>URLSearchParams Example</title>
+    </head>
+    <body>
+        <h1>URLSearchParams Example</h1>
+
+        <p>Open this page with a URL containing query parameters, like:</p>
+        <code
+            >http://localhost:3000/index.html?username=John&email=john@example.com&dob=2000-01-01&country=USA</code
+        >
+
+        <h2>Extracted Query Parameters</h2>
+        <div id="query-params">
+            Submit the form to see query parameters here.
+        </div>
+
+        <h2>Form</h2>
+        <form id="myForm">
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                required
+            /><br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required /><br /><br />
+
+            <label for="country">Country:</label>
+            <input
+                type="text"
+                id="country"
+                name="country"
+                required
+            /><br /><br />
+
+            <input type="submit" value="Submit" />
+        </form>
+
+        <h2>Generated URL</h2>
+        <div id="generated-url"></div>
+
+        <script>
+            // Function to display query parameters
+            function displayQueryParams(params) {
+                const queryParamsDiv = document.getElementById("query-params");
+                queryParamsDiv.innerHTML = "";
+
+                if (params.toString()) {
+                    params.forEach((value, key) => {
+                        const p = document.createElement("p");
+                        p.textContent = `${key}: ${value}`;
+                        queryParamsDiv.appendChild(p);
+                    });
+                } else {
+                    queryParamsDiv.textContent = "No query parameters found.";
+                }
+            }
+
+            // Function to handle form submission
+            document
+                .getElementById("myForm")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(this);
+                    const params = new URLSearchParams(formData);
+
+                    // Display generated URL with query parameters
+                    const generatedURLDiv =
+                        document.getElementById("generated-url");
+                    generatedURLDiv.textContent = `${window.location.origin}${
+                        window.location.pathname
+                    }?${params.toString()}`;
+
+                    // Display the query parameters
+                    displayQueryParams(params);
+
+                    // Log the URL to the console
+                    console.log(
+                        `${window.location.origin}${
+                            window.location.pathname
+                        }?${params.toString()}`
+                    );
+                });
+        </script>
+    </body>
+</html>

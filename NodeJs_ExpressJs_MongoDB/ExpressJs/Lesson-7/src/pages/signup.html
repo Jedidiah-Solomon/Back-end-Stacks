@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Signup</title>
+        <link rel="stylesheet" href="/styles/signup.css" />
+    </head>
+    <body>
+        <div id="container">
+            <h1>Signup</h1>
+            <form id="signup-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+                <button type="submit">Signup</button>
+            </form>
+            <div id="message"></div>
+            <div id="password-requirements">
+                <p id="uppercase" class="requirement">
+                    ✓ At least one uppercase letter
+                </p>
+                <p id="lowercase" class="requirement">
+                    ✓ At least one lowercase letter
+                </p>
+                <p id="number" class="requirement">✓ At least one number</p>
+                <p id="special" class="requirement">
+                    ✓ At least one special character
+                </p>
+                <p id="length" class="requirement">
+                    ✓ At least 8 characters long
+                </p>
+            </div>
+        </div>
+        <script src="/scripts/signup.js"></script>
+    </body>
+</html>
