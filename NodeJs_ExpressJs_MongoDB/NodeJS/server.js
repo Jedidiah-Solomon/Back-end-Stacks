@@ -4,8 +4,8 @@ const mysql = require("mysql");
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Jedybrown1234$",
-    database: "bathphage_ict_center", // Optionally specify the database name here
+    password: "password1",
+    database: "db_name", // Optionally specify the database name here
 });
 
 // Connect to the database
