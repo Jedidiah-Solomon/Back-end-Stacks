@@ -1,0 +1,18 @@
+[
+    {
+        "_id": {
+            "$oid": "6681afd8a4aff80f143db276"
+        },
+        "name": "Amadi Uche",
+        "age": 22,
+        "course": "Data Science"
+    },
+    {
+        "_id": {
+            "$oid": "6681afd8a4aff80f143db255"
+        },
+        "name": "Jude Paul",
+        "age": 21,
+        "course": "Machine Learning"
+    }
+]

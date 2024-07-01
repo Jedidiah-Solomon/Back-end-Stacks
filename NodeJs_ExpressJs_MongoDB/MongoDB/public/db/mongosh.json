@@ -1,0 +1,21 @@
+// Connect to your MongoDB Atlas cluster
+mongosh "mongodb+srv://<your-cluster-url>"
+
+// Switch to the database
+use bathphage_ict_students
+
+// Insert the documents
+db.students.insertMany([
+  {
+    "_id": ObjectId("6681afd8a4aff80f143db211"),
+    "name": "Jane Smith",
+    "age": 22,
+    "course": "Data Analysis"
+  },
+  {
+    "_id": ObjectId("6681afd8a4aff80f143db233"),
+    "name": "Michael Johnson",
+    "age": 24,
+    "course": "Web Development"
+  }
+])
