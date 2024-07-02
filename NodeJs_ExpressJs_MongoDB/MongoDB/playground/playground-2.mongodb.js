@@ -93,3 +93,7 @@ db.getCollection("sales").aggregate([
         },
     },
 ]);
+
+// Print the result to the output
+print("Students with reviews by John Doe:");
+printjson(studentsWithJohnDoeReviews);

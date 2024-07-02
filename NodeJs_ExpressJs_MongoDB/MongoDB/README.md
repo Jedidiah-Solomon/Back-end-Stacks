@@ -628,3 +628,95 @@ const addCurrentIPToWhitelist = async () => {
 
 addCurrentIPToWhitelist();
 ```
+
+```
+// Define the route to get all students
+app.get("/students", (req, res) => {
+    let students = [];
+
+    db.collection("students")
+        .find()
+        .sort({ firstName: 1 })
+        .toArray()
+        .then((students) => {
+            res.status(200).json(students);
+        })
+        .catch((err) => {
+            res.status(500).json({ error: "Could not fetch the documents" });
+        });
+});
+```
+
+Code Snippet 1:
+
+````
+db.collection("students")
+    .find()
+    .sort({ firstName: 1 })
+    .forEach((student) => students.push(student))
+    .then(() => {
+        res.status(200).json(students);
+    })
+```
+Explanation:
+
+find() and sort(): This initiates a MongoDB query to find all documents in the "students" collection and sort them by the "firstName" field in ascending order.
+forEach((student) => students.push(student)): This part iterates over each document returned by find() and pushes it into the students array.
+then(() => { res.status(200).json(students); }): After all documents have been pushed into the students array, it sends a JSON response (res.status(200).json(students)) containing all the documents retrieved from the database.
+Pros:
+
+Efficient for processing large result sets if you need to perform actions on each document individually before sending the response.
+Cons:
+
+Not suitable for sending the response immediately after the find() operation completes, as forEach() and subsequent actions are asynchronous.
+Code Snippet 2:
+````
+
+app.get("/students", (req, res) => {
+db.collection("students")
+.find()
+.sort({ firstName: 1 })
+.toArray()
+.then((students) => {
+res.status(200).json(students);
+})
+.catch(() => {
+res.status(500).json({ error: "Could not fetch the documents" });
+});
+});
+
+```
+Explanation:
+
+find() and sort(): Similar to the previous snippet, this initiates a MongoDB query to find all documents in the "students" collection and sort them by the "firstName" field in ascending order.
+toArray(): This converts the cursor returned by find() into an array of documents. This method returns a promise that resolves to an array containing all documents in the result set.
+then((students) => { res.status(200).json(students); }): After converting the result set to an array, it sends a JSON response (res.status(200).json(students)) containing all the documents retrieved from the database.
+.catch(() => { res.status(500).json({ error: "Could not fetch the documents" }); });: This handles any errors that may occur during the find() or toArray() operations and sends a 500 status response with an error message.
+Pros:
+
+Directly sends the response once all documents are retrieved and converted to an array, making the code more straightforward and synchronous in handling the response.
+Cons:
+
+If you need to perform complex operations on each document individually before sending the response, this approach might not be suitable without additional asynchronous handling.
+Recommendation:
+Use Code Snippet 2: For most cases where you simply want to fetch and send all documents from a collection, converting the cursor to an array (toArray()) and then sending the response directly (res.json()) is the cleaner and more typical approach in Node.js applications.
+
+Consider Code Snippet 1: If you need to perform complex operations or modifications on each document retrieved before sending the response, you can use a similar approach with forEach(). Ensure to handle asynchronous operations properly within the loop and before sending the response to avoid issues with timing and concurrency.
+```
+
+MongoDB Aggregation Pipelines
+Aggregation Pipelines
+Aggregation operations allow you to group, sort, perform calculations, analyze data, and much more.
+
+Aggregation pipelines can have one or more "stages". The order of these stages are important. Each stage acts upon the results of the previous stage.
+
+```
+db.posts.aggregate([
+  {
+    $match: { likes: { $gt: 1 } }
+  },
+  {
+    $group: { _id: "$category", totalLikes: { $sum: "$likes" } }
+  }
+])
+```

@@ -92,6 +92,7 @@ db.students.insertMany([
         class: "9B",
         gender: "Female",
         hobbies: ["painting", "swimming"],
+        reviews: { name: "John Doe", remark: "Good" },
     },
 ]);
 
@@ -114,3 +115,44 @@ db.students.find({ age: { $lte: 4 } });
 db.students.find({
     $or: [{ age: 17 }, { firstNamer: "John" }],
 });
+
+//Find students with age  7 or 8 or 9
+db.students.find({ age: { $in: [7, 8, 9] } });
+
+//Find students with age not  7 or 8 or 9
+db.students.find({ age: { $nin: [7, 8, 9] } });
+
+//Find students with cooking as one of their hobbies
+db.students.find({ hobbies: "Cooking" });
+
+//Find students with cooking as thier only hobby
+db.students.find({ hobbies: ["Cooking"] });
+
+// Delete a single document where the student's first name is "John"
+db.students.deleteOne({ firstName: "John" });
+
+// Convert the string ID to an ObjectId and delete the document
+db.students.deleteOne({ _id: ObjectId("6682c178d152e60f88c4b6ed") });
+
+// Delete all documents where the students are in class "5A"
+db.students.deleteMany({ class: "5A" });
+
+// Update the email of the student with first name "Jane"
+db.students.updateOne(
+    { firstName: "Jane" },
+    { $set: { email: "jane.newemail@example.com" } }
+);
+
+// Update the class of all students with the first name "Doe" to "6B"
+db.students.updateMany({ lastName: "Doe" }, { $set: { class: "6B" } });
+
+// Add a new field "grade" to all students and set its value to "A"
+db.students.updateMany({}, { $set: { grade: "A" } });
+
+// Increment the age of all students by 1 year
+db.students.updateMany({}, { $inc: { age: 1 } });
+
+// Find students with reviews by "John Doe"
+const studentsWithJohnDoeReviews = db.students
+    .find({ "reviews.name": "John Doe" })
+    .toArray();
