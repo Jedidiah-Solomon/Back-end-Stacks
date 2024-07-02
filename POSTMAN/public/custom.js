@@ -3,23 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const searchType = document.getElementById("searchType");
     const booksContainer = document.getElementById("booksContainer");
+    let noResultsMessage = null;
 
     searchForm.addEventListener("submit", function (event) {
         event.preventDefault();
         const query = searchInput.value.trim();
         const type = searchType.value;
 
+        booksContainer.innerHTML = "";
+        if (noResultsMessage) {
+            noResultsMessage.remove();
+            noResultsMessage = null;
+        }
+
         if (query) {
             fetch(`/books/search?${type}=${query}`)
-                .then((response) => response.json())
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(
+                            `HTTP error! Status: ${response.status}`
+                        );
+                    }
+                    return response.json();
+                })
                 .then((books) => {
-                    booksContainer.innerHTML = "";
-                    if (books.length === 0) {
-                        const noResultsMessage = document.createElement("div");
+                    if (!Array.isArray(books) || books.length === 0) {
+                        noResultsMessage = document.createElement("div");
                         noResultsMessage.className = "no-book-found";
-                        noResultsMessage.textContent = "Book(s) Not Found";
+                        noResultsMessage.textContent =
+                            "Empty Bookshop, check later!!!";
                         booksContainer.appendChild(noResultsMessage);
                     } else {
+                        // Display books
                         books.forEach((book) => {
                             const bookElement = document.createElement("div");
                             bookElement.className = "book";
@@ -45,7 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                 .catch((error) => {
                     console.error("Error:", error);
-                    booksContainer.innerHTML = "<p>Error fetching books.</p>";
+                    if (error.message.includes("404")) {
+                        noResultsMessage = document.createElement("div");
+                        noResultsMessage.className = "no-book-found";
+                        noResultsMessage.textContent = "Book(s) Not Found";
+                        booksContainer.appendChild(noResultsMessage);
+                    } else {
+                        booksContainer.innerHTML = `<p>Error fetching books: ${error.message}</p>`;
+                    }
                 });
         }
     });

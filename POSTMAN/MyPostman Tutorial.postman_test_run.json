@@ -1,0 +1,110 @@
+{
+	"id": "7007217f-ba2c-4dfb-b245-9fcd34eeb017",
+	"name": "MyPostman Tutorial",
+	"timestamp": "2024-07-02T11:53:07.846Z",
+	"collection_id": "34532228-42f11ad9-8195-4031-8de3-199a6416175c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2024-07-02T11:53:04.840Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "72693098-540f-478f-ba41-15ecc98168b2",
+			"name": "Book request",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 1171,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1171
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0935aaad-0dea-473b-a624-e389f1394b73",
+			"name": "Book request | Params",
+			"url": "https://simple-books-api.glitch.me/books?type=fiction",
+			"time": 281,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				281
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c602c8c9-dff1-4f4f-be93-97094d2e81c2",
+			"name": "Book request | Params-2",
+			"url": "https://simple-books-api.glitch.me/books?limit=2",
+			"time": 224,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				224
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dfba309b-fbde-40c8-83d9-3f50f91f74c5",
+			"name": "Book request | Params-3",
+			"url": "https://simple-books-api.glitch.me/books/1\n",
+			"time": 230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				230
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1906,
+	"collection": {
+		"requests": [
+			{
+				"id": "72693098-540f-478f-ba41-15ecc98168b2",
+				"method": "GET"
+			},
+			{
+				"id": "0935aaad-0dea-473b-a624-e389f1394b73",
+				"method": "GET"
+			},
+			{
+				"id": "c602c8c9-dff1-4f4f-be93-97094d2e81c2",
+				"method": "GET"
+			},
+			{
+				"id": "dfba309b-fbde-40c8-83d9-3f50f91f74c5",
+				"method": "GET"
+			}
+		]
+	}
+}

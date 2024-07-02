@@ -69,27 +69,41 @@ app.get("/books/search", (req, res) => {
     let filteredBooks = books;
 
     if (genre) {
+        // Filter by genre
+        const genreLowerCase = genre.toLowerCase();
         filteredBooks = filteredBooks.filter((book) =>
-            book.genres.includes(genre)
+            book.genres.some((g) => g.toLowerCase() === genreLowerCase)
         );
     }
 
     if (author) {
+        // Filter by author (case insensitive)
+        const authorLowerCase = author.toLowerCase();
         filteredBooks = filteredBooks.filter(
-            (book) => book.author.toLowerCase() === author.toLowerCase()
+            (book) => book.author.toLowerCase() === authorLowerCase
         );
     }
 
     if (year) {
+        // Filter by year
         filteredBooks = filteredBooks.filter(
             (book) => book.publication.year == year
         );
     }
 
     if (custom_id) {
+        // Filter by custom_id (case insensitive)
+        const customIdLowerCase = custom_id.toLowerCase();
         filteredBooks = filteredBooks.filter(
-            (book) => book.custom_id == custom_id
+            (book) => book.custom_id.toLowerCase() === customIdLowerCase
         );
+    }
+
+    if (filteredBooks.length === 0) {
+        console.log(
+            `No books found for query: genre=${genre}, author=${author}, year=${year}, custom_id=${custom_id}`
+        );
+        return res.status(404).json({ message: "Books not found!" });
     }
 
     res.status(200).json(filteredBooks);

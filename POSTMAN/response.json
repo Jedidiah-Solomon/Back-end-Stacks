@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "custom_id": "1/bcc/2024",
+        "title": "Holy God",
+        "author": "James Dedon",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "John Okeke",
+            "year": "2021",
+            "location": "Lagos"
+        },
+        "genres": ["Fiction", "Action"]
+    },
+    {
+        "id": 5,
+        "custom_id": "123/nga/2024",
+        "title": "12 Laws of Power",
+        "author": "James Dedon",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "Mike Onwu",
+            "year": "2023",
+            "location": "London"
+        },
+        "genres": ["Fiction", "Action", "Drama"]
+    },
+    {
+        "http-CODE-RUN": "//localhost:3000/books/search?author=James%20Dedon"
+    }
+]
