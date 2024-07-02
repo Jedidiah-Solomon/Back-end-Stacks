@@ -719,4 +719,29 @@ db.posts.aggregate([
     $group: { _id: "$category", totalLikes: { $sum: "$likes" } }
   }
 ])
+
+db.students.aggregate([
+  {
+    $group: {
+      _id: "$class",
+      count: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
 ```
+
+
+Explanation:
+$group Stage:
+
+_id: "$class": Groups documents by the class field. This means each unique class value will be treated as a group identifier.
+count: { $sum: 1 }: Computes the count of documents in each group. $sum: 1 increments the count for each document in the group.
+$sort Stage:
+
+{ _id: 1 }: Sorts the output by _id in ascending order (alphabetical order for class names).
+Example Usage:
+If you run this aggregation pipeline in MongoDB with your sample data, assuming it's stored in the students collection, you might get results like this:
