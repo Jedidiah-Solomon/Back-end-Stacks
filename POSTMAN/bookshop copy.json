@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "custom_id": "1/bcc/2024",
+        "title": "Book 1",
+        "author": "Author 1",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "Publisher 1",
+            "year": 2020,
+            "location": "New York"
+        },
+        "genres": ["Fiction", "Adventure"],
+        "reviews": [
+            {
+                "reviewer": "Reviewer 1",
+                "rating": 4,
+                "comment": "Great book!"
+            },
+            {
+                "reviewer": "Reviewer 2",
+                "rating": 5,
+                "comment": "Must read."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "custom_id": "1/bcc/2024",
+        "title": "Book 2",
+        "author": "Author 2",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "Publisher 2",
+            "year": 2021,
+            "location": "London"
+        },
+        "genres": ["Non-Fiction", "Biography"],
+        "reviews": [
+            {
+                "reviewer": "Reviewer 3",
+                "rating": 3,
+                "comment": "It was okay."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "custom_id": "1/bcc/2024",
+        "title": "Book 3",
+        "author": "Author 3",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "Publisher 3",
+            "year": 2019,
+            "location": "San Francisco"
+        },
+        "genres": ["Science Fiction", "Thriller"],
+        "reviews": [
+            {
+                "reviewer": "Reviewer 4",
+                "rating": 2,
+                "comment": "Not my taste."
+            },
+            {
+                "reviewer": "Reviewer 5",
+                "rating": 4,
+                "comment": "Enjoyable."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "custom_id": "1/bcc/2024",
+        "title": "Book 4",
+        "author": "Author 4",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "Publisher 4",
+            "year": 2018,
+            "location": "Tokyo"
+        },
+        "genres": ["Fantasy", "Adventure"],
+        "reviews": [
+            {
+                "reviewer": "Reviewer 6",
+                "rating": 5,
+                "comment": "Excellent!"
+            },
+            {
+                "reviewer": "Reviewer 7",
+                "rating": 4,
+                "comment": "Very good."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "custom_id": "1/bcc/2024",
+        "title": "Book 5",
+        "author": "Author 5",
+        "imgUrl": "https://via.placeholder.com/150",
+        "publication": {
+            "publisher": "Publisher 5",
+            "year": 2022,
+            "location": "Sydney"
+        },
+        "genres": ["Mystery", "Crime", "Drama"],
+        "reviews": [
+            {
+                "reviewer": "Reviewer 8",
+                "rating": 3,
+                "comment": "Average read."
+            },
+            {
+                "reviewer": "Reviewer 9",
+                "rating": 5,
+                "comment": "Loved it!"
+            }
+        ]
+    }
+]
