@@ -1,0 +1,239 @@
+{
+    "info": {
+        "_postman_id": "599f1683-abc1-48eb-94fa-b27fad5de404",
+        "name": "Youtube Class",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "34532228"
+    },
+    "item": [
+        {
+            "name": "Get all Posts",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/posts",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get a single Post - id=1 | Success",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/posts/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Home Page Route",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": [""]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create New Post - Success",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "",
+                        "value": "",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "title",
+                            "value": "Love Story",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/posts",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create New Post - Error",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "",
+                        "value": "",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "Wrong",
+                            "value": "Love Story",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/posts?=",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts"],
+                    "query": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create New Post - Error -2",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "",
+                        "value": "",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "title",
+                            "value": "Bees love",
+                            "type": "text"
+                        },
+                        {
+                            "key": "Another-key",
+                            "value": "Manchi",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/posts",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create New Post - Error -3",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "",
+                        "value": "",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "title",
+                            "value": "Bees love 5",
+                            "type": "text"
+                        },
+                        {
+                            "key": "author",
+                            "value": "Paul Peter",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/posts",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update a Post",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "title",
+                            "value": "Updated Post 2",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/posts/2",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts", "2"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete a Post",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": []
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/posts/2",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "posts", "2"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
