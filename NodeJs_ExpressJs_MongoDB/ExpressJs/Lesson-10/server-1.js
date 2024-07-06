@@ -5,7 +5,6 @@ import { dirname } from "path";
 import posts from "./routes/posts.js";
 import logger from "./middleware/logger.js";
 import errorHandler from "./middleware/error.js";
-import pages from "./routes/pages.js";
 
 const Port = process.env.PORT || 3000;
 
@@ -26,17 +25,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/api/posts", posts);
-app.use("/", pages);
+
+// Home Route
+app.get("/", (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// 404 Route
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
+});
 
 // Error-handling middleware
 app.use(errorHandler);
-
-// 404 Error Handling Middleware
-app.use((req, res) => {
-    res.status(404).sendFile(
-        path.join(__dirname, "public", "pages", "404.html")
-    );
-});
 
 app.listen(Port, () => {
     console.log(`Server running at port ${Port}`);

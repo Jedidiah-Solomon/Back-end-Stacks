@@ -472,3 +472,7 @@ Usage: `req.subdomains`
 
 Description: A Boolean that is true if the request was made by an XMLHttpRequest.
 Usage: `req.xhr`
+
+### Add Color to terminal
+
+` npm i colors`
