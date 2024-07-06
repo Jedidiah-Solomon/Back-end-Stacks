@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header,
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: blue;
+}
