@@ -1,0 +1,15 @@
+GET http://localhost:3000/posts
+
+### Create accessToken for John
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "John"
+}
+
+
+### Access Protected Route
+GET http://localhost:3000/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiIsImlhdCI6MTcyMDM1MjkwNH0.ipOQN0-FMEZOafTkfW6LsPntb4sS5YLH0E6MG7RajZs

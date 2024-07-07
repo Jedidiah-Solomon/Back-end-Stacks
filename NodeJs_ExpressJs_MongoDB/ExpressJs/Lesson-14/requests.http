@@ -1,0 +1,13 @@
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "jedybrown9821@gmail.com",
+    "password": "Password2#"
+}
+
+###
+GET http://localhost:5000/classroom.html
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJPZ2FTb2xvIiwiaWF0IjoxNzIwMzgyNDA0LCJleHAiOjE3MjAzODk2MDR9.EHmd7f9nGx7bc6KrxaQTJYcVIk3Cns3jzWEuthvSRj0
+
+### https://fusionauth.io/dev-tools/jwt-decoder
