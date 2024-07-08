@@ -8,6 +8,5 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5000/classroom.html
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJPZ2FTb2xvIiwiaWF0IjoxNzIwMzgyNDA0LCJleHAiOjE3MjAzODk2MDR9.EHmd7f9nGx7bc6KrxaQTJYcVIk3Cns3jzWEuthvSRj0
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJPZ2FTb2xvIiwiaWF0IjoxNzIwNDQxNjQ2LCJleHAiOjE3MjA0NDg4NDZ9.Y-eCHzH0BsAsDVeCxakbteSf041M6gBdEuTRc8FsE3E
 ### https://fusionauth.io/dev-tools/jwt-decoder

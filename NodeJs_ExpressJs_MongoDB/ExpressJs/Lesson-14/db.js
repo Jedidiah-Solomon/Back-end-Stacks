@@ -1,4 +1,5 @@
 const mysql = require("mysql");
+const util = require("util"); // Require the util module explicitly
 
 const connection = mysql.createConnection({
     host: "localhost",
@@ -13,6 +14,11 @@ connection.connect((err) => {
         return;
     }
     console.log("Connected to the database as id " + connection.threadId);
+    // console.log(
+    //     "Connection properties:",
+    //     util.inspect(connection, { depth: null, colors: true })
+    // );
+    // console.log("Connection property names:", Object.keys(connection));
 });
 
 module.exports = connection;

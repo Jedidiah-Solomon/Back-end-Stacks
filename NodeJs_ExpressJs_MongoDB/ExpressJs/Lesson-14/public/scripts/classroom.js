@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await fetch("/classroom", {
+        const response = await fetch("/classroom.html", {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`,
