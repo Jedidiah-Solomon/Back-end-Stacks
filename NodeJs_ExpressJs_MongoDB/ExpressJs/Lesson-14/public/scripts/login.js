@@ -3,6 +3,11 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    if (!email || !password) {
+        alert("Please enter both email and password.");
+        return;
+    }
+
     try {
         const response = await fetch("/login", {
             method: "POST",
@@ -14,12 +19,8 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
         if (response.ok) {
             const data = await response.json();
-            if (data.accessToken) {
-                localStorage.setItem("accessToken", data.accessToken);
-                console.log(
-                    "Token stored:",
-                    localStorage.getItem("accessToken")
-                );
+            if (data.message === "Login successful") {
+                console.log("Login successful, redirecting...");
                 alert("Login successful!");
                 window.location.href = "/classroom.html";
             } else {

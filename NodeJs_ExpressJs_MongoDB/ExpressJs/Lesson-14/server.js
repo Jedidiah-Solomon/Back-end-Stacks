@@ -5,7 +5,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const connection = require("./db");
-
+const cookieParser = require("cookie-parser");
 const path = require("path");
 const cors = require("cors");
 
@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cors()); // Use cors middleware to enable CORS for all routes
+app.use(cookieParser());
 
 // app.use(
 //     cors({
@@ -107,9 +108,14 @@ app.post("/login", async (req, res) => {
                     const accessToken = jwt.sign(
                         { id: user.id, username: user.username },
                         process.env.ACCESS_TOKEN_SECRET,
-                        { expiresIn: "2h" }
+                        { expiresIn: "2m" } // { expiresIn: "3h" } for 3h, 2m = 2 mins
                     );
-                    return res.json({ accessToken });
+                    res.cookie("accessToken", accessToken, {
+                        httpOnly: true,
+                        maxAge: 2 * 60 * 1000, // 2 hours = 2 * 60 * 60 * 1000, 2 * 60 * 1000 = 2mins
+                        sameSite: "Strict", // or 'Lax', or 'None' if you need cross-site usage
+                    });
+                    return res.json({ message: "Login successful" });
                 } else {
                     return res
                         .status(401)
@@ -130,24 +136,25 @@ app.get("/classroom.html", authenticateToken, (req, res) => {
 
 // Middleware to authenticate JWT token
 function authenticateToken(req, res, next) {
-    const authHeader = req.headers["authorization"];
-    console.log("Authorization Header:", authHeader);
-
-    const token = authHeader && authHeader.split(" ")[1];
-    console.log("Token:", token); // Log the extracted token
+    const token = req.cookies.accessToken;
+    console.log("Token from cookie:", token); // Log the extracted token
 
     if (!token) {
-        console.log("No token provided");
-        return res.sendStatus(401);
+        console.log("No token provided, Please login again for a new session!");
+        return res.status(401).json({
+            message: "No token provided, Please login again for a new session!",
+        });
     }
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
         if (err) {
             console.error("JWT verification error:", err);
-            return res.sendStatus(403); // 403 for token expired or invalid
+            return res
+                .status(403)
+                .json({ message: "Token verification failed" }); // 403 for token expired or invalid
         }
         req.user = user;
-        console.log("Authenticated user:", user); // Log the authenticated user
+        console.log("Authenticated user:", user);
         next();
     });
 }
