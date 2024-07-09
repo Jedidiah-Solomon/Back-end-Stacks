@@ -1,0 +1,33 @@
+<article>
+    <div class="feature-image-box">
+        <img
+            src="<%= data.featureImg %>"
+            alt="Feature Image"
+            class="feature-image"
+        />
+    </div>
+
+    <h2><%= data.title %></h2>
+
+    <p><%= data.body %></p>
+
+    <div class="post-images">
+        <img
+            src="<%= data.requiredImg %>"
+            alt="Required Image"
+            class="post-img"
+        />
+        <% if (data.optionalImg) { %>
+        <img
+            src="<%= data.optionalImg %>"
+            alt="Optional Image"
+            class="post-img"
+        />
+        <% } %>
+    </div>
+
+    <p>Created at: <%= data.createdAt.toDateString() %></p>
+    <% if (data.updatedAt) { %>
+    <p>Updated at: <%= data.updatedAt.toDateString() %></p>
+    <% } %>
+</article>
