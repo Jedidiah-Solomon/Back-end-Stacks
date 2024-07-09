@@ -116,3 +116,9 @@ a:hover {
     margin-top: 5px;
     text-align: center;
 }
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}

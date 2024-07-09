@@ -16,24 +16,28 @@ const initializePassport = require("./passport-config");
 initializePassport(
     passport,
     (email) => {
-        connection.query(
-            "SELECT * FROM customers WHERE email = ?",
-            [email],
-            (err, results) => {
-                if (err) throw err;
-                return results[0];
-            }
-        );
+        return new Promise((resolve, reject) => {
+            connection.query(
+                "SELECT * FROM customers WHERE email = ?",
+                [email],
+                (err, results) => {
+                    if (err) return reject(err);
+                    resolve(results[0]);
+                }
+            );
+        });
     },
     (id) => {
-        connection.query(
-            "SELECT * FROM customers WHERE id = ?",
-            [id],
-            (err, results) => {
-                if (err) throw err;
-                return results[0];
-            }
-        );
+        return new Promise((resolve, reject) => {
+            connection.query(
+                "SELECT * FROM customers WHERE id = ?",
+                [id],
+                (err, results) => {
+                    if (err) return reject(err);
+                    resolve(results[0]);
+                }
+            );
+        });
     }
 );
 
@@ -61,7 +65,11 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // Routes
-app.get("/", checkAuthenticated, (req, res) => {
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/home.html");
+});
+
+app.get("/dashboard", checkAuthenticated, (req, res) => {
     res.render("index", { username: req.user.username });
 });
 
@@ -75,15 +83,10 @@ app.post(
     "/login",
     checkNotAuthenticated,
     passport.authenticate("local", {
-        successRedirect: "/",
+        successRedirect: "/dashboard",
         failureRedirect: "/login",
         failureFlash: true,
-    }),
-    (req, res) => {
-        // This function will execute if authentication fails
-        req.flash("error", "Invalid email or password");
-        res.redirect("/login");
-    }
+    })
 );
 
 // Register Route for Get
@@ -101,9 +104,8 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
             async (err, results) => {
                 if (err) throw err;
                 if (results.length > 0) {
-                    return res
-                        .status(400)
-                        .json({ message: "Email already in use" });
+                    req.flash("error", "Email already in use");
+                    return res.redirect("/register");
                 }
 
                 const hashedPassword = await bcrypt.hash(password, 10);
@@ -116,6 +118,10 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
                             "POST /register - Customer registered successfully"
                                 .green
                         );
+                        req.flash(
+                            "success",
+                            "Registration successful! Please log in."
+                        );
                         res.redirect("/login");
                     }
                 );
@@ -123,6 +129,7 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
         );
     } catch (error) {
         console.error("POST /register - Server error".red, error);
+        req.flash("error", "Server error");
         res.redirect("/register");
     }
 });
@@ -147,7 +154,7 @@ function checkAuthenticated(req, res, next) {
 
 function checkNotAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
-        return res.redirect("/");
+        return res.redirect("/dashboard");
     }
     next();
 }
