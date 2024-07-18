@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa2"
+  },
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "Michael",
+  "email": "john.doe@example.com",
+  "age": 30,
+  "religion": "Christianity",
+  "educationLevel": "Bachelor's Degree",
+  "state": "Lagos",
+  "lga": "Ikeja",
+  "tribe": "Yoruba"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa3"
+  },
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "middleName": "Ann",
+  "email": "jane.smith@example.com",
+  "age": 28,
+  "religion": "Islam",
+  "educationLevel": "Master's Degree",
+  "state": "Kano",
+  "lga": "Kano Municipal",
+  "tribe": "Hausa"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa4"
+  },
+  "firstName": "David",
+  "lastName": "Brown",
+  "middleName": "Oluwaseun",
+  "email": "david.brown@example.com",
+  "age": 35,
+  "religion": "Christianity",
+  "educationLevel": "PhD",
+  "state": "Ogun",
+  "lga": "Abeokuta North",
+  "tribe": "Yoruba"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa5"
+  },
+  "firstName": "Mary",
+  "lastName": "Johnson",
+  "middleName": "Grace",
+  "email": "mary.johnson@example.com",
+  "age": 25,
+  "religion": "Christianity",
+  "educationLevel": "Bachelor's Degree",
+  "state": "Abuja",
+  "lga": "Garki",
+  "tribe": "Igbo"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa6"
+  },
+  "firstName": "Ahmed",
+  "lastName": "Mohammed",
+  "middleName": "Ali",
+  "email": "ahmed.mohammed@example.com",
+  "age": 32,
+  "religion": "Islam",
+  "educationLevel": "Master's Degree",
+  "state": "Kaduna",
+  "lga": "Kaduna South",
+  "tribe": "Hausa"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa7"
+  },
+  "firstName": "Blessing",
+  "lastName": "Okon",
+  "middleName": "Joy",
+  "email": "blessing.okon@example.com",
+  "age": 27,
+  "religion": "Christianity",
+  "educationLevel": "Bachelor's Degree",
+  "state": "Akwa Ibom",
+  "lga": "Uyo",
+  "tribe": "Ibibio"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa8"
+  },
+  "firstName": "James",
+  "lastName": "Taylor",
+  "middleName": "Peter",
+  "email": "james.taylor@example.com",
+  "age": 29,
+  "religion": "Christianity",
+  "educationLevel": "Master's Degree",
+  "state": "Rivers",
+  "lga": "Port Harcourt",
+  "tribe": "Ijaw"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aa9"
+  },
+  "firstName": "Fatima",
+  "lastName": "Aliyu",
+  "middleName": "Aisha",
+  "email": "fatima.aliyu@example.com",
+  "age": 31,
+  "religion": "Islam",
+  "educationLevel": "Bachelor's Degree",
+  "state": "Kano",
+  "lga": "Kano Municipal",
+  "tribe": "Hausa"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aaa"
+  },
+  "firstName": "Chinedu",
+  "lastName": "Nwachukwu",
+  "middleName": "Emeka",
+  "email": "chinedu.nwachukwu@example.com",
+  "age": 26,
+  "religion": "Christianity",
+  "educationLevel": "Bachelor's Degree",
+  "state": "Enugu",
+  "lga": "Enugu East",
+  "tribe": "Igbo"
+},
+{
+  "_id": {
+    "$oid": "66954571af4cd5b7a0d13aab"
+  },
+  "firstName": "Amina",
+  "lastName": "Abubakar",
+  "middleName": "Halima",
+  "email": "amina.abubakar@example.com",
+  "age": 33,
+  "religion": "Islam",
+  "educationLevel": "PhD",
+  "state": "Bauchi",
+  "lga": "Bauchi",
+  "tribe": "Fulani"
+},
+{
+  "_id": {
+    "$oid": "669547ea59bb3f89ed16e357"
+  },
+  "firstName": "Jedy",
+  "lastName": "Paul",
+  "middleName": "Michael",
+  "email": "jedy.paul@example.com",
+  "age": 50,
+  "religion": "Christianity",
+  "educationLevel": "Bachelor's Degree",
+  "state": "Lagos",
+  "lga": "Ikeja",
+  "tribe": "Yoruba"
+},
+{
+  "_id": {
+    "$oid": "669547ea59bb3f89ed16e358"
+  },
+  "firstName": "Akachi",
+  "lastName": "Onwuka",
+  "middleName": "Michael",
+  "email": "a.o@example.com",
+  "age": 50,
+  "religion": "Christianity",
+  "educationLevel": "GCE",
+  "state": "Imo",
+  "lga": "Isial Mbano",
+  "tribe": "Igbo"
+}]

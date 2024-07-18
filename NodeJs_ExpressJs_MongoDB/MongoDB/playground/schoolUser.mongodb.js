@@ -1,5 +1,5 @@
 // Select the database to use
-use("Redemed_school");
+use("JVN_school");
 
 // Create the students collection and insert documents
 db.students.insertMany([

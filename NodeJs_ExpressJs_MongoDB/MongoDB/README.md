@@ -704,8 +704,9 @@ Use Code Snippet 2: For most cases where you simply want to fetch and send all d
 Consider Code Snippet 1: If you need to perform complex operations or modifications on each document retrieved before sending the response, you can use a similar approach with forEach(). Ensure to handle asynchronous operations properly within the loop and before sending the response to avoid issues with timing and concurrency.
 ```
 
-MongoDB Aggregation Pipelines
-Aggregation Pipelines
+### MongoDB Aggregation Pipelines
+
+**Aggregation Pipelines**
 Aggregation operations allow you to group, sort, perform calculations, analyze data, and much more.
 
 Aggregation pipelines can have one or more "stages". The order of these stages are important. Each stage acts upon the results of the previous stage.
@@ -734,14 +735,270 @@ db.students.aggregate([
 
 ```
 
-
 Explanation:
 $group Stage:
 
-_id: "$class": Groups documents by the class field. This means each unique class value will be treated as a group identifier.
+\_id: "$class": Groups documents by the class field. This means each unique class value will be treated as a group identifier.
 count: { $sum: 1 }: Computes the count of documents in each group. $sum: 1 increments the count for each document in the group.
 $sort Stage:
 
-{ _id: 1 }: Sorts the output by _id in ascending order (alphabetical order for class names).
+{ \_id: 1 }: Sorts the output by \_id in ascending order (alphabetical order for class names).
 Example Usage:
 If you run this aggregation pipeline in MongoDB with your sample data, assuming it's stored in the students collection, you might get results like this:
+
+```
+
+```
+
+## MongoDB Query Operators
+
+There are many query operators that can be used to compare and reference document fields.
+
+### Comparison
+
+The following operators can be used in queries to compare values:
+
+$eq: Values are equal
+$ne: Values are not equal
+$gt: Value is greater than another value
+$gte: Value is greater than or equal to another value
+$lt: Value is less than another value
+$lte: Value is less than or equal to another value
+$in: Value is matched within an array
+
+### Logical
+
+The following operators can logically compare multiple queries.
+
+$and: Returns documents where both queries match
+$or: Returns documents where either query matches
+$nor: Returns documents where both queries fail to match
+$not: Returns documents where the query does not match
+
+### Evaluation
+
+The following operators assist in evaluating documents.
+
+$regex: Allows the use of regular expressions when evaluating field values
+$text: Performs a text search
+$where: Uses a JavaScript expression to match documents
+
+## MongoDB Update Operators
+
+There are many update operators that can be used during document updates.
+
+### Fields
+
+The following operators can be used to update fields:
+
+$currentDate: Sets the field value to the current date
+$inc: Increments the field value
+$rename: Renames the field
+$set: Sets the value of a field
+$unset: Removes the field from the document
+
+### Array
+
+The following operators assist with updating arrays.
+
+$addToSet: Adds distinct elements to an array
+$pop: Removes the first or last element of an array
+$pull: Removes all elements from an array that match the query
+$push: Adds an element to an array
+
+---
+
+---
+
+---
+
+The $project stage in MongoDB's aggregation framework is used to reshape documents passing through the pipeline. Let's break down the { $project } stage you've mentioned:
+
+Explanation Line by Line:
+
+{
+$project: {
+        _id: 0,
+        productName: "$\_id",
+count: 1,
+},
+},
+
+---
+
+```
+// Aggregate to count unique product names in the orders collection
+const result = db.getCollection("orders").aggregate([
+    {
+        $group: {
+            _id: "$name",
+            count: { $sum: 1 },
+        },
+    },
+    {
+        $project: {
+            _id: 0,
+            productName: "$_id",
+            count: 1,
+        },
+    },
+]);
+```
+
+Goal:
+We want to count how many times each unique product name appears in the orders collection.
+
+Step-by-Step Explanation:
+Define the Collection:
+
+We're working with the orders collection in our database.
+Aggregation Pipeline:
+
+Aggregation is like a series of steps (or stages) where we process and transform our data. Think of it like making a sandwich: you add ingredients one by one to get the final product.
+First Stage: $group
+Purpose: Group the orders by the product name and count how many times each product name appears.
+Syntax:
+
+```
+{
+    $group: {
+        _id: "$name",        // Group by the product name
+        count: { $sum: 1 }   // For each product name, add 1 to the count
+    }
+}
+
+```
+
+Sure! Let's break it down step by step, imagining we're explaining it to someone who's just starting to learn about MongoDB.
+
+Goal:
+We want to count how many times each unique product name appears in the orders collection.
+
+Step-by-Step Explanation:
+Define the Collection:
+
+We're working with the orders collection in our database.
+Aggregation Pipeline:
+
+Aggregation is like a series of steps (or stages) where we process and transform our data. Think of it like making a sandwich: you add ingredients one by one to get the final product.
+First Stage: $group
+Purpose: Group the orders by the product name and count how many times each product name appears.
+Syntax:
+
+{
+$group: {
+        _id: "$name", // Group by the product name
+count: { $sum: 1 }   // For each product name, add 1 to the count
+    }
+}
+Detailed Explanation:
+$group:
+Imagine all the orders are put into different boxes based on their product names. All orders with the same product name go into the same box.
+\_id: "$name": This means the "name" field of the order is used as the key for each box. Each unique product name gets its own box.
+count: { $sum: 1 }: For every order in each box, add 1 to the count. This counts the total number of orders in each box.
+Second Stage: $project
+Purpose: Reshape the data to make it easier to understand. We rename the fields for clarity.
+Syntax:
+
+```
+{
+    $project: {
+        _id: 0,              // Don't include the default `_id` field
+        productName: "$_id", // Rename `_id` to `productName`
+        count: 1             // Keep the count field as it is
+    }
+}
+```
+
+Detailed Explanation:
+$project:
+This stage is like taking the boxes from the previous stage and labeling them neatly.
+_id: 0: This means we don't want to include the _id field in the final output.
+productName: "$\_id": We rename \_id to productName because \_id was just a placeholder for the product name.
+count: 1: This means we keep the count field as it is, showing how many times each product name appeared.
+
+Final Result:
+The output will be a list of documents. Each document will have:
+productName: The name of the product.
+count: How many times that product name appeared in the orders.
+
+{ "name": "Pepperoni", "size": "small" }
+{ "name": "Pepperoni", "size": "medium" }
+{ "name": "Cheese", "size": "small" }
+
+The result would be:
+
+{ "productName": "Pepperoni", "count": 2 }
+{ "productName": "Cheese", "count": 1 }
+
+{ $sum: 1 }
+Purpose: When you use { $sum: 1 } within a $group stage, it is used to count the number of documents that fall into each group defined by the \_id.
+
+Function: It increments a counter by 1 for each document in the group. Essentially, it's a way to count occurrences of documents based on the grouping key.
+
+{ $count: "fieldName" }
+Purpose: The $count operator is used to return a count of the number of documents in the input to the stage. It does not group documents but simply counts all documents that pass through that stage.
+
+Function: It provides a single count value for the entire result set, rather than counting within groups.
+
+$project: This is the aggregation stage that allows you to include, exclude, or reshape fields in the output documents.
+
+\_id: 0: This specifies that the \_id field should be excluded from the output. In MongoDB's aggregation framework, if you want to exclude a field from the output, you set its value to 0.
+
+productName: "$\_id": This line creates a new field productName in the output document. It assigns the value of $\_id (which was created in the previous $group stage) to productName. Essentially, it renames \_id to productName.
+
+## count: 1: This line includes the count field in the output document. In MongoDB aggregation, setting a field to 1 includes it in the output. The count field here refers to the count of documents (or the count defined in the previous stage of the pipeline).
+
+---
+
+To perform text searches in MongoDB, you need to create a text index on the fields you want to search. Here's a step-by-step explanation:
+
+### What is a Text Index?
+
+A text index in MongoDB is designed to support text searches for fields containing string data. It enables more complex queries for finding documents that contain specific words or phrases.
+
+#### Steps to Create and Use a Text Index
+
+Create a Text Index
+
+To enable text search on the name field of the orders collection, you need to create a text index on that field. Here’s how you do it:
+
+`db.orders.createIndex({ name: "text" });`
+
+db.orders.createIndex: This is a command to create an index on the orders collection.
+{ name: "text" }: This specifies that the name field should be indexed for text search. The "text" indicates that the index is a text index.
+Purpose: Creating this index allows MongoDB to perform full-text searches on the name field efficiently. Without this index, text searches would be slower and less optimized.
+
+Using Text Search
+
+Once you’ve created a text index, you can perform text searches on the indexed field. For example:
+
+`db.orders.find({ $text: { $search: "Pepperoni" } });`
+
+$text: This is the operator used to perform text searches on the fields indexed with a text index.
+$search: "Pepperoni": This specifies the term you want to search for in the indexed field.
+Purpose: This query finds documents where the name field contains the word "Pepperoni". The text search is performed using the index you created, which improves performance compared to a regular query.
+
+Example
+Assuming you have the following documents in the orders collection:
+
+```
+{ "name": "Pepperoni Pizza" }
+{ "name": "Cheese Pizza" }
+{ "name": "Pepperoni Roll" }
+{ "name": "Veggie Pizza" }
+```
+
+After creating a text index on the name field, you can perform a text search like this:
+
+`db.orders.find({ $text: { $search: "Pepperoni" } });`
+This query will return documents where the name field contains the term "Pepperoni":
+
+```
+{ "name": "Pepperoni Pizza" }
+{ "name": "Pepperoni Roll" }
+```
+
+Summary
+Create a Text Index: db.orders.createIndex({ name: "text" }); creates an index that supports text searches on the name field.
+Text Search: Use $text and $search to find documents containing specific words or phrases in fields with a text index.
