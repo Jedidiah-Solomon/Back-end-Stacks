@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto&display=swap");
+
+body {
+    font-family: Rakkas, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 0, 0.5), rgba(255, 255, 0, 0.5)),
+        url("../img/hero-image.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    height: 90vh;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.links a {
+    text-decoration: none;
+    color: #e91e63;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-container,
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.product-card .price {
+    color: #e91e63;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Container for the order summary */
+.order-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4px;
+}
+
+/* Individual order card */
+.order-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px 6px;
+    text-align: center;
+    width: 245px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for order card */
+.order-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Order card header */
+.order-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Order card paragraph */
+.order-card p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Container for the summary overview */
+.summary-overview {
+    background-color: transparent;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Summary overview title */
+.summary-overview h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Summary overview paragraph */
+.summary-overview p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer span {
+    color: #e91e63;
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .product-card {
+        margin: 10px 0;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+        padding: 20px 0;
+    }
+
+    .product-card {
+        margin: 10px 0;
+    }
+
+    .product-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .product-card h2 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 12px;
+    }
+}

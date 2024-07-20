@@ -864,3 +864,30 @@ The "EXTRA" attribute contains additional information about the field that doesn
 
 
 ```
+
+my-project/
+│
+├── Frontend/
+│ ├── index.html
+│ ├── styles.css
+│ ├── custom.js
+│ └── pages/
+│ └── products.html
+│
+├── Backend/
+│ ├── db/
+│ │ └── database.js
+│ ├── routes/
+│ │ └── routes.js
+│ ├── server.js
+│ ├── .env
+│ ├── package.json
+│ ├── package-lock.json
+│ └── node_modules/
+│
+├── README.md
+└── .gitignore
+
+```
+
+```
