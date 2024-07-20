@@ -42,6 +42,8 @@ router.get("/api/product-details", (req, res) => {
         if (err) throw err;
         res.json(results);
         // console.log(results);
+        // console.log(results[2]);
+        // console.log(results[2].name);
     });
 });
 

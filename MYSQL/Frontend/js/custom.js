@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 summaryOverview.className = "summary-overview";
                 summaryOverview.innerHTML = `
                     <h2>Order Totals</h2>
-                    <p>Total Ordered Products: ${totalOrderedProducts}</p>
-                    <p>Total Amount: $${totalAmount}</p>
+                    <p>Total Ordered Products: <span class="col-span">${totalOrderedProducts}</span></p>
+                    <p>Total Amount: <span class="col-span">$${totalAmount}</span></p>
                 `;
                 orderSummaryContainer.appendChild(summaryOverview);
 

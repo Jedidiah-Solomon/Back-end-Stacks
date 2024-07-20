@@ -154,6 +154,10 @@ footer span {
     color: #e91e63;
 }
 
+.col-span {
+    color: #e91e63;
+}
+
 /* Media query for tablets */
 @media (max-width: 768px) {
     .product-card {
