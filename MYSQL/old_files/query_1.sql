@@ -82,6 +82,7 @@ ALTER TABLE Employees
 RENAME COLUMN FirstName TO First_Name;
 
 DROP TABLE projects;
+DROP TABLE IF EXISTS projects; -- Better to avoid error
 
 DROP DATABASE Dangote_Group_of_Company;
 
@@ -89,6 +90,9 @@ DROP DATABASE Dangote_Group_of_Company;
 SELECT * FROM employees;
 SELECT * FROM departments;
 SELECT * FROM projects;
+SELECT * FROM employees LIMIT 5;
+SELECT * FROM employees LIMIT 5 OFFSET 2; -- Start from position 3, and return the next 5 records
+SELECT * FROM employees LIMIT 2, 5; -- Start from position 3, and return the next 5 records
 
 SELECT 
     EmployeeID, 
