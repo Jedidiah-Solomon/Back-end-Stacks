@@ -143,7 +143,7 @@ db.students.updateOne(
     { $set: { email: "jane.newemail@example.com" } }
 );
 
-// Update the class of all students with the first name "Doe" to "6B"
+// Update the class of all students with the last name "Doe" to "6B"
 db.students.updateMany({ lastName: "Doe" }, { $set: { class: "6B" } });
 
 // Add a new field "grade" to all students and set its value to "A"
