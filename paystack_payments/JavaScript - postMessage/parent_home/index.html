@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md space-y-4">
+      <h1 class="text-3xl font-bold text-gray-800">
+        JS Message Event - Parent Page
+      </h1>
+      <p class="text-gray-600 leading-relaxed">
+        The message events allow communication between different windows,
+        iframes, and even web workers. Here’s a brief about the key methods:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        <li>
+          <strong class="font-semibold text-gray-800">postMessage:</strong> This
+          method sends a message from one window (or iframe) to another.
+        </li>
+        <li>
+          <strong class="font-semibold text-gray-800">onmessage:</strong> The
+          event that receives messages sent to a window (or iframe) using
+          postMessage.
+        </li>
+      </ul>
+      <iframe
+        id="iframe-5500"
+        src="http://127.0.0.1:5500/child_home/iframe.html"
+        class="border-2 border-gray-300 w-full h-96 mt-8"
+        title="Iframe on Port 5500"
+      ></iframe>
+
+      <button
+        onclick="sendBroadcastMessage()"
+        class="bg-purple-500 text-white px-4 py-2 rounded"
+      >
+        Send Broadcast Message
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

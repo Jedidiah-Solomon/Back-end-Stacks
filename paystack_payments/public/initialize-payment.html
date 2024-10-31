@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Initialize Payment</title>
+    <script src="/js/paystack.js" defer></script>
+    <link rel="stylesheet" href="/styles/initialize-payment.css" />
+  </head>
+  <body>
+    <h1>Paystack Payment Initialization</h1>
+    <form id="paymentForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required />
+
+      <!-- Hidden product name field -->
+      <input
+        type="hidden"
+        id="product_name"
+        name="product_name"
+        value="Sample Product 1"
+      />
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </body>
+</html>

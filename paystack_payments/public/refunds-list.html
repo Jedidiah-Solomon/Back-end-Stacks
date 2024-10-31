@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refunds List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #4caf50; /* Green background for header */
+        color: white; /* White text color for header */
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray for even rows */
+      }
+
+      tr:hover {
+        background-color: #ddd; /* Gray background on hover */
+      }
+
+      @media (max-width: 600px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        tr {
+          margin-bottom: 15px;
+        }
+
+        td {
+          text-align: right;
+          padding-left: 50%;
+          position: relative;
+        }
+
+        td::before {
+          position: absolute;
+          left: 0;
+          width: 50%;
+          padding-left: 10px;
+          white-space: nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List of Refunds</h1>
+    <table id="refundsTable">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Refund Channel</th>
+          <th>Initiated By</th>
+          <th>Refunded By</th>
+          <th>Transaction Reference</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Refunds will be populated here -->
+      </tbody>
+    </table>
+
+    <script src="/js/refunds-list.js" defer></script>
+  </body>
+</html>

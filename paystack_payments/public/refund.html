@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Refund</title>
+    <style>
+      /* Basic styles for better appearance */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #message {
+        margin-top: 20px;
+        text-align: center;
+      }
+      #otherReason {
+        display: none; /* Hidden by default */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Request a Refund</h1>
+      <form id="refundForm">
+        <label for="transactionId">Transaction ID:</label>
+        <input type="text" id="transactionId" name="transactionId" required />
+
+        <label for="amount">Refund Amount (optional):</label>
+        <input type="number" id="amount" name="amount" />
+
+        <label for="refundReason">Reason for Refund:</label>
+        <select id="refundReason" name="refundReason" required>
+          <option value="">Select a reason</option>
+          <option value="product_defect">Product Defect</option>
+          <option value="wrong_item">Received Wrong Item</option>
+          <option value="service_not_satisfied">Service Not Satisfied</option>
+          <option value="changed_mind">Changed My Mind</option>
+          <option value="other">Other</option>
+        </select>
+
+        <div id="otherReason">
+          <label for="otherReasonInput">Please specify:</label>
+          <input type="text" id="otherReasonInput" name="otherReasonInput" />
+        </div>
+
+        <button type="submit">Submit Refund Request</button>
+      </form>
+      <div id="message"></div>
+    </div>
+
+    <script src="js/refund.js"></script>
+    <script>
+      document
+        .getElementById("refundReason")
+        .addEventListener("change", function () {
+          const otherReasonDiv = document.getElementById("otherReason");
+          if (this.value === "other") {
+            otherReasonDiv.style.display = "block";
+          } else {
+            otherReasonDiv.style.display = "none";
+          }
+        });
+    </script>
+  </body>
+</html>
