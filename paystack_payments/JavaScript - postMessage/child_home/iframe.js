@@ -27,20 +27,20 @@
 
 // Listener 3: Handles specific message types
 window.addEventListener("message", (event) => {
-  if (
-    event.origin === "http://127.0.0.1:4500" &&
-    event.data.type === "paymentData"
-  ) {
-    console.log(`Data type is: ${event.data.type}`);
-    console.log(
-      "Special Message Received from parent - Content:",
-      event.data.content
-    );
-    console.log(
-      "Special Message Received from parent - PaymentData:",
-      event.data.data
-    );
-  }
+    if (
+        event.origin === "http://127.0.0.1:4500" &&
+        event.data.type === "paymentData"
+    ) {
+        console.log(`Data type is: ${event.data.type}`);
+        console.log(
+            "Special Message Received from parent - Content:",
+            event.data.content
+        );
+        console.log(
+            "Special Message Received from parent - PaymentData:",
+            event.data.data
+        );
+    }
 });
 
 // // Listener 4: General listener that accepts messages from any origin

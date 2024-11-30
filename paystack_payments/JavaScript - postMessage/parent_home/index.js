@@ -12,14 +12,14 @@ const iframe = document.getElementById("iframe-5500");
 
 // Send another message when iframe loads
 iframe.addEventListener("load", () => {
-  iframe.contentWindow.postMessage(
-    {
-      type: "paymentData",
-      content: "sub-account type",
-      data: { name: "John", level: "1", employed: true },
-    },
-    "http://127.0.0.1:5500"
-  );
+    iframe.contentWindow.postMessage(
+        {
+            type: "paymentData",
+            content: "sub-account type",
+            data: { name: "John", level: "1", employed: true },
+        },
+        "http://127.0.0.1:5500"
+    );
 });
 
 // // Function to send a broadcast message to any listener (using "*")
